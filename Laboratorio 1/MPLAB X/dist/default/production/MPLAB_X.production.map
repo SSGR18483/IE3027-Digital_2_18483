@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.20\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\MPLAB_X.production.sym \
   --cmf=dist/default/production\MPLAB_X.production.cmf -z -Q16F887 \
-  -oC:\Users\galic\AppData\Local\Temp\sl0c.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\galic\AppData\Local\Temp\s5ao.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/MPLAB_X.production.map -E1 -ver=XC8 Compiler \
   --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -preset_vec=00h,intentry,init,end_init -ppowerup=CODE -pcinit=CODE \
   -pfunctab=ENTRY -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 \
   -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\galic\AppData\Local\Temp\sl0c.o \
+  C:\Users\galic\AppData\Local\Temp\s5ao.o \
   dist/default/production\MPLAB_X.production.o 
 
 Object code version is 3.11
@@ -28,7 +28,7 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\galic\AppData\Local\Temp\sl0c.o
+C:\Users\galic\AppData\Local\Temp\s5ao.o
                 end_init                              0        0        3        0       0
                 config                             2007     2007        2        0       4
 dist/default/production\MPLAB_X.production.o
@@ -281,7 +281,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 131 in file "Lab_1_18483.c"
+		line 140 in file "Lab_1_18483.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -312,7 +312,7 @@ Total ram usage:        2 bytes
 
  *************** function _Setup *****************
  Defined at:
-		line 51 in file "Lab_1_18483.c"
+		line 52 in file "Lab_1_18483.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -341,7 +341,7 @@ Total ram usage:        0 bytes
 
  *************** function _Iniciador *****************
  Defined at:
-		line 68 in file "Lab_1_18483.c"
+		line 71 in file "Lab_1_18483.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -370,7 +370,7 @@ Total ram usage:        3 bytes
 
  *************** function _Cont *****************
  Defined at:
-		line 87 in file "Lab_1_18483.c"
+		line 93 in file "Lab_1_18483.c"
  Parameters:    Size  Location     Type
   Con             2    0[COMMON] unsigned int 
  Auto vars:     Size  Location     Type

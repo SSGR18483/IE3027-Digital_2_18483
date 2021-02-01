@@ -47,6 +47,7 @@ int Cont(unsigned int Con);
 void Setup(void);
 void Iniciador(void);
 //añado el setup
+//bloque en el que selecciono los datos como digitales exceptuando los bits en el puerto A 
 
 void Setup(void) {
     ANSEL = 0;
@@ -64,6 +65,8 @@ void Setup(void) {
 }
 
 //Parte 1 funcionalidad del semaforo de inicio
+//en este iniciador prendo secuencialmente 3 leds los cuales se acumulan y al 
+//final se apagan en conjunto, como los semaforos de la formula 1
 
 void Iniciador(void) {
     J1 = 1;
@@ -79,11 +82,14 @@ void Iniciador(void) {
     Yel = 0;
     VER = 0;
     PORTE = 0;
-    
+
 
 }
 //Parte 2 Incremento contador
-
+// en este bloque cuando se le da la bandera de inicio en el main
+// se le da inicio al bucle while el cual comprueba el input de los botones en
+//el puerto A y verifica que cada contador incremente en valor de 1, siempre atras de la realidad
+// cuando el contador llega a el final de los bits, regresa el valor dado a el entero Cont
 int Cont(unsigned int Con) {
     if (Con == 1) {
         while (1) {
@@ -92,7 +98,7 @@ int Cont(unsigned int Con) {
                 if (RA1 == 0) {
                     PORTC = J1;
                     J1 = J1 << 1;
-                    if (J1>128) {
+                    if (J1 > 128) {
                         return (1);
                     } else {
                     }
@@ -107,7 +113,7 @@ int Cont(unsigned int Con) {
                 if (RA2 == 0) {
                     PORTD = J2;
                     J2 = J2 << 1;
-                    if (J2>128) {
+                    if (J2 > 128) {
                         return (2);
                     } else {
                     }
@@ -127,7 +133,10 @@ int Cont(unsigned int Con) {
 
 }
 //Programa Principal // parte 3 xd
-
+// aqui se reproduce las funciones setup y iniciador, envia la bandera de cont y si al final la igualacion win
+//es el valor regresado en 1 imprime el ganador 1, si regresa el vaor 2 entonces el ganador es el J2
+// si no regresa ninguno entonces manda un empate, imposible pero mas ordenado y real 
+// a la hora de las reglas del juego.
 void main(void) {
     Setup();
     while (1) {

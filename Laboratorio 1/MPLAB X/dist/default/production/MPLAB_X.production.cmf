@@ -22,7 +22,7 @@ cstackCOMMON COMMON 1 70 70 6 1
 dataCOMMON COMMON 1 76 76 4 1
 bssCOMMON COMMON 1 7A 7A 2 1
 config CONFIG 4 2007 2007 2 2
-$C:\Users\galic\AppData\Local\Temp\sl0c.o
+$C:\Users\galic\AppData\Local\Temp\s5ao.o
 end_init CODE 0 0 0 3 2
 config CONFIG 4 2007 2007 2 2
 # %UNUSED Section
@@ -71,87 +71,87 @@ STRING 800-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\MPLAB_X.production.o
-7E2 cinit CODE >475:C:\Users\galic\AppData\Local\Temp\sl0c.s
-7E2 cinit CODE >478:C:\Users\galic\AppData\Local\Temp\sl0c.s
-7E2 cinit CODE >504:C:\Users\galic\AppData\Local\Temp\sl0c.s
-7E7 cinit CODE >505:C:\Users\galic\AppData\Local\Temp\sl0c.s
-7E8 cinit CODE >506:C:\Users\galic\AppData\Local\Temp\sl0c.s
-7ED cinit CODE >507:C:\Users\galic\AppData\Local\Temp\sl0c.s
-7EE cinit CODE >508:C:\Users\galic\AppData\Local\Temp\sl0c.s
-7F3 cinit CODE >509:C:\Users\galic\AppData\Local\Temp\sl0c.s
-7F4 cinit CODE >510:C:\Users\galic\AppData\Local\Temp\sl0c.s
-7F9 cinit CODE >511:C:\Users\galic\AppData\Local\Temp\sl0c.s
-7FA cinit CODE >515:C:\Users\galic\AppData\Local\Temp\sl0c.s
-7FB cinit CODE >516:C:\Users\galic\AppData\Local\Temp\sl0c.s
-7FC cinit CODE >522:C:\Users\galic\AppData\Local\Temp\sl0c.s
-7FC cinit CODE >524:C:\Users\galic\AppData\Local\Temp\sl0c.s
-7FD cinit CODE >525:C:\Users\galic\AppData\Local\Temp\sl0c.s
-77E text3 CODE >87:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-77E text3 CODE >88:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-784 text3 CODE >89:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-784 text3 CODE >90:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-78A text3 CODE >91:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-793 text3 CODE >92:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-799 text3 CODE >93:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-79B text3 CODE >94:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-7A0 text3 CODE >95:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-7AD text3 CODE >96:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-7B2 text3 CODE >104:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-7B2 text3 CODE >105:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-7B8 text3 CODE >106:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-7C1 text3 CODE >107:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-7C7 text3 CODE >108:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-7C9 text3 CODE >109:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-7CE text3 CODE >110:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-7DB text3 CODE >111:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-7E0 text3 CODE >118:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-7E1 text3 CODE >128:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-6EF text2 CODE >68:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-6EF text2 CODE >69:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-6F3 text2 CODE >70:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-6F7 text2 CODE >71:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-6F9 text2 CODE >72:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-6FC text2 CODE >73:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-709 text2 CODE >74:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-70C text2 CODE >75:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-719 text2 CODE >76:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-71C text2 CODE >77:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-729 text2 CODE >78:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-72C text2 CODE >79:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-72D text2 CODE >80:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-72E text2 CODE >81:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-72F text2 CODE >84:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-6DB text1 CODE >51:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+7E2 cinit CODE >475:C:\Users\galic\AppData\Local\Temp\s5ao.s
+7E2 cinit CODE >478:C:\Users\galic\AppData\Local\Temp\s5ao.s
+7E2 cinit CODE >504:C:\Users\galic\AppData\Local\Temp\s5ao.s
+7E7 cinit CODE >505:C:\Users\galic\AppData\Local\Temp\s5ao.s
+7E8 cinit CODE >506:C:\Users\galic\AppData\Local\Temp\s5ao.s
+7ED cinit CODE >507:C:\Users\galic\AppData\Local\Temp\s5ao.s
+7EE cinit CODE >508:C:\Users\galic\AppData\Local\Temp\s5ao.s
+7F3 cinit CODE >509:C:\Users\galic\AppData\Local\Temp\s5ao.s
+7F4 cinit CODE >510:C:\Users\galic\AppData\Local\Temp\s5ao.s
+7F9 cinit CODE >511:C:\Users\galic\AppData\Local\Temp\s5ao.s
+7FA cinit CODE >515:C:\Users\galic\AppData\Local\Temp\s5ao.s
+7FB cinit CODE >516:C:\Users\galic\AppData\Local\Temp\s5ao.s
+7FC cinit CODE >522:C:\Users\galic\AppData\Local\Temp\s5ao.s
+7FC cinit CODE >524:C:\Users\galic\AppData\Local\Temp\s5ao.s
+7FD cinit CODE >525:C:\Users\galic\AppData\Local\Temp\s5ao.s
+77E text3 CODE >93:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+77E text3 CODE >94:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+784 text3 CODE >95:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+784 text3 CODE >96:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+78A text3 CODE >97:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+793 text3 CODE >98:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+799 text3 CODE >99:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+79B text3 CODE >100:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+7A0 text3 CODE >101:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+7AD text3 CODE >102:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+7B2 text3 CODE >110:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+7B2 text3 CODE >111:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+7B8 text3 CODE >112:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+7C1 text3 CODE >113:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+7C7 text3 CODE >114:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+7C9 text3 CODE >115:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+7CE text3 CODE >116:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+7DB text3 CODE >117:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+7E0 text3 CODE >124:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+7E1 text3 CODE >134:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+6EF text2 CODE >71:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+6EF text2 CODE >72:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+6F3 text2 CODE >73:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+6F7 text2 CODE >74:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+6F9 text2 CODE >75:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+6FC text2 CODE >76:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+709 text2 CODE >77:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+70C text2 CODE >78:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+719 text2 CODE >79:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+71C text2 CODE >80:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+729 text2 CODE >81:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+72C text2 CODE >82:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+72D text2 CODE >83:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+72E text2 CODE >84:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+72F text2 CODE >87:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
 6DB text1 CODE >52:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-6DE text1 CODE >53:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-6DF text1 CODE >54:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-6E3 text1 CODE >55:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-6E4 text1 CODE >56:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-6E5 text1 CODE >57:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-6E6 text1 CODE >58:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-6E7 text1 CODE >59:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-6EA text1 CODE >60:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-6EB text1 CODE >61:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-6EC text1 CODE >62:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-6ED text1 CODE >63:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-6EE text1 CODE >64:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-730 maintext CODE >131:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-730 maintext CODE >132:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-735 maintext CODE >134:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-73B maintext CODE >135:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-744 maintext CODE >136:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-74A maintext CODE >137:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-74F maintext CODE >138:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-75C maintext CODE >139:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-762 maintext CODE >140:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-765 maintext CODE >141:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-766 maintext CODE >142:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-767 maintext CODE >143:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-76F maintext CODE >144:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-773 maintext CODE >148:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-777 maintext CODE >149:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-778 maintext CODE >150:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
-77A maintext CODE >155:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+6DB text1 CODE >53:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+6DE text1 CODE >54:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+6DF text1 CODE >55:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+6E3 text1 CODE >56:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+6E4 text1 CODE >57:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+6E5 text1 CODE >58:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+6E6 text1 CODE >59:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+6E7 text1 CODE >60:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+6EA text1 CODE >61:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+6EB text1 CODE >62:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+6EC text1 CODE >63:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+6ED text1 CODE >64:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+6EE text1 CODE >65:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+730 maintext CODE >140:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+730 maintext CODE >141:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+735 maintext CODE >143:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+73B maintext CODE >144:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+744 maintext CODE >145:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+74A maintext CODE >146:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+74F maintext CODE >147:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+75C maintext CODE >148:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+762 maintext CODE >149:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+765 maintext CODE >150:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+766 maintext CODE >151:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+767 maintext CODE >152:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+76F maintext CODE >153:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+773 maintext CODE >157:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+777 maintext CODE >158:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+778 maintext CODE >159:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+77A maintext CODE >164:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -175,21 +175,21 @@ _J1 78 0 COMMON 1 dataCOMMON dist/default/production\MPLAB_X.production.o
 _J2 76 0 COMMON 1 dataCOMMON dist/default/production\MPLAB_X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _Cont EFC 0 CODE 0 text3 dist/default/production\MPLAB_X.production.o
-___sp 0 0 STACK 2 stack C:\Users\galic\AppData\Local\Temp\sl0c.o
+___sp 0 0 STACK 2 stack C:\Users\galic\AppData\Local\Temp\s5ao.o
 _main E60 0 CODE 0 maintext dist/default/production\MPLAB_X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\MPLAB_X.production.o
-start 0 0 CODE 0 init C:\Users\galic\AppData\Local\Temp\sl0c.o
+start 0 0 CODE 0 init C:\Users\galic\AppData\Local\Temp\s5ao.o
 __size_of_Cont 0 0 ABS 0 - dist/default/production\MPLAB_X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\MPLAB_X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
 __HdataCOMMON 0 0 ABS 0 dataCOMMON -
-intlevel0 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\sl0c.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\sl0c.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\sl0c.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\sl0c.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\sl0c.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\sl0c.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s5ao.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s5ao.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s5ao.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s5ao.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s5ao.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s5ao.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production\MPLAB_X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
@@ -198,12 +198,12 @@ __pidataCOMMON DAE 0 CODE 0 idataCOMMON dist/default/production\MPLAB_X.producti
 _ANSELH 189 0 ABS 0 - dist/default/production\MPLAB_X.production.o
 __LdataCOMMON 0 0 ABS 0 dataCOMMON -
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\galic\AppData\Local\Temp\sl0c.o
-___stacklo 0 0 ABS 0 - C:\Users\galic\AppData\Local\Temp\sl0c.o
+___stackhi 0 0 ABS 0 - C:\Users\galic\AppData\Local\Temp\s5ao.o
+___stacklo 0 0 ABS 0 - C:\Users\galic\AppData\Local\Temp\s5ao.o
 __size_of_Setup 0 0 ABS 0 - dist/default/production\MPLAB_X.production.o
 __LidataCOMMON 0 0 ABS 0 idataCOMMON -
 start_initialization FC4 0 CODE 0 cinit dist/default/production\MPLAB_X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\galic\AppData\Local\Temp\sl0c.o
+___int_sp 0 0 STACK 2 stack C:\Users\galic\AppData\Local\Temp\s5ao.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -246,7 +246,7 @@ __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 __HidataCOMMON 0 0 ABS 0 idataCOMMON -
 __Lintentry 0 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\galic\AppData\Local\Temp\sl0c.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\galic\AppData\Local\Temp\s5ao.o
 __pmaintext E60 0 CODE 0 maintext dist/default/production\MPLAB_X.production.o
 ?_Cont 70 0 COMMON 1 cstackCOMMON dist/default/production\MPLAB_X.production.o
 __Lcommon 0 0 ABS 0 common -

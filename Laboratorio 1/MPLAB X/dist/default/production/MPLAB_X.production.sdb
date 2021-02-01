@@ -11,13 +11,13 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"51 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
+"52 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 1\MPLAB X\Lab_1_18483.c
 [v _Setup Setup `(v  1 e 1 0 ]
-"68
+"71
 [v _Iniciador Iniciador `(v  1 e 1 0 ]
-"87
+"93
 [v _Cont Cont `(i  1 e 2 0 ]
-"131
+"140
 [v _main main `(v  1 e 1 0 ]
 "166 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
@@ -81,24 +81,24 @@
 [v _J1 J1 `i  1 e 2 0 ]
 "44
 [v _J2 J2 `i  1 e 2 0 ]
-"131
+"140
 [v _main main `(v  1 e 1 0 ]
 {
-"158
+"167
 } 0
-"51
+"52
 [v _Setup Setup `(v  1 e 1 0 ]
 {
-"64
+"65
 } 0
-"68
+"71
 [v _Iniciador Iniciador `(v  1 e 1 0 ]
 {
-"84
-} 0
 "87
+} 0
+"93
 [v _Cont Cont `(i  1 e 2 0 ]
 {
 [v Cont@Con Con `ui  1 p 2 0 ]
-"128
+"134
 } 0

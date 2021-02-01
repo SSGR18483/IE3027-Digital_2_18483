@@ -2518,6 +2518,7 @@ void Setup(void);
 void Iniciador(void);
 
 
+
 void Setup(void) {
     ANSEL = 0;
     ANSELH = 0;
@@ -2532,6 +2533,8 @@ void Setup(void) {
     PORTD = 0;
     PORTE = 0;
 }
+
+
 
 
 
@@ -2554,6 +2557,9 @@ void Iniciador(void) {
 }
 
 
+
+
+
 int Cont(unsigned int Con) {
     if (Con == 1) {
         while (1) {
@@ -2562,7 +2568,7 @@ int Cont(unsigned int Con) {
                 if (PORTAbits.RA1 == 0) {
                     PORTC = J1;
                     J1 = J1 << 1;
-                    if (J1>128) {
+                    if (J1 > 128) {
                         return (1);
                     } else {
                     }
@@ -2577,7 +2583,7 @@ int Cont(unsigned int Con) {
                 if (PORTAbits.RA2 == 0) {
                     PORTD = J2;
                     J2 = J2 << 1;
-                    if (J2>128) {
+                    if (J2 > 128) {
                         return (2);
                     } else {
                     }
@@ -2596,6 +2602,9 @@ int Cont(unsigned int Con) {
 
 
 }
+
+
+
 
 
 void main(void) {
