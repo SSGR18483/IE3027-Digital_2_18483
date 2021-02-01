@@ -36,9 +36,12 @@
 #define VER PORTBbits.RB2
 #define Yel PORTBbits.RB1
 #define Red PORTBbits.RB0
+#define RA0 PORTAbits.RA0
+#define RA1 PORTAbits.RA1
+#define RA2 PORTAbits.RA2
 int Win = 0;
-int J1 = 0;
-int J2 = 0;
+int J1 = 1;
+int J2 = 1;
 int Cont(unsigned int Con);
 //Definir las funciones
 void Setup(void);
@@ -63,8 +66,8 @@ void Setup(void) {
 //Parte 1 funcionalidad del semaforo de inicio
 
 void Iniciador(void) {
-    J1 = 0;
-    J2 = 0;
+    J1 = 1;
+    J2 = 1;
     Win = 0;
     Red = 1;
     __delay_ms(500);
@@ -75,8 +78,55 @@ void Iniciador(void) {
     Red = 0;
     Yel = 0;
     VER = 0;
-    PORTC = J1;
-    PORTD = J2;
+
+}
+//Parte 2 Incremento contador
+
+int Cont(unsigned int Con) {
+    if (Con == 1) {
+        while (1) {
+            if (RA1 == 1) {
+                __delay_ms(25);
+                if (RA1 == 0) {
+                    PORTC = J1;
+                    J1 = J1 << 1;
+                    if (J1 == 0) {
+                        return (1);
+                    } else {
+                        printf("XD");
+                    }
+
+
+                } else {
+                    printf("XD");
+                }
+            } else {
+                printf("Xd");
+            }
+            if (RA2 == 1) {
+                __delay_ms(25);
+                if(RA2 == 0){
+                    PORTD = J2;
+                    J2 = J2<<1;
+                    if (J2 ==0){
+                        return (2);
+                    }
+                    else{printf("xd");}
+                    
+                }
+                else{
+                printf("XD");}
+            }
+            else {printf("XD");}
+            
+        }
+        
+    } else {
+        printf("XD");
+    }
+
+
+
 
 }
 //Programa Principal

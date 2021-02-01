@@ -2508,16 +2508,10 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
 # 32 "Lab_1_18483.c" 2
-
-
-
-
-
-
-
+# 42 "Lab_1_18483.c"
 int Win = 0;
-int J1 = 0;
-int J2 = 0;
+int J1 = 1;
+int J2 = 1;
 int Cont(unsigned int Con);
 
 void Setup(void);
@@ -2542,8 +2536,8 @@ void Setup(void) {
 
 
 void Iniciador(void) {
-    J1 = 0;
-    J2 = 0;
+    J1 = 1;
+    J2 = 1;
     Win = 0;
     PORTBbits.RB0 = 1;
     _delay((unsigned long)((500)*(8000000/4000.0)));
@@ -2554,8 +2548,55 @@ void Iniciador(void) {
     PORTBbits.RB0 = 0;
     PORTBbits.RB1 = 0;
     PORTBbits.RB2 = 0;
-    PORTC = J1;
-    PORTD = J2;
+
+}
+
+
+int Cont(unsigned int Con) {
+    if (Con == 1) {
+        while (1) {
+            if (PORTAbits.RA1 == 1) {
+                _delay((unsigned long)((25)*(8000000/4000.0)));
+                if (PORTAbits.RA1 == 0) {
+                    PORTC = J1;
+                    J1 = J1 << 1;
+                    if (J1 == 0) {
+                        return (1);
+                    } else {
+                        printf("XD");
+                    }
+
+
+                } else {
+                    printf("XD");
+                }
+            } else {
+                printf("Xd");
+            }
+            if (PORTAbits.RA2 == 1) {
+                _delay((unsigned long)((25)*(8000000/4000.0)));
+                if(PORTAbits.RA2 == 0){
+                    PORTD = J2;
+                    J2 = J2<<1;
+                    if (J2 ==0){
+                        return (2);
+                    }
+                    else{printf("xd");}
+
+                }
+                else{
+                printf("XD");}
+            }
+            else {printf("XD");}
+
+        }
+
+    } else {
+        printf("XD");
+    }
+
+
+
 
 }
 
