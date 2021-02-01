@@ -41,7 +41,21 @@ int Cont(unsigned int Con);
 //Definir las funciones
 void Setup (void);
 void Iniciador(void);
-
+//añado el setup
+void Setup(void){
+    ANSEL = 0;
+    ANSELH = 0;
+    TRISA = 0b00000111;//inputs analogicos
+    TRISB = 0;
+    TRISC = 0;
+    TRISD = 0;       
+    TRISE = 0;
+    PORTA = 0;
+    PORTB = 0;
+    PORTC = 0;
+    PORTD = 0;
+    PORTE = 0;
+}
 //Programa Principal
 void main(void) {
     return;
