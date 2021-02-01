@@ -2511,6 +2511,55 @@ extern __bank0 __bit __timeout;
 
 
 
+
+
+
+
+int Win = 0;
+int J1 = 0;
+int J2 = 0;
+int Cont(unsigned int Con);
+
+void Setup(void);
+void Iniciador(void);
+
+
+void Setup(void) {
+    ANSEL = 0;
+    ANSELH = 0;
+    TRISA = 0b00000111;
+    TRISB = 0;
+    TRISC = 0;
+    TRISD = 0;
+    TRISE = 0;
+    PORTA = 0;
+    PORTB = 0;
+    PORTC = 0;
+    PORTD = 0;
+    PORTE = 0;
+}
+
+
+
+void Iniciador(void) {
+    J1 = 0;
+    J2 = 0;
+    Win = 0;
+    PORTBbits.RB0 = 1;
+    _delay((unsigned long)((500)*(8000000/4000.0)));
+    PORTBbits.RB1 = 1;
+    _delay((unsigned long)((500)*(8000000/4000.0)));
+    PORTBbits.RB2 = 1;
+    _delay((unsigned long)((500)*(8000000/4000.0)));
+    PORTBbits.RB0 = 0;
+    PORTBbits.RB1 = 0;
+    PORTBbits.RB2 = 0;
+    PORTC = J1;
+    PORTD = J2;
+
+}
+
+
 void main(void) {
     return;
 }

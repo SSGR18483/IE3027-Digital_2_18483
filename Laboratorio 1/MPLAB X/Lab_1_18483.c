@@ -37,18 +37,21 @@
 #define Yel PORTBbits.RB1
 #define Red PORTBbits.RB0
 int Win = 0;
+int J1 = 0;
+int J2 = 0;
 int Cont(unsigned int Con);
 //Definir las funciones
-void Setup (void);
+void Setup(void);
 void Iniciador(void);
 //añado el setup
-void Setup(void){
+
+void Setup(void) {
     ANSEL = 0;
     ANSELH = 0;
-    TRISA = 0b00000111;//inputs analogicos
+    TRISA = 0b00000111; //inputs analogicos
     TRISB = 0;
     TRISC = 0;
-    TRISD = 0;       
+    TRISD = 0;
     TRISE = 0;
     PORTA = 0;
     PORTB = 0;
@@ -56,7 +59,28 @@ void Setup(void){
     PORTD = 0;
     PORTE = 0;
 }
+
+//Parte 1 funcionalidad del semaforo de inicio
+
+void Iniciador(void) {
+    J1 = 0;
+    J2 = 0;
+    Win = 0;
+    Red = 1;
+    __delay_ms(500);
+    Yel = 1;
+    __delay_ms(500);
+    VER = 1;
+    __delay_ms(500);
+    Red = 0;
+    Yel = 0;
+    VER = 0;
+    PORTC = J1;
+    PORTD = J2;
+
+}
 //Programa Principal
+
 void main(void) {
     return;
 }
