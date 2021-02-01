@@ -2563,36 +2563,31 @@ int Cont(unsigned int Con) {
                     if (J1 == 0) {
                         return (1);
                     } else {
-                        printf("XD");
                     }
 
 
                 } else {
-                    printf("XD");
                 }
             } else {
-                printf("Xd");
             }
             if (PORTAbits.RA2 == 1) {
                 _delay((unsigned long)((25)*(8000000/4000.0)));
-                if(PORTAbits.RA2 == 0){
+                if (PORTAbits.RA2 == 0) {
                     PORTD = J2;
-                    J2 = J2<<1;
-                    if (J2 ==0){
+                    J2 = J2 << 1;
+                    if (J2 == 0) {
                         return (2);
+                    } else {
                     }
-                    else{printf("xd");}
 
+                } else {
                 }
-                else{
-                printf("XD");}
+            } else {
             }
-            else {printf("XD");}
 
         }
 
     } else {
-        printf("XD");
     }
 
 
@@ -2602,5 +2597,24 @@ int Cont(unsigned int Con) {
 
 
 void main(void) {
-    return;
+    Setup();
+    while (1) {
+        if (PORTAbits.RA0 == 1) {
+            _delay((unsigned long)((10)*(8000000/4000.0)));
+            if (PORTAbits.RA0 == 0) {
+                Iniciador();
+                Win = Cont(1);
+                if (Win == 1) {
+                    PORTEbits.RE0 = 1;
+                } else if (Win == 2) {
+                    PORTEbits.RE1 = 1;
+                } else {
+                    PORTE = 0b00000011;
+                }
+            } else {
+            }
+        } else {
+        }
+    }
+
 }

@@ -61,10 +61,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "183
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 183: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x005)));
 [v _PORTAbits `VS5 ~T0 @X0 0 e@5 ]
-"96 Lab_1_18483.c
-[; ;Lab_1_18483.c: 96:                         printf("XD");
-[v _printf `(i ~T0 @X0 0 e? ]
 [p mainexit ]
+"420
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 420:     struct {
+[s S14 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S14 . RE0 RE1 RE2 RE3 ]
+"419
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 419: typedef union {
+[u S13 `S14 1 ]
+[n S13 . . ]
+"427
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 427: extern volatile PORTEbits_t PORTEbits __attribute__((address(0x009)));
+[v _PORTEbits `VS13 ~T0 @X0 0 e@9 ]
 "14 Lab_1_18483.c
 [p x FOSC = XT ]
 "15
@@ -480,139 +488,193 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 147 ]
 {
 "96
-[; ;Lab_1_18483.c: 96:                         printf("XD");
-[e ( _printf :s 1C ]
-"97
-[; ;Lab_1_18483.c: 97:                     }
+[; ;Lab_1_18483.c: 96:                     }
 }
 [e :U 148 ]
-"100
-[; ;Lab_1_18483.c: 100:                 } else {
+"99
+[; ;Lab_1_18483.c: 99:                 } else {
 }
 [e $U 149  ]
 [e :U 146 ]
 {
-"101
-[; ;Lab_1_18483.c: 101:                     printf("XD");
-[e ( _printf :s 2C ]
-"102
-[; ;Lab_1_18483.c: 102:                 }
+"100
+[; ;Lab_1_18483.c: 100:                 }
 }
 [e :U 149 ]
-"103
-[; ;Lab_1_18483.c: 103:             } else {
+"101
+[; ;Lab_1_18483.c: 101:             } else {
 }
 [e $U 150  ]
 [e :U 145 ]
 {
-"104
-[; ;Lab_1_18483.c: 104:                 printf("Xd");
-[e ( _printf :s 3C ]
-"105
-[; ;Lab_1_18483.c: 105:             }
+"102
+[; ;Lab_1_18483.c: 102:             }
 }
 [e :U 150 ]
-"106
-[; ;Lab_1_18483.c: 106:             if (PORTAbits.RA2 == 1) {
+"103
+[; ;Lab_1_18483.c: 103:             if (PORTAbits.RA2 == 1) {
 [e $ ! == -> . . _PORTAbits 0 2 `i -> 1 `i 151  ]
 {
-"107
-[; ;Lab_1_18483.c: 107:                 _delay((unsigned long)((25)*(8000000/4000.0)));
+"104
+[; ;Lab_1_18483.c: 104:                 _delay((unsigned long)((25)*(8000000/4000.0)));
 [e ( __delay (1 -> * -> -> 25 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"108
-[; ;Lab_1_18483.c: 108:                 if(PORTAbits.RA2 == 0){
+"105
+[; ;Lab_1_18483.c: 105:                 if (PORTAbits.RA2 == 0) {
 [e $ ! == -> . . _PORTAbits 0 2 `i -> 0 `i 152  ]
 {
-"109
-[; ;Lab_1_18483.c: 109:                     PORTD = J2;
+"106
+[; ;Lab_1_18483.c: 106:                     PORTD = J2;
 [e = _PORTD -> _J2 `uc ]
-"110
-[; ;Lab_1_18483.c: 110:                     J2 = J2<<1;
+"107
+[; ;Lab_1_18483.c: 107:                     J2 = J2 << 1;
 [e = _J2 << _J2 -> 1 `i ]
-"111
-[; ;Lab_1_18483.c: 111:                     if (J2 ==0){
+"108
+[; ;Lab_1_18483.c: 108:                     if (J2 == 0) {
 [e $ ! == _J2 -> 0 `i 153  ]
 {
-"112
-[; ;Lab_1_18483.c: 112:                         return (2);
+"109
+[; ;Lab_1_18483.c: 109:                         return (2);
 [e ) -> 2 `i ]
 [e $UE 140  ]
-"113
-[; ;Lab_1_18483.c: 113:                     }
+"110
+[; ;Lab_1_18483.c: 110:                     } else {
 }
 [e $U 154  ]
-"114
-[; ;Lab_1_18483.c: 114:                     else{printf("xd");}
 [e :U 153 ]
 {
-[e ( _printf :s 4C ]
+"111
+[; ;Lab_1_18483.c: 111:                     }
 }
 [e :U 154 ]
-"116
-[; ;Lab_1_18483.c: 116:                 }
+"113
+[; ;Lab_1_18483.c: 113:                 } else {
 }
 [e $U 155  ]
-"117
-[; ;Lab_1_18483.c: 117:                 else{
 [e :U 152 ]
 {
-"118
-[; ;Lab_1_18483.c: 118:                 printf("XD");}
-[e ( _printf :s 5C ]
+"114
+[; ;Lab_1_18483.c: 114:                 }
 }
 [e :U 155 ]
-"119
-[; ;Lab_1_18483.c: 119:             }
+"115
+[; ;Lab_1_18483.c: 115:             } else {
 }
 [e $U 156  ]
-"120
-[; ;Lab_1_18483.c: 120:             else {printf("XD");}
 [e :U 151 ]
 {
-[e ( _printf :s 6C ]
+"116
+[; ;Lab_1_18483.c: 116:             }
 }
 [e :U 156 ]
-"122
-[; ;Lab_1_18483.c: 122:         }
+"118
+[; ;Lab_1_18483.c: 118:         }
 }
 [e :U 142 ]
 [e $U 143  ]
 [e :U 144 ]
-"124
-[; ;Lab_1_18483.c: 124:     } else {
+"120
+[; ;Lab_1_18483.c: 120:     } else {
 }
 [e $U 157  ]
 [e :U 141 ]
 {
-"125
-[; ;Lab_1_18483.c: 125:         printf("XD");
-[e ( _printf :s 7C ]
-"126
-[; ;Lab_1_18483.c: 126:     }
+"121
+[; ;Lab_1_18483.c: 121:     }
 }
 [e :U 157 ]
-"131
-[; ;Lab_1_18483.c: 131: }
+"126
+[; ;Lab_1_18483.c: 126: }
 [e :UE 140 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"134
-[; ;Lab_1_18483.c: 134: void main(void) {
+"129
+[; ;Lab_1_18483.c: 129: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
+"130
+[; ;Lab_1_18483.c: 130:     Setup();
+[e ( _Setup ..  ]
+"131
+[; ;Lab_1_18483.c: 131:     while (1) {
+[e :U 160 ]
+{
+"132
+[; ;Lab_1_18483.c: 132:         if (PORTAbits.RA0 == 1) {
+[e $ ! == -> . . _PORTAbits 0 0 `i -> 1 `i 162  ]
+{
+"133
+[; ;Lab_1_18483.c: 133:             _delay((unsigned long)((10)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"134
+[; ;Lab_1_18483.c: 134:             if (PORTAbits.RA0 == 0) {
+[e $ ! == -> . . _PORTAbits 0 0 `i -> 0 `i 163  ]
+{
 "135
-[; ;Lab_1_18483.c: 135:     return;
-[e $UE 158  ]
+[; ;Lab_1_18483.c: 135:                 Iniciador();
+[e ( _Iniciador ..  ]
 "136
-[; ;Lab_1_18483.c: 136: }
+[; ;Lab_1_18483.c: 136:                 Win = Cont(1);
+[e = _Win ( _Cont (1 -> -> 1 `i `ui ]
+"137
+[; ;Lab_1_18483.c: 137:                 if (Win == 1) {
+[e $ ! == _Win -> 1 `i 164  ]
+{
+"138
+[; ;Lab_1_18483.c: 138:                     PORTEbits.RE0 = 1;
+[e = . . _PORTEbits 0 0 -> -> 1 `i `uc ]
+"139
+[; ;Lab_1_18483.c: 139:                 } else if (Win == 2) {
+}
+[e $U 165  ]
+[e :U 164 ]
+[e $ ! == _Win -> 2 `i 166  ]
+{
+"140
+[; ;Lab_1_18483.c: 140:                     PORTEbits.RE1 = 1;
+[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
+"141
+[; ;Lab_1_18483.c: 141:                 } else {
+}
+[e $U 167  ]
+[e :U 166 ]
+{
+"142
+[; ;Lab_1_18483.c: 142:                     PORTE = 0b00000011;
+[e = _PORTE -> -> 3 `i `uc ]
+"143
+[; ;Lab_1_18483.c: 143:                 }
+}
+[e :U 167 ]
+[e :U 165 ]
+"144
+[; ;Lab_1_18483.c: 144:             } else {
+}
+[e $U 168  ]
+[e :U 163 ]
+{
+"145
+[; ;Lab_1_18483.c: 145:             }
+}
+[e :U 168 ]
+"146
+[; ;Lab_1_18483.c: 146:         } else {
+}
+[e $U 169  ]
+[e :U 162 ]
+{
+"147
+[; ;Lab_1_18483.c: 147:         }
+}
+[e :U 169 ]
+"148
+[; ;Lab_1_18483.c: 148:     }
+}
+[e :U 159 ]
+[e $U 160  ]
+[e :U 161 ]
+"150
+[; ;Lab_1_18483.c: 150: }
 [e :UE 158 ]
 }
-[a 4C 120 100 0 ]
-[a 3C 88 100 0 ]
-[a 1C 88 68 0 ]
-[a 2C 88 68 0 ]
-[a 5C 88 68 0 ]
-[a 6C 88 68 0 ]
-[a 7C 88 68 0 ]

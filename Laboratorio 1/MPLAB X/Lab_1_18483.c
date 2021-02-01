@@ -93,44 +93,58 @@ int Cont(unsigned int Con) {
                     if (J1 == 0) {
                         return (1);
                     } else {
-                        printf("XD");
                     }
 
 
                 } else {
-                    printf("XD");
                 }
             } else {
-                printf("Xd");
             }
             if (RA2 == 1) {
                 __delay_ms(25);
-                if(RA2 == 0){
+                if (RA2 == 0) {
                     PORTD = J2;
-                    J2 = J2<<1;
-                    if (J2 ==0){
+                    J2 = J2 << 1;
+                    if (J2 == 0) {
                         return (2);
+                    } else {
                     }
-                    else{printf("xd");}
-                    
+
+                } else {
                 }
-                else{
-                printf("XD");}
+            } else {
             }
-            else {printf("XD");}
-            
+
         }
-        
+
     } else {
-        printf("XD");
     }
 
 
 
 
 }
-//Programa Principal
+//Programa Principal // parte 3 xd
 
 void main(void) {
-    return;
+    Setup();
+    while (1) {
+        if (RA0 == 1) {
+            __delay_ms(10);
+            if (RA0 == 0) {
+                Iniciador();
+                Win = Cont(1);
+                if (Win == 1) {
+                    PORTEbits.RE0 = 1;
+                } else if (Win == 2) {
+                    PORTEbits.RE1 = 1;
+                } else {
+                    PORTE = 0b00000011;
+                }
+            } else {
+            }
+        } else {
+        }
+    }
+
 }
