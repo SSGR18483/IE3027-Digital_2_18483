@@ -78,6 +78,8 @@ void Iniciador(void) {
     Red = 0;
     Yel = 0;
     VER = 0;
+    PORTE = 0;
+    
 
 }
 //Parte 2 Incremento contador
@@ -90,7 +92,7 @@ int Cont(unsigned int Con) {
                 if (RA1 == 0) {
                     PORTC = J1;
                     J1 = J1 << 1;
-                    if (J1 == 0) {
+                    if (J1>128) {
                         return (1);
                     } else {
                     }
@@ -105,7 +107,7 @@ int Cont(unsigned int Con) {
                 if (RA2 == 0) {
                     PORTD = J2;
                     J2 = J2 << 1;
-                    if (J2 == 0) {
+                    if (J2>128) {
                         return (2);
                     } else {
                     }
@@ -136,10 +138,16 @@ void main(void) {
                 Win = Cont(1);
                 if (Win == 1) {
                     PORTEbits.RE0 = 1;
+                    PORTC = 0;
+                    PORTD = 0;
                 } else if (Win == 2) {
                     PORTEbits.RE1 = 1;
+                    PORTC = 0;
+                    PORTD = 0;
                 } else {
                     PORTE = 0b00000011;
+                    PORTC = 0;
+                    PORTD = 0;
                 }
             } else {
             }
