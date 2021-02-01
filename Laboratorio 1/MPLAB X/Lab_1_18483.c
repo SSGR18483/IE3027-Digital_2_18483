@@ -30,6 +30,17 @@
 // Use project enums instead of #define for ON and OFF.
 
 #include <xc.h>
+//Variables
+#define _XTAL_FREQ 8000000
+//clock a 8MHz como en proteus
+#define VER PORTBbits.RB2
+#define Yel PORTBbits.RB1
+#define Red PORTBbits.RB0
+int Win = 0;
+int Cont(unsigned int Con);
+//Definir las funciones
+void Setup (void);
+void Iniciador(void);
 
 //Programa Principal
 void main(void) {
