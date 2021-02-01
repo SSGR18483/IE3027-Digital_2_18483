@@ -1,29 +1,47 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"3387 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3387: extern volatile unsigned char ANSEL __attribute__((address(0x188)));
+[v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
+"3449
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3449: extern volatile unsigned char ANSELH __attribute__((address(0x189)));
+[v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
+"1416
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1416: extern volatile unsigned char TRISA __attribute__((address(0x085)));
+[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
+"166
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 166: extern volatile unsigned char PORTA __attribute__((address(0x005)));
+[v _PORTA `Vuc ~T0 @X0 0 e@5 ]
+"1478
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1478: extern volatile unsigned char TRISB __attribute__((address(0x086)));
+[v _TRISB `Vuc ~T0 @X0 0 e@134 ]
+"228
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 228: extern volatile unsigned char PORTB __attribute__((address(0x006)));
+[v _PORTB `Vuc ~T0 @X0 0 e@6 ]
 [p mainexit ]
 "14 Lab2_18483.c
-[p x FOSC = XT ]
+[p x FOSC  =  XT         ]
 "15
-[p x WDTE = OFF ]
+[p x WDTE  =  OFF        ]
 "16
-[p x PWRTE = OFF ]
+[p x PWRTE  =  OFF       ]
 "17
-[p x MCLRE = OFF ]
+[p x MCLRE  =  OFF       ]
 "18
-[p x CP = OFF ]
+[p x CP  =  OFF          ]
 "19
-[p x CPD = OFF ]
+[p x CPD  =  OFF         ]
 "20
-[p x BOREN = OFF ]
+[p x BOREN  =  OFF       ]
 "21
-[p x IESO = OFF ]
+[p x IESO  =  OFF        ]
 "22
-[p x FCMEN = OFF ]
+[p x FCMEN  =  OFF       ]
 "23
-[p x LVP = OFF ]
+[p x LVP  =  OFF         ]
 "26
-[p x BOR4V = BOR40V ]
+[p x BOR4V  =  BOR40V    ]
 "27
-[p x WRT = OFF ]
+[p x WRT  =  OFF         ]
 "54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -258,17 +276,48 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
+"39 Lab2_18483.c
+[; ;Lab2_18483.c: 39: char Cont;
+[v _Cont `uc ~T0 @X0 1 e ]
+"45
+[; ;Lab2_18483.c: 45: void Setup(void) {
+[v _Setup `(v ~T0 @X0 1 ef ]
+{
+[e :U _Setup ]
+[f ]
+"46
+[; ;Lab2_18483.c: 46:     ANSEL = 0;
+[e = _ANSEL -> -> 0 `i `uc ]
+"47
+[; ;Lab2_18483.c: 47:     ANSELH = 0;
+[e = _ANSELH -> -> 0 `i `uc ]
+"48
+[; ;Lab2_18483.c: 48:     TRISA = 0b00000001;
+[e = _TRISA -> -> 1 `i `uc ]
+"49
+[; ;Lab2_18483.c: 49:     PORTA = 0;
+[e = _PORTA -> -> 0 `i `uc ]
+"50
+[; ;Lab2_18483.c: 50:     TRISB = 0b00000011;
+[e = _TRISB -> -> 3 `i `uc ]
+"51
+[; ;Lab2_18483.c: 51:     PORTB = 0;
+[e = _PORTB -> -> 0 `i `uc ]
+"53
+[; ;Lab2_18483.c: 53: }
+[e :UE 138 ]
+}
 [v $root$_main `(v ~T0 @X0 0 e ]
-"40 Lab2_18483.c
-[; ;Lab2_18483.c: 40: void main(void) {
+"57
+[; ;Lab2_18483.c: 57: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"41
-[; ;Lab2_18483.c: 41:     return;
-[e $UE 138  ]
-"42
-[; ;Lab2_18483.c: 42: }
-[e :UE 138 ]
+"58
+[; ;Lab2_18483.c: 58:     return;
+[e $UE 139  ]
+"59
+[; ;Lab2_18483.c: 59: }
+[e :UE 139 ]
 }

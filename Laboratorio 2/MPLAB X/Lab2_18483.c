@@ -32,8 +32,25 @@
 #include <xc.h>
 
 //Variables
-
+#define _XTAL_FREQ 8000000;
+#define RB1 PORTBbits.RB1
+#define RB0 PORTBbits.RB0
+#define RA0 PORTAbits.RA0
+char Cont;
 //Funciones
+void Setup(void);
+void __interrupt() inte(void);
+//
+
+void Setup(void) {
+    ANSEL = 0;
+    ANSELH = 0;
+    TRISA = 0b00000001;
+    PORTA = 0;
+    TRISB = 0b00000011;
+    PORTB = 0;
+
+}
 
 //
 

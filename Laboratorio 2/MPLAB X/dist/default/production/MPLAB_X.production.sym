@@ -1,14 +1,19 @@
 __S0 800 0 ABS 0
-__S1 0 0 ABS 0
+__S1 71 0 ABS 0
 __S2 0 0 ABS 0
 __S3 0 0 ABS 0
 __Hintentry 0 0 CODE 0
 __Lintentry 0 0 CODE 0
-_main 7F9 0 CODE 0
+_main 7F8 0 CODE 0
 ___sp 0 0 STACK 2
 btemp 7E 0 ABS 0
 start 0 0 CODE 0
+_TRISA 85 0 ABS 0
+_TRISB 86 0 ABS 0
+_PORTA 5 0 ABS 0
 reset_vec 0 0 CODE 0
+_PORTB 6 0 ABS 0
+_ANSEL 188 0 ABS 0
 wtemp0 7E 0 ABS 0
 __Hconfig 2009 0 CONFIG 4
 __Lconfig 0 0 CONFIG 4
@@ -21,6 +26,7 @@ __Lcommon 0 0 ABS 0
 __Heeprom_data 0 0 EEDATA 3
 __Leeprom_data 0 0 EEDATA 3
 ___int_sp 0 0 STACK 2
+_ANSELH 189 0 ABS 0
 __Habs1 0 0 ABS 0
 __Labs1 0 0 ABS 0
 __Hsfr0 0 0 ABS 0
@@ -36,7 +42,7 @@ __Hcode 0 0 ABS 0
 __Lcode 0 0 ABS 0
 __Hinit 0 0 CODE 0
 __Linit 0 0 CODE 0
-__end_of_main 7FC 0 CODE 0
+__end_of_main 7FB 0 CODE 0
 __Htext 0 0 ABS 0
 __Ltext 0 0 ABS 0
 end_of_initialization 7FC 0 CODE 0
@@ -61,17 +67,20 @@ __Hstack 0 0 STACK 2
 __Lstack 0 0 STACK 2
 __Hspace_0 800 0 ABS 0
 __Lspace_0 0 0 ABS 0
-__Hspace_1 0 0 ABS 0
+__Hspace_1 71 0 ABS 0
 __Lspace_1 0 0 ABS 0
 __Hspace_2 0 0 ABS 0
 __Lspace_2 0 0 ABS 0
 __Hcinit 800 0 CODE 0
-__Lcinit 7FC 0 CODE 0
+__Lcinit 7FB 0 CODE 0
 __Hspace_3 0 0 ABS 0
 __Lspace_3 0 0 ABS 0
 __size_of_main 0 0 ABS 0
 __Hspace_4 4010 0 ABS 0
 __Lspace_4 0 0 ABS 0
+__HbssCOMMON 0 0 ABS 0
+__LbssCOMMON 0 0 ABS 0
+__pbssCOMMON 70 0 COMMON 1
 __Hend_init 3 0 CODE 0
 __Lend_init 0 0 CODE 0
 __Hreset_vec 0 0 CODE 0
@@ -85,24 +94,26 @@ intlevel5 0 0 ENTRY 0
 __HcstackCOMMON 0 0 ABS 0
 __LcstackCOMMON 0 0 ABS 0
 __pcstackCOMMON 0 0 COMMON 1
-start_initialization 7FC 0 CODE 0
+start_initialization 7FB 0 CODE 0
 __Hmaintext 0 0 ABS 0
 __Lmaintext 0 0 ABS 0
-__pmaintext 7F9 0 CODE 0
-__initialization 7FC 0 CODE 0
+__pmaintext 7F8 0 CODE 0
+__initialization 7FB 0 CODE 0
 %segments
 reset_vec 0 5 CODE 0 0
-cinit FF8 FFF CODE FF8 0
-maintext FF2 FF7 CODE FF2 0
+cinit FF6 FFF CODE FF6 0
+bssCOMMON 70 70 COMMON 70 1
+maintext FF0 FF5 CODE FF0 0
 %locals
 dist/default/production\MPLAB_X.production.o
-C:\Users\galic\AppData\Local\Temp\smfg.s
-423 7FC 0 CODE 0
-426 7FC 0 CODE 0
-432 7FC 0 CODE 0
-434 7FC 0 CODE 0
-435 7FD 0 CODE 0
+C:\Users\galic\AppData\Local\Temp\sins.s
+435 7FB 0 CODE 0
+438 7FB 0 CODE 0
+449 7FB 0 CODE 0
+455 7FC 0 CODE 0
+457 7FC 0 CODE 0
+458 7FD 0 CODE 0
 Lab2_18483.c
-40 7F9 0 CODE 0
-41 7F9 0 CODE 0
-42 7F9 0 CODE 0
+57 7F8 0 CODE 0
+58 7F8 0 CODE 0
+59 7F8 0 CODE 0

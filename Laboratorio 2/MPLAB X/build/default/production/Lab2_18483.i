@@ -35,8 +35,8 @@ extern double __fpnormalize(double);
 
 
 
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\xc8debug.h" 1 3
-# 13 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\xc8debug.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\xc8debug.h" 1 3
+# 13 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\xc8debug.h" 3
 #pragma intrinsic(__builtin_software_breakpoint)
 extern void __builtin_software_breakpoint(void);
 # 24 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
@@ -2513,6 +2513,23 @@ extern __bank0 __bit __timeout;
 
 
 
+
+
+char Cont;
+
+void Setup(void);
+void __attribute__((picinterrupt(("")))) inte(void);
+
+
+void Setup(void) {
+    ANSEL = 0;
+    ANSELH = 0;
+    TRISA = 0b00000001;
+    PORTA = 0;
+    TRISB = 0b00000011;
+    PORTB = 0;
+
+}
 
 
 
