@@ -11,7 +11,7 @@
 // 'C' source line config statements
 
 // CONFIG1
-#pragma config FOSC = INTRC_NOCLKOUT        // Oscillator Selection bits (XT oscillator: Crystal/resonator on RA6/OSC2/CLKOUT and RA7/OSC1/CLKIN)
+#pragma config FOSC = XT        // Oscillator Selection bits (XT oscillator: Crystal/resonator on RA6/OSC2/CLKOUT and RA7/OSC1/CLKIN)
 #pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled and can be enabled by SWDTEN bit of the WDTCON register)
 #pragma config PWRTE = OFF      // Power-up Timer Enable bit (PWRT disabled)
 #pragma config MCLRE = OFF      // RE3/MCLR pin function select bit (RE3/MCLR pin function is digital input, MCLR internally tied to VDD)
@@ -31,13 +31,22 @@
 
 #include <xc.h>
 #include<stdint.h>
+//#include"ADC.h"
+//#include"multiplex.h"
 //Variables
-#define _XTAL_FREQ 8000000;
+#define _XTAL_FREQ 8000000
 #define RB1 PORTBbits.RB1
 #define RB0 PORTBbits.RB0
 #define RA0 PORTAbits.RA0
-char CONTL;
-char Cont;
+unsigned char var1;
+unsigned char CONTL;
+unsigned char Cont;
+unsigned char del;
+unsigned char der;
+unsigned char izq;
+unsigned char disp[16] = {0b00111111, 0b00000110, 0b01011011, 0b01001111,
+    0b01100110, 0b01101101, 0b01111101, 0b00000111, 0b01111111, 0b01101111, 0b01110111,
+    0b01111100, 0b00111001, 0b01011110, 0b01111001, 0b01110001};
 //Funciones
 void Setup(void);
 void __interrupt() inte(void);
@@ -46,7 +55,7 @@ void __interrupt() inte(void);
 //############################################
 
 void Setup(void) {
-    ANSEL = 0;
+    ANSEL = 0b00000001;
     ANSELH = 0;
     TRISA = 0b00000001;
     PORTA = 0;
@@ -54,15 +63,27 @@ void Setup(void) {
     PORTB = 0;
     TRISD = 0;
     PORTD = 0;
+    TRISE = 0;
+    PORTE = 0;
+    TRISC = 0;
+    PORTC = 0;
     //COSAS INTERRUPCIONES
     //ei();
     INTCONbits.GIE = 1;
     INTCONbits.RBIE = 1;
     INTCONbits.RBIF = 0;
     INTCONbits.PEIE = 1;
+    INTCONbits.T0IE = 1;
+    INTCONbits.T0IF = 0;
     IOCBbits.IOCB0 = 1;
     IOCBbits.IOCB1 = 1; // ENTRADA B1 Y B0
+    PIE1bits.ADIE = 1;
     CONTL = 0;
+    ADCON0 = 0b10000001;
+    ADCON1 = 0;
+    var1 = 0;
+    //OPTION_REG = 0b00000101; //1:32
+
 }
 //############################################
 //Interrupcion
@@ -78,12 +99,30 @@ void __interrupt() inte(void) {
         }
         INTCONbits.RBIF = 0;
     }
+    //parte 2 obtener el valor del ADC en una variable
+    if (ADCON0bits.GO == 0) {// reviso que el bit go done termine de convertir
+        var1 = ADRESH; //muevo los valores a una variable para luego usarlo
+        __delay_us(25);
+        PIR1bits.ADIF = 0;
+        ADCON0bits.GO_DONE = 1; //espero despues para poder realizar otra conversion
+    }
+
+    //restadc();
 }
 
 void main(void) {
     Setup();
+    __delay_us(25);
+    ADCON0bits.GO_DONE = 1;
+    PORTEbits.RE0 = 0;
     while (1) {
         PORTD = CONTL;
+        //ccomparacion para la alarma 
+        if (var1 <= CONTL) {
+            PORTEbits.RE0 = 0;
+        } else {
+            PORTEbits.RE0 = 1;
+        }
     }
     return;
 }

@@ -4,6 +4,8 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>ADC.h</itemPath>
+      <itemPath>multiplex.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -13,6 +15,8 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>Lab2_18483.c</itemPath>
+      <itemPath>ADC.c</itemPath>
+      <itemPath>multiplex.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -28,7 +32,7 @@
         <targetDevice>PIC16F887</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool></platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC8</languageToolchain>
         <languageToolchainVersion>2.31</languageToolchainVersion>
         <platform>3</platform>
