@@ -84,6 +84,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ADCON1 `Vuc ~T0 @X0 0 e@159 ]
 [t ~ __interrupt . k ]
 [t T2 __interrupt ]
+"420
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 420:     struct {
+[s S14 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S14 . RE0 RE1 RE2 RE3 ]
+"419
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 419: typedef union {
+[u S13 `S14 1 ]
+[n S13 . . ]
+"427
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 427: extern volatile PORTEbits_t PORTEbits __attribute__((address(0x009)));
+[v _PORTEbits `VS13 ~T0 @X0 0 e@9 ]
 "234
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 234:     struct {
 [s S8 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -137,17 +148,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 553: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x00C)));
 [v _PIR1bits `VS18 ~T0 @X0 0 e@12 ]
 [p mainexit ]
-"420
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 420:     struct {
-[s S14 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S14 . RE0 RE1 RE2 RE3 ]
-"419
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 419: typedef union {
-[u S13 `S14 1 ]
-[n S13 . . ]
-"427
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 427: extern volatile PORTEbits_t PORTEbits __attribute__((address(0x009)));
-[v _PORTEbits `VS13 ~T0 @X0 0 e@9 ]
 "14 Lab2_18483.c
 [p x FOSC  =  XT         ]
 "15
@@ -424,29 +424,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "46
 [; ;Lab2_18483.c: 46: unsigned char izq;
 [v _izq `uc ~T0 @X0 1 e ]
-"47
-[; ;Lab2_18483.c: 47: unsigned char disp[16] = {0b00111111, 0b00000110, 0b01011011, 0b01001111,
-[v _disp `uc ~T0 @X0 -> 16 `i e ]
-[i _disp
-:U ..
--> -> 63 `i `uc
--> -> 6 `i `uc
--> -> 91 `i `uc
--> -> 79 `i `uc
--> -> 102 `i `uc
--> -> 109 `i `uc
--> -> 125 `i `uc
--> -> 7 `i `uc
--> -> 127 `i `uc
--> -> 111 `i `uc
--> -> 119 `i `uc
--> -> 124 `i `uc
--> -> 57 `i `uc
--> -> 94 `i `uc
--> -> 121 `i `uc
--> -> 113 `i `uc
-..
-]
 "57
 [; ;Lab2_18483.c: 57: void Setup(void) {
 [v _Setup `(v ~T0 @X0 1 ef ]
@@ -540,81 +517,84 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _inte ]
 [f ]
 "93
-[; ;Lab2_18483.c: 93:     if (INTCONbits.RBIF == 1) {
+[; ;Lab2_18483.c: 93:     PORTEbits.RE0 = 0;
+[e = . . _PORTEbits 0 0 -> -> 0 `i `uc ]
+"94
+[; ;Lab2_18483.c: 94:     if (INTCONbits.RBIF == 1) {
 [e $ ! == -> . . _INTCONbits 0 0 `i -> 1 `i 140  ]
 {
-"95
-[; ;Lab2_18483.c: 95:         if (PORTBbits.RB1 == 1) {
+"96
+[; ;Lab2_18483.c: 96:         if (PORTBbits.RB1 == 1) {
 [e $ ! == -> . . _PORTBbits 0 1 `i -> 1 `i 141  ]
 {
-"96
-[; ;Lab2_18483.c: 96:             CONTL--;
-[e -- _CONTL -> -> 1 `i `uc ]
 "97
-[; ;Lab2_18483.c: 97:         } else if (PORTBbits.RB0 == 1) {
+[; ;Lab2_18483.c: 97:             CONTL--;
+[e -- _CONTL -> -> 1 `i `uc ]
+"98
+[; ;Lab2_18483.c: 98:         } else if (PORTBbits.RB0 == 1) {
 }
 [e $U 142  ]
 [e :U 141 ]
 [e $ ! == -> . . _PORTBbits 0 0 `i -> 1 `i 143  ]
 {
-"98
-[; ;Lab2_18483.c: 98:             CONTL++;
-[e ++ _CONTL -> -> 1 `i `uc ]
 "99
-[; ;Lab2_18483.c: 99:         }
+[; ;Lab2_18483.c: 99:             CONTL++;
+[e ++ _CONTL -> -> 1 `i `uc ]
+"100
+[; ;Lab2_18483.c: 100:         }
 }
 [e :U 143 ]
 [e :U 142 ]
-"100
-[; ;Lab2_18483.c: 100:         INTCONbits.RBIF = 0;
-[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
 "101
-[; ;Lab2_18483.c: 101:     }
+[; ;Lab2_18483.c: 101:         INTCONbits.RBIF = 0;
+[e = . . _INTCONbits 0 0 -> -> 0 `i `uc ]
+"102
+[; ;Lab2_18483.c: 102:     }
 }
 [e :U 140 ]
-"103
-[; ;Lab2_18483.c: 103:     if (ADCON0bits.GO == 0) {
+"104
+[; ;Lab2_18483.c: 104:     if (ADCON0bits.GO == 0) {
 [e $ ! == -> . . _ADCON0bits 1 1 `i -> 0 `i 144  ]
 {
-"104
-[; ;Lab2_18483.c: 104:         var1 = ADRESH;
-[e = _var1 _ADRESH ]
 "105
-[; ;Lab2_18483.c: 105:         _delay((unsigned long)((25)*(8000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 25 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;Lab2_18483.c: 105:         var1 = ADRESH;
+[e = _var1 _ADRESH ]
 "106
-[; ;Lab2_18483.c: 106:         PIR1bits.ADIF = 0;
-[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;Lab2_18483.c: 106:         _delay((unsigned long)((25)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 25 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
 "107
-[; ;Lab2_18483.c: 107:         ADCON0bits.GO_DONE = 1;
-[e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
+[; ;Lab2_18483.c: 107:         PIR1bits.ADIF = 0;
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
 "108
-[; ;Lab2_18483.c: 108:     }
+[; ;Lab2_18483.c: 108:         ADCON0bits.GO_DONE = 1;
+[e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
+"109
+[; ;Lab2_18483.c: 109:     }
 }
 [e :U 144 ]
-"111
-[; ;Lab2_18483.c: 111: }
+"110
+[; ;Lab2_18483.c: 110:     return;
+[e $UE 139  ]
+"112
+[; ;Lab2_18483.c: 112: }
 [e :UE 139 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"113
-[; ;Lab2_18483.c: 113: void main(void) {
+"114
+[; ;Lab2_18483.c: 114: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"114
-[; ;Lab2_18483.c: 114:     Setup();
-[e ( _Setup ..  ]
 "115
-[; ;Lab2_18483.c: 115:     _delay((unsigned long)((25)*(8000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 25 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;Lab2_18483.c: 115:     Setup();
+[e ( _Setup ..  ]
 "116
-[; ;Lab2_18483.c: 116:     ADCON0bits.GO_DONE = 1;
-[e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
+[; ;Lab2_18483.c: 116:     _delay((unsigned long)((25)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 25 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
 "117
-[; ;Lab2_18483.c: 117:     PORTEbits.RE0 = 0;
-[e = . . _PORTEbits 0 0 -> -> 0 `i `uc ]
+[; ;Lab2_18483.c: 117:     ADCON0bits.GO_DONE = 1;
+[e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
 "118
 [; ;Lab2_18483.c: 118:     while (1) {
 [e :U 147 ]
@@ -627,8 +607,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! <= -> _var1 `i -> _CONTL `i 149  ]
 {
 "122
-[; ;Lab2_18483.c: 122:             PORTEbits.RE0 = 0;
-[e = . . _PORTEbits 0 0 -> -> 0 `i `uc ]
+[; ;Lab2_18483.c: 122:             PORTE = 0b00000001;
+[e = _PORTE -> -> 1 `i `uc ]
 "123
 [; ;Lab2_18483.c: 123:         } else {
 }
@@ -636,8 +616,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U 149 ]
 {
 "124
-[; ;Lab2_18483.c: 124:             PORTEbits.RE0 = 1;
-[e = . . _PORTEbits 0 0 -> -> 1 `i `uc ]
+[; ;Lab2_18483.c: 124:             PORTE = 0b00000000;
+[e = _PORTE -> -> 0 `i `uc ]
 "125
 [; ;Lab2_18483.c: 125:         }
 }

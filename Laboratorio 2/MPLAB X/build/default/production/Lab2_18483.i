@@ -2657,9 +2657,9 @@ unsigned char Cont;
 unsigned char del;
 unsigned char der;
 unsigned char izq;
-unsigned char disp[16] = {0b00111111, 0b00000110, 0b01011011, 0b01001111,
-    0b01100110, 0b01101101, 0b01111101, 0b00000111, 0b01111111, 0b01101111, 0b01110111,
-    0b01111100, 0b00111001, 0b01011110, 0b01111001, 0b01110001};
+
+
+
 
 void Setup(void);
 void __attribute__((picinterrupt(("")))) inte(void);
@@ -2703,6 +2703,7 @@ void Setup(void) {
 
 
 void __attribute__((picinterrupt(("")))) inte(void) {
+    PORTEbits.RE0 = 0;
     if (INTCONbits.RBIF == 1) {
 
         if (PORTBbits.RB1 == 1) {
@@ -2719,7 +2720,7 @@ void __attribute__((picinterrupt(("")))) inte(void) {
         PIR1bits.ADIF = 0;
         ADCON0bits.GO_DONE = 1;
     }
-
+    return;
 
 }
 
@@ -2727,14 +2728,13 @@ void main(void) {
     Setup();
     _delay((unsigned long)((25)*(8000000/4000000.0)));
     ADCON0bits.GO_DONE = 1;
-    PORTEbits.RE0 = 0;
     while (1) {
         PORTD = CONTL;
 
         if (var1 <= CONTL) {
-            PORTEbits.RE0 = 0;
+            PORTE = 0b00000001;
         } else {
-            PORTEbits.RE0 = 1;
+            PORTE = 0b00000000;
         }
     }
     return;
