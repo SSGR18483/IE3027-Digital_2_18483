@@ -6,10 +6,13 @@
  */
 
 
-#include <xc.h>
 
-void main(void) {
+#include"INT.h"
+void intr(void) {
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
+    PIE1bits.RCIE = 1;
+    
+    
     return;
 }
