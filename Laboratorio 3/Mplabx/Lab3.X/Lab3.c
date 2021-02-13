@@ -22,6 +22,6 @@ void main(void) {
     __delay_us(25);
     Lcd_Init();
     __delay_ms(11);
-    Lcd_Write_String("hola mundo");
+    Lcd_Write_String("EMILIO ES MARIK");
 
 }

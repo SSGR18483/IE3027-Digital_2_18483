@@ -12,6 +12,7 @@ void setup(void) {
     ANSEL = 0b00000011;
     ANSELH = 0;
     TRISA = 0b000000011;
+    TRISE =0;
     TRISB = 0;
     TRISC = 0;
     TRISD = 0;
@@ -19,6 +20,7 @@ void setup(void) {
     PORTB = 0;
     PORTC = 0;
     PORTD = 0;
+    PORTE = 0;
 
 
     return;

@@ -68,7 +68,7 @@ Lcd_Clear()
 
 void Lcd_Set_Cursor(char a, char b)
 {
-	char temp,z,y;
+	char temp;//,z,y;
 	if(a == 1)
 	{
 	  temp = 0x80 + b - 1;
@@ -97,16 +97,16 @@ void Lcd_Init()
 	__delay_ms(15);
   Lcd_Cmd(0x30);
   /////////////////////////////////////////////////////
-  Lcd_Cmd(0x3C);
-  Lcd_Cmd(0x08);
+  Lcd_Cmd(0x30);
+  Lcd_Cmd(0x0C);
   Lcd_Cmd(0x01); // cmd de 8 bits
-  Lcd_Cmd(0x07);
+  Lcd_Cmd(0x06);
 }
 
 void Lcd_Write_Char(char a)
 {
-   //char temp,y;
-   //temp = a&0x0F;
+   char temp;//,y;
+   temp = a&0xFF;
    //y = a&0xF0;
     //a= a&0xFF;
    RS = 1;             // => RS = 1
@@ -114,8 +114,8 @@ void Lcd_Write_Char(char a)
    //EN = 1;
    //__delay_us(40);
    //EN = 0;
-   Lcd_Port(a);
-   //Lcd_Port(temp);
+   //Lcd_Port(a);
+   Lcd_Port(temp);
    EN = 1;
    __delay_us(40);
    EN = 0;
