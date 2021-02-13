@@ -236,7 +236,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "8 confb.c
 [p x FOSC = EXTRC_CLKOUT ]
 "9
-[p x WDTE = ON ]
+[p x WDTE = OFF ]
 "10
 [p x PWRTE = OFF ]
 "11
@@ -246,7 +246,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "13
 [p x CPD = OFF ]
 "14
-[p x BOREN = OFF ]
+[p x BOREN = ON ]
 "15
 [p x IESO = OFF ]
 "16

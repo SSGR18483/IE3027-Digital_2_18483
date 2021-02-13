@@ -21,6 +21,7 @@ void main(void) {
     ADCL_con();
     __delay_us(25);
     Lcd_Init();
+    __delay_ms(11);
     Lcd_Write_String("hola mundo");
 
 }

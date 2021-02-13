@@ -13,11 +13,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "92 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
 [v __delay `JF1256 ~T0 @X0 0 e ]
 [p i __delay ]
-"27 ./lcd.h
-[; ;./lcd.h: 27: void Lcd_Init();
+"31 ./lcd.h
+[; ;./lcd.h: 31: void Lcd_Init();
 [v _Lcd_Init `(v ~T0 @X0 0 e? ]
-"29
-[; ;./lcd.h: 29: void Lcd_Write_String(char *a);
+"33
+[; ;./lcd.h: 33: void Lcd_Write_String(char *a);
 [v _Lcd_Write_String `(v ~T0 @X0 0 ef1`*uc ]
 "54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 54: __asm("INDF equ 00h");
@@ -276,10 +276,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;Lab3.c: 23:     Lcd_Init();
 [e ( _Lcd_Init ..  ]
 "24
-[; ;Lab3.c: 24:     Lcd_Write_String("hola mundo");
+[; ;Lab3.c: 24:     _delay((unsigned long)((11)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 11 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"25
+[; ;Lab3.c: 25:     Lcd_Write_String("hola mundo");
 [e ( _Lcd_Write_String (1 :s 1C ]
-"26
-[; ;Lab3.c: 26: }
+"27
+[; ;Lab3.c: 27: }
 [e :UE 138 ]
 }
 [a 1C 104 111 108 97 32 109 117 110 100 111 0 ]

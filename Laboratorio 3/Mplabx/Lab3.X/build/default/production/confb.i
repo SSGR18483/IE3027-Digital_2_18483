@@ -2499,12 +2499,12 @@ extern __bank0 __bit __timeout;
 
 
 #pragma config FOSC = EXTRC_CLKOUT
-#pragma config WDTE = ON
+#pragma config WDTE = OFF
 #pragma config PWRTE = OFF
 #pragma config MCLRE = OFF
 #pragma config CP = OFF
 #pragma config CPD = OFF
-#pragma config BOREN = OFF
+#pragma config BOREN = ON
 #pragma config IESO = OFF
 #pragma config FCMEN = OFF
 #pragma config LVP = OFF

@@ -2654,7 +2654,7 @@ void setup(void);
 # 14 "Lab3.c" 2
 
 # 1 "./lcd.h" 1
-# 24 "./lcd.h"
+# 28 "./lcd.h"
 void Lcd_Port(char a);
 void Lcd_Cmd(char a);
 void Lcd_Set_Cursor(char a, char b);
@@ -2673,6 +2673,7 @@ void main(void) {
     ADCL_con();
     _delay((unsigned long)((25)*(8000000/4000000.0)));
     Lcd_Init();
+    _delay((unsigned long)((11)*(8000000/4000.0)));
     Lcd_Write_String("hola mundo");
 
 }
