@@ -9,6 +9,7 @@
       <itemPath>CONFIG.h</itemPath>
       <itemPath>timer0.h</itemPath>
       <itemPath>confb.h</itemPath>
+      <itemPath>EUSCON.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -23,6 +24,7 @@
         <itemPath>INT.c</itemPath>
         <itemPath>CONFIG.c</itemPath>
         <itemPath>confb.c</itemPath>
+        <itemPath>EUSCON.c</itemPath>
       </logicalFolder>
       <itemPath>Lab3.c</itemPath>
     </logicalFolder>

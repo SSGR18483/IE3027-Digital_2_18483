@@ -8,11 +8,13 @@
 
 
 #include"INT.h"
+
 void intr(void) {
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
     PIE1bits.RCIE = 1;
+    PIE1bits.TXIE = 1;
     
-    
+
     return;
 }
