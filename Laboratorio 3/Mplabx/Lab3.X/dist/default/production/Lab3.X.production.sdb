@@ -35,22 +35,22 @@
 [v _setup setup `(v  1 e 1 0 ]
 "11 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\INT.c
 [v _intr intr `(v  1 e 1 0 ]
-"29 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\Lab3.c
+"31 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\Lab3.c
 [v _intac intac `II(v  1 e 1 0 ]
 "51
 [v _main main `(v  1 e 1 0 ]
-"15 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\LCD.c
-[v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
-"54
-[v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
+"22 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\LCD.c
+[v _LCD_Initialize LCD_Initialize `(v  1 e 1 0 ]
+"48
+[v _LCDWrite LCDWrite `(v  1 e 1 0 ]
 "69
-[v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
-"90
-[v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
-"106
-[v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
-"124
-[v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
+[v _LCDChar LCDChar `(v  1 e 1 0 ]
+"77
+[v _LCDCmd LCDCmd `(v  1 e 1 0 ]
+"85
+[v _LCDStr LCDStr `(v  1 e 1 0 ]
+"97
+[v _LCDGoto LCDGoto `(v  1 e 1 0 ]
 "166 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
 "228
@@ -61,7 +61,15 @@
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
 "414
 [v _PORTE PORTE `VEuc  1 e 1 @9 ]
-[s S81 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S64 . 1 `uc 1 RE0 1 0 :1:0 
+`uc 1 RE1 1 0 :1:1 
+`uc 1 RE2 1 0 :1:2 
+`uc 1 RE3 1 0 :1:3 
+]
+"427
+[u S69 . 1 `S64 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES69  1 e 1 @9 ]
+[s S98 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -71,14 +79,14 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "482
-[s S90 . 1 `uc 1 . 1 0 :2:0 
+[s S107 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
-[u S95 . 1 `S81 1 . 1 0 `S90 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES95  1 e 1 @11 ]
-[s S195 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S112 . 1 `S98 1 . 1 0 `S107 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES112  1 e 1 @11 ]
+[s S210 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -87,19 +95,19 @@
 `uc 1 ADIF 1 0 :1:6 
 ]
 "553
-[u S203 . 1 `S195 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES203  1 e 1 @12 ]
+[u S218 . 1 `S210 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES218  1 e 1 @12 ]
 "1238
 [v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
 "1245
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
-[s S146 . 1 `uc 1 ADON 1 0 :1:0 
+[s S163 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 `uc 1 ADCS 1 0 :2:6 
 ]
 "1276
-[s S151 . 1 `uc 1 . 1 0 :1:0 
+[s S168 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -108,14 +116,14 @@
 `uc 1 ADCS0 1 0 :1:6 
 `uc 1 ADCS1 1 0 :1:7 
 ]
-[s S160 . 1 `uc 1 . 1 0 :1:0 
+[s S177 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S163 . 1 `uc 1 . 1 0 :1:0 
+[s S180 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[u S166 . 1 `S146 1 . 1 0 `S151 1 . 1 0 `S160 1 . 1 0 `S163 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES166  1 e 1 @31 ]
+[u S183 . 1 `S163 1 . 1 0 `S168 1 . 1 0 `S177 1 . 1 0 `S180 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES183  1 e 1 @31 ]
 "1416
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1478
@@ -143,32 +151,34 @@
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 "3449
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
-"4205
-[v _RE0 RE0 `VEb  1 e 0 @72 ]
-"4208
-[v _RE1 RE1 `VEb  1 e 0 @73 ]
 "358 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\doprnt.c
 [v _dpowers dpowers `DC[5]ui  1 s 10 dpowers ]
 "18 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\Lab3.c
 [v _buffer buffer `[20]uc  1 e 20 0 ]
 "19
+[v _buffer2 buffer2 `[20]uc  1 e 20 0 ]
+"20
 [v _cons cons `i  1 e 2 0 ]
-"21
-[v _voltage1 voltage1 `f  1 e 4 0 ]
 "22
-[v _voltage_int1 voltage_int1 `i  1 e 2 0 ]
+[v _voltage1 voltage1 `f  1 e 4 0 ]
 "23
-[v _voltage2 voltage2 `f  1 e 4 0 ]
+[v _voltage_int1 voltage_int1 `i  1 e 2 0 ]
 "24
-[v _voltage_int2 voltage_int2 `i  1 e 2 0 ]
+[v _voltage2 voltage2 `f  1 e 4 0 ]
 "25
-[v _digits digits `[2]uc  1 e 2 0 ]
+[v _voltage_int2 voltage_int2 `i  1 e 2 0 ]
 "26
+[v _digits digits `[3]uc  1 e 3 0 ]
+"27
+[v _digits2 digits2 `[3]uc  1 e 3 0 ]
+"28
 [v _i i `i  1 e 2 0 ]
+"29
+[v _fla fla `i  1 e 2 0 ]
 "51
 [v _main main `(v  1 e 1 0 ]
 {
-"81
+"89
 } 0
 "505 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
@@ -236,17 +246,17 @@
 "8 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S564 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S585 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S569 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S572 . 4 `l 1 i 4 0 `d 1 f 4 0 `S564 1 fAsBytes 4 0 `S569 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S572  1 a 4 36 ]
+[s S590 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S593 . 4 `l 1 i 4 0 `d 1 f 4 0 `S585 1 fAsBytes 4 0 `S590 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S593  1 a 4 36 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 30 ]
-[s S641 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S662 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S644 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S641 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S644  1 a 2 40 ]
+[u S665 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S662 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S665  1 a 2 40 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 35 ]
 "11
@@ -316,72 +326,62 @@
 [v ___awdiv@dividend dividend `i  1 p 2 9 ]
 "41
 } 0
-"124 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\LCD.c
-[v _Lcd_Write_String Lcd_Write_String `(v  1 e 1 0 ]
+"22 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\LCD.c
+[v _LCD_Initialize LCD_Initialize `(v  1 e 1 0 ]
 {
-[v Lcd_Write_String@a a `*.4uc  1 a 1 wreg ]
-"126
-[v Lcd_Write_String@i i `i  1 a 2 12 ]
-"124
-[v Lcd_Write_String@a a `*.4uc  1 a 1 wreg ]
-"127
-[v Lcd_Write_String@a a `*.4uc  1 a 1 14 ]
-"129
+"45
 } 0
-"106
-[v _Lcd_Write_Char Lcd_Write_Char `(v  1 e 1 0 ]
+"85
+[v _LCDStr LCDStr `(v  1 e 1 0 ]
 {
-[v Lcd_Write_Char@a a `uc  1 a 1 wreg ]
-"108
-[v Lcd_Write_Char@temp temp `uc  1 a 1 10 ]
-"106
-[v Lcd_Write_Char@a a `uc  1 a 1 wreg ]
-"109
-[v Lcd_Write_Char@a a `uc  1 a 1 9 ]
-"122
+"86
+[v LCDStr@i i `uc  1 a 1 14 ]
+"85
+[v LCDStr@str str `*.26DCuc  1 p 2 12 ]
+"95
 } 0
 "69
-[v _Lcd_Set_Cursor Lcd_Set_Cursor `(v  1 e 1 0 ]
+[v _LCDChar LCDChar `(v  1 e 1 0 ]
 {
-[v Lcd_Set_Cursor@a a `uc  1 a 1 wreg ]
-"71
-[v Lcd_Set_Cursor@temp temp `uc  1 a 1 13 ]
-"69
-[v Lcd_Set_Cursor@a a `uc  1 a 1 wreg ]
-[v Lcd_Set_Cursor@b b `uc  1 p 1 11 ]
-"72
-[v Lcd_Set_Cursor@a a `uc  1 a 1 12 ]
-"88
+[v LCDChar@ch ch `uc  1 a 1 wreg ]
+[v LCDChar@ch ch `uc  1 a 1 wreg ]
+[v LCDChar@ch ch `uc  1 a 1 11 ]
+"74
 } 0
-"90
-[v _Lcd_Init Lcd_Init `(v  1 e 1 0 ]
+"97
+[v _LCDGoto LCDGoto `(v  1 e 1 0 ]
 {
-"104
+[v LCDGoto@pos pos `uc  1 a 1 wreg ]
+[v LCDGoto@pos pos `uc  1 a 1 wreg ]
+[v LCDGoto@ln ln `uc  1 p 1 12 ]
+"99
+[v LCDGoto@pos pos `uc  1 a 1 17 ]
+"110
 } 0
-"54
-[v _Lcd_Cmd Lcd_Cmd `(v  1 e 1 0 ]
+"77
+[v _LCDCmd LCDCmd `(v  1 e 1 0 ]
 {
-[v Lcd_Cmd@a a `uc  1 a 1 wreg ]
-[v Lcd_Cmd@a a `uc  1 a 1 wreg ]
-"56
-[v Lcd_Cmd@a a `uc  1 a 1 10 ]
-"61
+[v LCDCmd@ch ch `uc  1 a 1 wreg ]
+[v LCDCmd@ch ch `uc  1 a 1 wreg ]
+[v LCDCmd@ch ch `uc  1 a 1 11 ]
+"82
 } 0
-"15
-[v _Lcd_Port Lcd_Port `(v  1 e 1 0 ]
+"48
+[v _LCDWrite LCDWrite `(v  1 e 1 0 ]
 {
-[v Lcd_Port@a a `uc  1 a 1 wreg ]
-[v Lcd_Port@a a `uc  1 a 1 wreg ]
-"17
-[v Lcd_Port@a a `uc  1 a 1 7 ]
-"53
+[v LCDWrite@ch ch `uc  1 a 1 wreg ]
+[v LCDWrite@ch ch `uc  1 a 1 wreg ]
+[v LCDWrite@rs rs `uc  1 p 1 7 ]
+"51
+[v LCDWrite@ch ch `uc  1 a 1 8 ]
+"67
 } 0
 "10 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\adc.c
 [v _ADCL_con ADCL_con `(v  1 e 1 0 ]
 {
 "17
 } 0
-"29 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\Lab3.c
+"31 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\Lab3.c
 [v _intac intac `II(v  1 e 1 0 ]
 {
 "49

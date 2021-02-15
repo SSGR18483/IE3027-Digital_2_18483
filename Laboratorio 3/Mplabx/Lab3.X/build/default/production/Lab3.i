@@ -2654,19 +2654,9 @@ void setup(void);
 # 14 "Lab3.c" 2
 
 # 1 "./lcd.h" 1
-# 28 "./lcd.h"
-void Lcd_Init();
-void Lcd_Port(char a);
-void Lcd_Cmd(char a);
-void Lcd_Set_Cursor(char a, char b);
-void Lcd_Write_Char(char a);
-void Lcd_Write_String(char *a);
-void Lcd_Shift_Right();
-void Lcd_Shift_Left();
-# 15 "Lab3.c" 2
-
+# 29 "./lcd.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
-# 16 "Lab3.c" 2
+# 29 "./lcd.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdio.h" 1 3
 
@@ -2765,22 +2755,41 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 #pragma printf_check(sprintf) const
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
-# 17 "Lab3.c" 2
+# 30 "./lcd.h" 2
+# 99 "./lcd.h"
+void LCD_Initialize(void);
+# 117 "./lcd.h"
+void LCDChar(uint8_t ch);
+# 135 "./lcd.h"
+void LCDCmd(uint8_t ch);
+# 153 "./lcd.h"
+void LCDStr(const char *);
+# 171 "./lcd.h"
+void LCDWrite(uint8_t ch,uint8_t rs);
+# 193 "./lcd.h"
+void LCDGoto(uint8_t pos, uint8_t ln);
+# 15 "Lab3.c" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
+# 16 "Lab3.c" 2
+
 
 char buffer[20];
+char buffer2[20];
 int cons;
 unsigned char var1;
 float voltage1;
 int voltage_int1;
 float voltage2;
 int voltage_int2;
-char digits[2];
+char digits[3];
+char digits2[3];
 int i;
-
+int fla;
 
 void __attribute__((picinterrupt(("")))) intac(void) {
 
-
+    fla =1;
     if (ADCON0bits.GO_DONE == 0) {
 
         if (cons == 0) {
@@ -2788,10 +2797,8 @@ void __attribute__((picinterrupt(("")))) intac(void) {
         } else if (cons == 1) {
             voltage2 = ADRESH;
         }
-        _delay((unsigned long)((25)*(8000000/4000000.0)));
+        cons++;
         PIR1bits.ADIF = 0;
-        ADCON0bits.GO_DONE = 1;
-
         if (cons == 2) {
             cons = 0;
         }
@@ -2805,29 +2812,37 @@ void main(void) {
     cons = 0;
     intr();
     _delay((unsigned long)((25)*(8000000/4000000.0)));
-    Lcd_Init();
-    _delay((unsigned long)((11)*(8000000/4000.0)));
+    LCD_Initialize();
     ADCL_con();
     ADCON0bits.GO_DONE = 1;
+    LCDGoto(0, 0);
+    LCDStr(" S1:   S2:   S3: ");
     while (1) {
-        if (cons == 0) {
-            voltage_int1 = (uint16_t) (((voltage1 * 500) / 255));
-            for (i = 0; i < 3; i++) {
-                digits[i] = (char) (voltage_int1 % 10);
-                voltage_int1 /= 10;
+        if (fla==1){
+            fla=0;
+            _delay((unsigned long)((25)*(8000000/4000000.0)));
+
+            ADCON0bits.GO_DONE = 1;
+            if (cons == 0) {
+                voltage_int1 = (uint16_t) (((voltage1 * 500) / 255));
+                for (i = 0; i < 3; i++) {
+                    digits[i] = (char) (voltage_int1 % 10);
+                    voltage_int1 /= 10;
+                }
+                LCDGoto(0, 1);
+                sprintf(buffer, "%i.%i%iV", digits[2], digits[1], digits[0]);
+                LCDStr(buffer);
+            } else if (cons == 1) {
+                voltage_int2 = (uint16_t) (((voltage2 * 500) / 255));
+                for (i = 0; i < 3; i++) {
+                    digits2[i] = (char) (voltage_int2 % 10);
+                    voltage_int2 /= 10;
+                }
+                LCDGoto(7, 1);
+                sprintf(buffer2, "%i.%i%iV", digits2[2], digits2[1], digits2[0]);
+                LCDStr(buffer2);
             }
-            Lcd_Set_Cursor(1,1);
-            sprintf(buffer, "%i.%i%iV", digits[2], digits[1], digits[0]);
-            Lcd_Write_String(buffer);
-        } else if (cons == 1) {
-            voltage_int2 = (uint16_t) (((voltage2 * 500) / 255));
-            for (i = 0; i < 3; i++) {
-                digits[i] = (char) (voltage_int1 % 10);
-                voltage_int2 /= 10;
-            }
-            Lcd_Set_Cursor(2, 7);
-            sprintf(buffer, "%i.%i%iV", digits[2], digits[1], digits[0]);
-            Lcd_Write_String(buffer);
+
         }
     }
 }
