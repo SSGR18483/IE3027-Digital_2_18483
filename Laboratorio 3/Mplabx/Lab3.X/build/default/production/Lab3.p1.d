@@ -4,4 +4,5 @@ confb.h  \
 INT.h  \
 adc.h  \
 CONFIG.h  \
-lcd.h 
+lcd.h  \
+EUSCON.h 

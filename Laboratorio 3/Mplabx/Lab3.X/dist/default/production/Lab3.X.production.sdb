@@ -5,6 +5,8 @@
 [d frameptr 0 ]
 "10 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\adc.c
 [v _ADCL_con ADCL_con `(v  1 e 1 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
 "5 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 "5 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\awmod.c
@@ -13,6 +15,8 @@
 [v _sprintf sprintf `(i  1 e 2 0 ]
 "43 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
+"8 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
 "5 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 "5 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\lwmod.c
@@ -23,6 +27,8 @@
 [v ___fldiv __fldiv `(d  1 e 4 0 ]
 "8 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
+"15 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
@@ -33,11 +39,13 @@
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
 "11 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\CONFIG.c
 [v _setup setup `(v  1 e 1 0 ]
-"11 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\INT.c
+"4 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\EUSCON.c
+[v _CONUSART CONUSART `(v  1 e 1 0 ]
+"12 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\INT.c
 [v _intr intr `(v  1 e 1 0 ]
-"31 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\Lab3.c
+"37 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\Lab3.c
 [v _intac intac `II(v  1 e 1 0 ]
-"51
+"75
 [v _main main `(v  1 e 1 0 ]
 "22 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\LCD.c
 [v _LCD_Initialize LCD_Initialize `(v  1 e 1 0 ]
@@ -55,8 +63,6 @@
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
 "228
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
-"290
-[v _PORTC PORTC `VEuc  1 e 1 @7 ]
 "352
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
 "414
@@ -86,7 +92,7 @@
 ]
 [u S112 . 1 `S98 1 . 1 0 `S107 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES112  1 e 1 @11 ]
-[s S210 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[s S161 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -95,19 +101,25 @@
 `uc 1 ADIF 1 0 :1:6 
 ]
 "553
-[u S218 . 1 `S210 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES218  1 e 1 @12 ]
+[u S169 . 1 `S161 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES169  1 e 1 @12 ]
+"1038
+[v _RCSTA RCSTA `VEuc  1 e 1 @24 ]
+"1133
+[v _TXREG TXREG `VEuc  1 e 1 @25 ]
+"1140
+[v _RCREG RCREG `VEuc  1 e 1 @26 ]
 "1238
 [v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
 "1245
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
-[s S163 . 1 `uc 1 ADON 1 0 :1:0 
+[s S181 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 `uc 1 ADCS 1 0 :2:6 
 ]
 "1276
-[s S168 . 1 `uc 1 . 1 0 :1:0 
+[s S186 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -116,20 +128,18 @@
 `uc 1 ADCS0 1 0 :1:6 
 `uc 1 ADCS1 1 0 :1:7 
 ]
-[s S177 . 1 `uc 1 . 1 0 :1:0 
+[s S195 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S180 . 1 `uc 1 . 1 0 :1:0 
+[s S198 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[u S183 . 1 `S163 1 . 1 0 `S168 1 . 1 0 `S177 1 . 1 0 `S180 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES183  1 e 1 @31 ]
+[u S201 . 1 `S181 1 . 1 0 `S186 1 . 1 0 `S195 1 . 1 0 `S198 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES201  1 e 1 @31 ]
 "1416
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1478
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
-"1540
-[v _TRISC TRISC `VEuc  1 e 1 @135 ]
 "1602
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
 "1664
@@ -145,127 +155,174 @@
 "1718
 [u S30 . 1 `S22 1 . 1 0 ]
 [v _PIE1bits PIE1bits `VES30  1 e 1 @140 ]
+"2556
+[v _TXSTA TXSTA `VEuc  1 e 1 @152 ]
+"2642
+[v _SPBRG SPBRG `VEuc  1 e 1 @153 ]
 "2977
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
+[s S300 . 1 `uc 1 ABDEN 1 0 :1:0 
+`uc 1 WUE 1 0 :1:1 
+`uc 1 . 1 0 :1:2 
+`uc 1 BRG16 1 0 :1:3 
+`uc 1 SCKP 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 RCIDL 1 0 :1:6 
+`uc 1 ABDOVF 1 0 :1:7 
+]
+"3352
+[u S309 . 1 `S300 1 . 1 0 ]
+[v _BAUDCTLbits BAUDCTLbits `VES309  1 e 1 @391 ]
 "3387
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 "3449
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
 "358 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\doprnt.c
 [v _dpowers dpowers `DC[5]ui  1 s 10 dpowers ]
-"18 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\Lab3.c
+"19 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\Lab3.c
 [v _buffer buffer `[20]uc  1 e 20 0 ]
-"19
-[v _buffer2 buffer2 `[20]uc  1 e 20 0 ]
 "20
+[v _buffer2 buffer2 `[20]uc  1 e 20 0 ]
+"21
 [v _cons cons `i  1 e 2 0 ]
-"22
-[v _voltage1 voltage1 `f  1 e 4 0 ]
 "23
-[v _voltage_int1 voltage_int1 `i  1 e 2 0 ]
+[v _voltage1 voltage1 `f  1 e 4 0 ]
 "24
-[v _voltage2 voltage2 `f  1 e 4 0 ]
+[v _voltage_int1 voltage_int1 `i  1 e 2 0 ]
 "25
-[v _voltage_int2 voltage_int2 `i  1 e 2 0 ]
+[v _voltage2 voltage2 `f  1 e 4 0 ]
 "26
-[v _digits digits `[3]uc  1 e 3 0 ]
+[v _voltage_int2 voltage_int2 `i  1 e 2 0 ]
 "27
-[v _digits2 digits2 `[3]uc  1 e 3 0 ]
+[v _digitos digitos `[3]uc  1 e 3 0 ]
 "28
-[v _i i `i  1 e 2 0 ]
+[v _digitos2 digitos2 `[3]uc  1 e 3 0 ]
 "29
+[v _i i `i  1 e 2 0 ]
+"30
 [v _fla fla `i  1 e 2 0 ]
-"51
+"31
+[v _datos datos `[20]uc  1 e 20 0 ]
+"32
+[v _incre incre `i  1 e 2 0 ]
+"33
+[v _incre2 incre2 `i  1 e 2 0 ]
+"34
+[v _leer leer `uc  1 e 1 0 ]
+"35
+[v _datos2 datos2 `[20]uc  1 e 20 0 ]
+"75
 [v _main main `(v  1 e 1 0 ]
 {
-"89
+"117
 } 0
 "505 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
+[v sprintf@sp sp `*.5uc  1 a 1 wreg ]
+"514
+[v sprintf@width width `i  1 a 2 43 ]
 "545
-[v sprintf@val val `ui  1 a 2 32 ]
+[v sprintf@val val `ui  1 a 2 41 ]
 "512
-[v sprintf@c c `uc  1 a 1 35 ]
-"521
-[v sprintf@prec prec `c  1 a 1 31 ]
+[v sprintf@c c `uc  1 a 1 46 ]
 "525
-[v sprintf@flag flag `uc  1 a 1 30 ]
+[v sprintf@flag flag `uc  1 a 1 40 ]
+"521
+[v sprintf@prec prec `c  1 a 1 39 ]
 "507
-[v sprintf@ap ap `[1]*.4v  1 a 1 29 ]
+[v sprintf@ap ap `[1]*.4v  1 a 1 38 ]
 "505
-[v sprintf@sp sp `*.4uc  1 a 1 wreg ]
-[v sprintf@f f `*.24DCuc  1 p 1 19 ]
+[v sprintf@sp sp `*.5uc  1 a 1 wreg ]
+[v sprintf@f f `*.24DCuc  1 p 1 20 ]
 "550
-[v sprintf@sp sp `*.4uc  1 a 1 34 ]
+[v sprintf@sp sp `*.5uc  1 a 1 45 ]
 "1567
+} 0
+"8 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\isdigit.c
+[v _isdigit isdigit `(b  1 e 0 0 ]
+{
+[v isdigit@c c `uc  1 a 1 wreg ]
+[v isdigit@c c `uc  1 a 1 wreg ]
+"14
+[v isdigit@c c `uc  1 a 1 9 ]
+"15
+} 0
+"15 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\Umul16.c
+[v ___wmul __wmul `(ui  1 e 2 0 ]
+{
+"17
+[v ___wmul@product product `ui  1 a 2 12 ]
+"15
+[v ___wmul@multiplier multiplier `ui  1 p 2 8 ]
+[v ___wmul@multiplicand multiplicand `ui  1 p 2 10 ]
+"53
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\lwmod.c
 [v ___lwmod __lwmod `(ui  1 e 2 0 ]
 {
 "10
-[v ___lwmod@counter counter `uc  1 a 1 18 ]
+[v ___lwmod@counter counter `uc  1 a 1 19 ]
 "5
-[v ___lwmod@divisor divisor `ui  1 p 2 14 ]
-[v ___lwmod@dividend dividend `ui  1 p 2 16 ]
+[v ___lwmod@divisor divisor `ui  1 p 2 15 ]
+[v ___lwmod@dividend dividend `ui  1 p 2 17 ]
 "25
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\lwdiv.c
 [v ___lwdiv __lwdiv `(ui  1 e 2 0 ]
 {
 "10
-[v ___lwdiv@quotient quotient `ui  1 a 2 11 ]
+[v ___lwdiv@quotient quotient `ui  1 a 2 12 ]
 "11
-[v ___lwdiv@counter counter `uc  1 a 1 13 ]
+[v ___lwdiv@counter counter `uc  1 a 1 14 ]
 "5
-[v ___lwdiv@divisor divisor `ui  1 p 2 7 ]
-[v ___lwdiv@dividend dividend `ui  1 p 2 9 ]
+[v ___lwdiv@divisor divisor `ui  1 p 2 8 ]
+[v ___lwdiv@dividend dividend `ui  1 p 2 10 ]
 "30
 } 0
 "11 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\CONFIG.c
 [v _setup setup `(v  1 e 1 0 ]
 {
-"27
+"25
 } 0
-"11 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\INT.c
+"12 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\INT.c
 [v _intr intr `(v  1 e 1 0 ]
 {
-"18
+"20
 } 0
 "43 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
 {
 "45
-[v ___fltol@exp1 exp1 `uc  1 a 1 64 ]
-[v ___fltol@sign1 sign1 `uc  1 a 1 63 ]
+[v ___fltol@exp1 exp1 `uc  1 a 1 34 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 33 ]
 "43
-[v ___fltol@f1 f1 `d  1 p 4 55 ]
+[v ___fltol@f1 f1 `d  1 p 4 25 ]
 "70
 } 0
 "8 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S585 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S638 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S590 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S593 . 4 `l 1 i 4 0 `d 1 f 4 0 `S585 1 fAsBytes 4 0 `S590 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S593  1 a 4 36 ]
+[s S643 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S646 . 4 `l 1 i 4 0 `d 1 f 4 0 `S638 1 fAsBytes 4 0 `S643 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S646  1 a 4 37 ]
 "12
-[v ___flmul@grs grs `ul  1 a 4 30 ]
-[s S662 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[v ___flmul@grs grs `ul  1 a 4 31 ]
+[s S715 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S665 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S662 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S665  1 a 2 40 ]
+[u S718 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S715 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S718  1 a 2 41 ]
 "10
-[v ___flmul@bexp bexp `uc  1 a 1 35 ]
+[v ___flmul@bexp bexp `uc  1 a 1 36 ]
 "11
-[v ___flmul@aexp aexp `uc  1 a 1 34 ]
+[v ___flmul@aexp aexp `uc  1 a 1 35 ]
 "9
-[v ___flmul@sign sign `uc  1 a 1 29 ]
+[v ___flmul@sign sign `uc  1 a 1 30 ]
 "8
-[v ___flmul@b b `d  1 p 4 16 ]
-[v ___flmul@a a `d  1 p 4 20 ]
+[v ___flmul@b b `d  1 p 4 17 ]
+[v ___flmul@a a `d  1 p 4 21 ]
 "205
 } 0
 "4 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\Umul8_16.c
@@ -273,13 +330,13 @@
 {
 [v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
 "6
-[v __Umul8_16@word_mpld word_mpld `ui  1 a 2 13 ]
+[v __Umul8_16@word_mpld word_mpld `ui  1 a 2 14 ]
 "5
-[v __Umul8_16@product product `ui  1 a 2 11 ]
+[v __Umul8_16@product product `ui  1 a 2 12 ]
 "4
 [v __Umul8_16@multiplier multiplier `uc  1 a 1 wreg ]
-[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 7 ]
-[v __Umul8_16@multiplier multiplier `uc  1 a 1 15 ]
+[v __Umul8_16@multiplicand multiplicand `uc  1 p 1 8 ]
+[v __Umul8_16@multiplier multiplier `uc  1 a 1 16 ]
 "60
 } 0
 "8 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\sprcdiv.c
@@ -298,32 +355,48 @@
 "16
 [v ___fldiv@sign sign `uc  1 a 1 4 ]
 "8
-[v ___fldiv@a a `d  1 p 4 42 ]
-[v ___fldiv@b b `d  1 p 4 46 ]
+[v ___fldiv@a a `d  1 p 4 43 ]
+[v ___fldiv@b b `d  1 p 4 47 ]
 "185
+} 0
+"10 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+{
+"17
+[v ___fladd@grs grs `uc  1 a 1 24 ]
+"15
+[v ___fladd@bexp bexp `uc  1 a 1 23 ]
+"16
+[v ___fladd@aexp aexp `uc  1 a 1 22 ]
+"13
+[v ___fladd@signs signs `uc  1 a 1 21 ]
+"10
+[v ___fladd@b b `d  1 p 4 13 ]
+[v ___fladd@a a `d  1 p 4 17 ]
+"237
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
 {
 "10
-[v ___awmod@sign sign `uc  1 a 1 12 ]
-[v ___awmod@counter counter `uc  1 a 1 11 ]
+[v ___awmod@sign sign `uc  1 a 1 13 ]
+[v ___awmod@counter counter `uc  1 a 1 12 ]
 "5
-[v ___awmod@divisor divisor `i  1 p 2 7 ]
-[v ___awmod@dividend dividend `i  1 p 2 9 ]
+[v ___awmod@divisor divisor `i  1 p 2 8 ]
+[v ___awmod@dividend dividend `i  1 p 2 10 ]
 "34
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\awdiv.c
 [v ___awdiv __awdiv `(i  1 e 2 0 ]
 {
 "10
-[v ___awdiv@quotient quotient `i  1 a 2 13 ]
+[v ___awdiv@quotient quotient `i  1 a 2 14 ]
 "11
-[v ___awdiv@sign sign `uc  1 a 1 12 ]
-[v ___awdiv@counter counter `uc  1 a 1 11 ]
+[v ___awdiv@sign sign `uc  1 a 1 13 ]
+[v ___awdiv@counter counter `uc  1 a 1 12 ]
 "5
-[v ___awdiv@divisor divisor `i  1 p 2 7 ]
-[v ___awdiv@dividend dividend `i  1 p 2 9 ]
+[v ___awdiv@divisor divisor `i  1 p 2 8 ]
+[v ___awdiv@dividend dividend `i  1 p 2 10 ]
 "41
 } 0
 "22 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\LCD.c
@@ -335,9 +408,9 @@
 [v _LCDStr LCDStr `(v  1 e 1 0 ]
 {
 "86
-[v LCDStr@i i `uc  1 a 1 14 ]
+[v LCDStr@i i `uc  1 a 1 15 ]
 "85
-[v LCDStr@str str `*.26DCuc  1 p 2 12 ]
+[v LCDStr@str str `*.26DCuc  1 p 2 13 ]
 "95
 } 0
 "69
@@ -345,7 +418,7 @@
 {
 [v LCDChar@ch ch `uc  1 a 1 wreg ]
 [v LCDChar@ch ch `uc  1 a 1 wreg ]
-[v LCDChar@ch ch `uc  1 a 1 11 ]
+[v LCDChar@ch ch `uc  1 a 1 12 ]
 "74
 } 0
 "97
@@ -353,9 +426,9 @@
 {
 [v LCDGoto@pos pos `uc  1 a 1 wreg ]
 [v LCDGoto@pos pos `uc  1 a 1 wreg ]
-[v LCDGoto@ln ln `uc  1 p 1 12 ]
+[v LCDGoto@ln ln `uc  1 p 1 13 ]
 "99
-[v LCDGoto@pos pos `uc  1 a 1 17 ]
+[v LCDGoto@pos pos `uc  1 a 1 18 ]
 "110
 } 0
 "77
@@ -363,7 +436,7 @@
 {
 [v LCDCmd@ch ch `uc  1 a 1 wreg ]
 [v LCDCmd@ch ch `uc  1 a 1 wreg ]
-[v LCDCmd@ch ch `uc  1 a 1 11 ]
+[v LCDCmd@ch ch `uc  1 a 1 12 ]
 "82
 } 0
 "48
@@ -371,20 +444,42 @@
 {
 [v LCDWrite@ch ch `uc  1 a 1 wreg ]
 [v LCDWrite@ch ch `uc  1 a 1 wreg ]
-[v LCDWrite@rs rs `uc  1 p 1 7 ]
+[v LCDWrite@rs rs `uc  1 p 1 8 ]
 "51
-[v LCDWrite@ch ch `uc  1 a 1 8 ]
+[v LCDWrite@ch ch `uc  1 a 1 9 ]
 "67
+} 0
+"4 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\EUSCON.c
+[v _CONUSART CONUSART `(v  1 e 1 0 ]
+{
+"5
+[v CONUSART@p p `l  1 a 4 39 ]
+"4
+[v CONUSART@baudrate baudrate `DCl  1 p 4 23 ]
+"14
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\aldiv.c
+[v ___aldiv __aldiv `(l  1 e 4 0 ]
+{
+"10
+[v ___aldiv@quotient quotient `l  1 a 4 19 ]
+"11
+[v ___aldiv@sign sign `uc  1 a 1 18 ]
+[v ___aldiv@counter counter `uc  1 a 1 17 ]
+"5
+[v ___aldiv@divisor divisor `l  1 p 4 8 ]
+[v ___aldiv@dividend dividend `l  1 p 4 12 ]
+"41
 } 0
 "10 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\adc.c
 [v _ADCL_con ADCL_con `(v  1 e 1 0 ]
 {
 "17
 } 0
-"31 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\Lab3.c
+"37 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\Laboratorio 3\Mplabx\Lab3.X\Lab3.c
 [v _intac intac `II(v  1 e 1 0 ]
 {
-"49
+"73
 } 0
 "10 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]

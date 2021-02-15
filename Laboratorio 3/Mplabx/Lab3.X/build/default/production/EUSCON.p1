@@ -1,77 +1,24 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[t ~ __interrupt . k ]
-[t T1 __interrupt ]
-"543 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 543:     struct {
-[s S19 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S19 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF ]
-"542
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 542: typedef union {
-[u S18 `S19 1 ]
-[n S18 . . ]
-"553
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 553: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x00C)));
-[v _PIR1bits `VS18 ~T0 @X0 0 e@12 ]
-"1238
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1238: extern volatile unsigned char ADRESH __attribute__((address(0x01E)));
-[v _ADRESH `Vuc ~T0 @X0 0 e@30 ]
-"1251
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1251:     struct {
-[s S45 :1 `uc 1 :1 `uc 1 :4 `uc 1 :2 `uc 1 ]
-[n S45 . ADON GO_nDONE CHS ADCS ]
-"1257
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1257:     struct {
-[s S46 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S46 . . GO CHS0 CHS1 CHS2 CHS3 ADCS0 ADCS1 ]
-"1267
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1267:     struct {
-[s S47 :1 `uc 1 :1 `uc 1 ]
-[n S47 . . nDONE ]
-"1271
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1271:     struct {
-[s S48 :1 `uc 1 :1 `uc 1 ]
-[n S48 . . GO_DONE ]
-"1250
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1250: typedef union {
-[u S44 `S45 1 `S46 1 `S47 1 `S48 1 ]
-[n S44 . . . . . ]
-"1276
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1276: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0x01F)));
-[v _ADCON0bits `VS44 ~T0 @X0 0 e@31 ]
-"1133
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1133: extern volatile unsigned char TXREG __attribute__((address(0x019)));
-[v _TXREG `Vuc ~T0 @X0 0 e@25 ]
-"1140
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1140: extern volatile unsigned char RCREG __attribute__((address(0x01A)));
-[v _RCREG `Vuc ~T0 @X0 0 e@26 ]
-[p mainexit ]
-"35 ./CONFIG.h
-[; ;./CONFIG.h: 35: void setup(void);
-[v _setup `(v ~T0 @X0 0 ef ]
-"36 ./INT.h
-[; ;./INT.h: 36: void intr(void);
-[v _intr `(v ~T0 @X0 0 ef ]
-[v F1256 `(v ~T0 @X0 1 tf1`ul ]
-"92 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
-[v __delay `JF1256 ~T0 @X0 0 e ]
-[p i __delay ]
-"99 ./lcd.h
-[; ;./lcd.h: 99: void LCD_Initialize(void);
-[v _LCD_Initialize `(v ~T0 @X0 0 ef ]
-"39 ./adc.h
-[; ;./adc.h: 39: void ADCL_con(void);
-[v _ADCL_con `(v ~T0 @X0 0 ef ]
-"16 ./EUSCON.h
-[; ;./EUSCON.h: 16: void CONUSART(const long int baudrate);
-[v _CONUSART `(v ~T0 @X0 0 ef1`Cl ]
-"193 ./lcd.h
-[; ;./lcd.h: 193: void LCDGoto(uint8_t pos, uint8_t ln);
-[v _LCDGoto `(v ~T0 @X0 0 ef2`uc`uc ]
-"153
-[; ;./lcd.h: 153: void LCDStr(const char *);
-[v _LCDStr `(v ~T0 @X0 0 ef1`*Cuc ]
-"194 C:\Program Files\Microchip\xc8\v2.20\pic\include\c90\stdio.h
-[v _sprintf `(i ~T0 @X0 0 e1v`*uc`*Cuc ]
+"2556 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2556: extern volatile unsigned char TXSTA __attribute__((address(0x098)));
+[v _TXSTA `Vuc ~T0 @X0 0 e@152 ]
+"3341
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3341:     struct {
+[s S131 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S131 . ABDEN WUE . BRG16 SCKP . RCIDL ABDOVF ]
+"3340
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3340: typedef union {
+[u S130 `S131 1 ]
+[n S130 . . ]
+"3352
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3352: extern volatile BAUDCTLbits_t BAUDCTLbits __attribute__((address(0x187)));
+[v _BAUDCTLbits `VS130 ~T0 @X0 0 e@391 ]
+"1038
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1038: extern volatile unsigned char RCSTA __attribute__((address(0x018)));
+[v _RCSTA `Vuc ~T0 @X0 0 e@24 ]
+"2642
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2642: extern volatile unsigned char SPBRG __attribute__((address(0x099)));
+[v _SPBRG `Vuc ~T0 @X0 0 e@153 ]
 "54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -306,356 +253,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"19 Lab3.c
-[; ;Lab3.c: 19: char buffer[20];
-[v _buffer `uc ~T0 @X0 -> 20 `i e ]
-"20
-[; ;Lab3.c: 20: char buffer2[20];
-[v _buffer2 `uc ~T0 @X0 -> 20 `i e ]
-"21
-[; ;Lab3.c: 21: int cons;
-[v _cons `i ~T0 @X0 1 e ]
-"22
-[; ;Lab3.c: 22: unsigned char var1;
-[v _var1 `uc ~T0 @X0 1 e ]
-"23
-[; ;Lab3.c: 23: float voltage1;
-[v _voltage1 `f ~T0 @X0 1 e ]
-"24
-[; ;Lab3.c: 24: int voltage_int1;
-[v _voltage_int1 `i ~T0 @X0 1 e ]
-"25
-[; ;Lab3.c: 25: float voltage2;
-[v _voltage2 `f ~T0 @X0 1 e ]
-"26
-[; ;Lab3.c: 26: int voltage_int2;
-[v _voltage_int2 `i ~T0 @X0 1 e ]
-"27
-[; ;Lab3.c: 27: char digitos[3];
-[v _digitos `uc ~T0 @X0 -> 3 `i e ]
-"28
-[; ;Lab3.c: 28: char digitos2[3];
-[v _digitos2 `uc ~T0 @X0 -> 3 `i e ]
-"29
-[; ;Lab3.c: 29: int i;
-[v _i `i ~T0 @X0 1 e ]
-"30
-[; ;Lab3.c: 30: int fla;
-[v _fla `i ~T0 @X0 1 e ]
-"31
-[; ;Lab3.c: 31: char datos[20];
-[v _datos `uc ~T0 @X0 -> 20 `i e ]
-"32
-[; ;Lab3.c: 32: int incre = 0;
-[v _incre `i ~T0 @X0 1 e ]
-[i _incre
--> 0 `i
-]
-"33
-[; ;Lab3.c: 33: int incre2 = 0;
-[v _incre2 `i ~T0 @X0 1 e ]
-[i _incre2
--> 0 `i
-]
-"34
-[; ;Lab3.c: 34: char leer;
-[v _leer `uc ~T0 @X0 1 e ]
-"35
-[; ;Lab3.c: 35: char datos2[20];
-[v _datos2 `uc ~T0 @X0 -> 20 `i e ]
-[v $root$_intac `(v ~T0 @X0 0 e ]
-"37
-[; ;Lab3.c: 37: void __attribute__((picinterrupt(("")))) intac(void) {
-[v _intac `(v ~T1 @X0 1 ef ]
+"4 EUSCON.c
+[; ;EUSCON.c: 4: void CONUSART(const long int baudrate){
+[v _CONUSART `(v ~T0 @X0 1 ef1`Cl ]
 {
-[e :U _intac ]
+[e :U _CONUSART ]
+[v _baudrate `Cl ~T0 @X0 1 r1 ]
 [f ]
-"39
-[; ;Lab3.c: 39:     if (PIR1bits.ADIF == 1) {
-[e $ ! == -> . . _PIR1bits 0 6 `i -> 1 `i 140  ]
-{
-"41
-[; ;Lab3.c: 41:         fla = 1;
-[e = _fla -> 1 `i ]
-"42
-[; ;Lab3.c: 42:         if (cons == 0) {
-[e $ ! == _cons -> 0 `i 141  ]
-{
-"43
-[; ;Lab3.c: 43:             voltage1 = ADRESH;
-[e = _voltage1 -> _ADRESH `f ]
-"44
-[; ;Lab3.c: 44:         } else if (cons == 1) {
-}
-[e $U 142  ]
-[e :U 141 ]
-[e $ ! == _cons -> 1 `i 143  ]
-{
-"45
-[; ;Lab3.c: 45:             voltage2 = ADRESH;
-[e = _voltage2 -> _ADRESH `f ]
-"46
-[; ;Lab3.c: 46:         }
-}
-[e :U 143 ]
-[e :U 142 ]
-"47
-[; ;Lab3.c: 47:         cons++;
-[e ++ _cons -> 1 `i ]
-"48
-[; ;Lab3.c: 48:         PIR1bits.ADIF = 0;
-[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-"49
-[; ;Lab3.c: 49:         if (cons == 2) {
-[e $ ! == _cons -> 2 `i 144  ]
-{
-"50
-[; ;Lab3.c: 50:             cons = 0;
-[e = _cons -> 0 `i ]
-"51
-[; ;Lab3.c: 51:         }
-}
-[e :U 144 ]
-"52
-[; ;Lab3.c: 52:         ADCON0bits.CHS = cons;
-[e = . . _ADCON0bits 0 2 -> _cons `uc ]
-"53
-[; ;Lab3.c: 53:     }
-}
-[e :U 140 ]
-"55
-[; ;Lab3.c: 55:     if (PIR1bits.TXIF == 1) {
-[e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 145  ]
-{
-"56
-[; ;Lab3.c: 56:         TXREG = datos[incre];
-[e = _TXREG -> *U + &U _datos * -> -> _incre `ui `ux -> -> # *U &U _datos `ui `ux `uc ]
-"57
-[; ;Lab3.c: 57:         if (incre == 20) {
-[e $ ! == _incre -> 20 `i 146  ]
-{
-"58
-[; ;Lab3.c: 58:             incre = 0;
-[e = _incre -> 0 `i ]
-"59
-[; ;Lab3.c: 59:         } else {
-}
-[e $U 147  ]
-[e :U 146 ]
-{
-"60
-[; ;Lab3.c: 60:             incre++;
-[e ++ _incre -> 1 `i ]
-"61
-[; ;Lab3.c: 61:         }
-}
-[e :U 147 ]
-"62
-[; ;Lab3.c: 62:     }
-}
-[e :U 145 ]
-"63
-[; ;Lab3.c: 63:     if (PIR1bits.RCIF == 1) {
-[e $ ! == -> . . _PIR1bits 0 5 `i -> 1 `i 148  ]
-{
-"64
-[; ;Lab3.c: 64:         leer = RCREG;
-[e = _leer -> _RCREG `uc ]
-"65
-[; ;Lab3.c: 65:         if (leer == '+') {
-[e $ ! == -> _leer `ui -> 43 `ui 149  ]
-{
-"66
-[; ;Lab3.c: 66:             incre2++;
-[e ++ _incre2 -> 1 `i ]
-"67
-[; ;Lab3.c: 67:         } else if (leer == '-') {
-}
-[e $U 150  ]
-[e :U 149 ]
-[e $ ! == -> _leer `ui -> 45 `ui 151  ]
-{
-"68
-[; ;Lab3.c: 68:             incre2--;
-[e -- _incre2 -> 1 `i ]
-"69
-[; ;Lab3.c: 69:         }
-}
-[e :U 151 ]
-[e :U 150 ]
-"70
-[; ;Lab3.c: 70:     }
-}
-[e :U 148 ]
-"73
-[; ;Lab3.c: 73: }
+"5
+[; ;EUSCON.c: 5:     long int p;
+[v _p `l ~T0 @X0 1 a ]
+"6
+[; ;EUSCON.c: 6:     TXSTA = 0b00100000;
+[e = _TXSTA -> -> 32 `i `uc ]
+"7
+[; ;EUSCON.c: 7:     BAUDCTLbits.BRG16 = 0;
+[e = . . _BAUDCTLbits 0 3 -> -> 0 `i `uc ]
+"8
+[; ;EUSCON.c: 8:     RCSTA= 0b10010000;
+[e = _RCSTA -> -> 144 `i `uc ]
+"9
+[; ;EUSCON.c: 9:     p = (8000000 - baudrate*64)/(baudrate*64);
+[e = _p / - -> 8000000 `l * _baudrate -> -> 64 `i `l * _baudrate -> -> 64 `i `l ]
+"10
+[; ;EUSCON.c: 10:     SPBRG = p;
+[e = _SPBRG -> _p `uc ]
+"14
+[; ;EUSCON.c: 14: }
 [e :UE 139 ]
 }
-[v $root$_main `(v ~T0 @X0 0 e ]
-"75
-[; ;Lab3.c: 75: void main(void) {
-[v _main `(v ~T0 @X0 1 ef ]
-{
-[e :U _main ]
-[f ]
-"76
-[; ;Lab3.c: 76:     setup();
-[e ( _setup ..  ]
-"77
-[; ;Lab3.c: 77:     cons = 0;
-[e = _cons -> 0 `i ]
-"78
-[; ;Lab3.c: 78:     intr();
-[e ( _intr ..  ]
-"79
-[; ;Lab3.c: 79:     _delay((unsigned long)((25)*(8000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 25 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
-"80
-[; ;Lab3.c: 80:     LCD_Initialize();
-[e ( _LCD_Initialize ..  ]
-"81
-[; ;Lab3.c: 81:     ADCL_con();
-[e ( _ADCL_con ..  ]
-"82
-[; ;Lab3.c: 82:     ADCON0bits.GO_DONE = 1;
-[e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
-"83
-[; ;Lab3.c: 83:     CONUSART(9600);
-[e ( _CONUSART (1 -> -> 9600 `i `l ]
-"84
-[; ;Lab3.c: 84:     LCDGoto(0, 0);
-[e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 0 `i `uc ]
-"85
-[; ;Lab3.c: 85:     LCDStr(" S1:   S2:   S3: ");
-[e ( _LCDStr (1 :s 1C ]
-"86
-[; ;Lab3.c: 86:     while (1) {
-[e :U 154 ]
-{
-"87
-[; ;Lab3.c: 87:         if (fla == 1) {
-[e $ ! == _fla -> 1 `i 156  ]
-{
-"88
-[; ;Lab3.c: 88:             fla = 0;
-[e = _fla -> 0 `i ]
-"89
-[; ;Lab3.c: 89:             sprintf(datos2, "%3i", incre2);
-[e ( _sprintf (1 , (. , &U _datos2 :s 2C _incre2 ]
-"90
-[; ;Lab3.c: 90:             LCDGoto(12, 1);
-[e ( _LCDGoto (2 , -> -> 12 `i `uc -> -> 1 `i `uc ]
-"91
-[; ;Lab3.c: 91:             LCDStr(datos2);
-[e ( _LCDStr (1 -> &U _datos2 `*Cuc ]
-"92
-[; ;Lab3.c: 92:             _delay((unsigned long)((25)*(8000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 25 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
-"93
-[; ;Lab3.c: 93:             ADCON0bits.GO_DONE = 1;
-[e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
-"94
-[; ;Lab3.c: 94:         }
-}
-[e :U 156 ]
-"95
-[; ;Lab3.c: 95:         if (cons == 0) {
-[e $ ! == _cons -> 0 `i 157  ]
-{
-"96
-[; ;Lab3.c: 96:             voltage_int1 = (uint16_t) ((((voltage1 * 500) / 255) - 300));
-[e = _voltage_int1 -> -> - / * _voltage1 -> -> 500 `i `f -> -> 255 `i `f -> -> 300 `i `f `ui `i ]
-"97
-[; ;Lab3.c: 97:             for (i = 0; i < 3; i++) {
-{
-[e = _i -> 0 `i ]
-[e $ < _i -> 3 `i 158  ]
-[e $U 159  ]
-[e :U 158 ]
-{
-"98
-[; ;Lab3.c: 98:                 digitos[i] = (char) (voltage_int1 % 10);
-[e = *U + &U _digitos * -> -> _i `ui `ux -> -> # *U &U _digitos `ui `ux -> % _voltage_int1 -> 10 `i `uc ]
-"99
-[; ;Lab3.c: 99:                 voltage_int1 /= 10;
-[e =/ _voltage_int1 -> 10 `i ]
-"100
-[; ;Lab3.c: 100:             }
-}
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 3 `i 158  ]
-[e :U 159 ]
-}
-"101
-[; ;Lab3.c: 101:             LCDGoto(0, 1);
-[e ( _LCDGoto (2 , -> -> 0 `i `uc -> -> 1 `i `uc ]
-"102
-[; ;Lab3.c: 102:             sprintf(buffer, "%i.%i%iV", digitos[2], digitos[1], digitos[0]);
-[e ( _sprintf (1 , , , (. , &U _buffer :s 3C -> *U + &U _digitos * -> -> -> 2 `i `ui `ux -> -> # *U &U _digitos `ui `ux `i -> *U + &U _digitos * -> -> -> 1 `i `ui `ux -> -> # *U &U _digitos `ui `ux `i -> *U + &U _digitos * -> -> -> 0 `i `ui `ux -> -> # *U &U _digitos `ui `ux `i ]
-"103
-[; ;Lab3.c: 103:             LCDStr(buffer);
-[e ( _LCDStr (1 -> &U _buffer `*Cuc ]
-"104
-[; ;Lab3.c: 104:         } else if (cons == 1) {
-}
-[e $U 161  ]
-[e :U 157 ]
-[e $ ! == _cons -> 1 `i 162  ]
-{
-"105
-[; ;Lab3.c: 105:             voltage_int2 = (uint16_t) (((voltage2 * 500) / 255));
-[e = _voltage_int2 -> -> / * _voltage2 -> -> 500 `i `f -> -> 255 `i `f `ui `i ]
-"106
-[; ;Lab3.c: 106:             for (i = 0; i < 3; i++) {
-{
-[e = _i -> 0 `i ]
-[e $ < _i -> 3 `i 163  ]
-[e $U 164  ]
-[e :U 163 ]
-{
-"107
-[; ;Lab3.c: 107:                 digitos2[i] = (char) (voltage_int2 % 10);
-[e = *U + &U _digitos2 * -> -> _i `ui `ux -> -> # *U &U _digitos2 `ui `ux -> % _voltage_int2 -> 10 `i `uc ]
-"108
-[; ;Lab3.c: 108:                 voltage_int2 /= 10;
-[e =/ _voltage_int2 -> 10 `i ]
-"109
-[; ;Lab3.c: 109:             }
-}
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 3 `i 163  ]
-[e :U 164 ]
-}
-"110
-[; ;Lab3.c: 110:             LCDGoto(6, 1);
-[e ( _LCDGoto (2 , -> -> 6 `i `uc -> -> 1 `i `uc ]
-"111
-[; ;Lab3.c: 111:             sprintf(buffer2, "%i.%i%iV", digitos2[2], digitos2[1], digitos2[0]);
-[e ( _sprintf (1 , , , (. , &U _buffer2 :s 4C -> *U + &U _digitos2 * -> -> -> 2 `i `ui `ux -> -> # *U &U _digitos2 `ui `ux `i -> *U + &U _digitos2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _digitos2 `ui `ux `i -> *U + &U _digitos2 * -> -> -> 0 `i `ui `ux -> -> # *U &U _digitos2 `ui `ux `i ]
-"112
-[; ;Lab3.c: 112:             LCDStr(buffer2);
-[e ( _LCDStr (1 -> &U _buffer2 `*Cuc ]
-"113
-[; ;Lab3.c: 113:         }
-}
-[e :U 162 ]
-[e :U 161 ]
-"114
-[; ;Lab3.c: 114:         sprintf(datos, "%i.%i%iV %i.%i%iV %i\r\n", digitos[2], digitos[1], digitos[0], digitos2[2], digitos2[1], digitos[0], incre2);
-[e ( _sprintf (1 , , , , , , , (. , &U _datos :s 5C -> *U + &U _digitos * -> -> -> 2 `i `ui `ux -> -> # *U &U _digitos `ui `ux `i -> *U + &U _digitos * -> -> -> 1 `i `ui `ux -> -> # *U &U _digitos `ui `ux `i -> *U + &U _digitos * -> -> -> 0 `i `ui `ux -> -> # *U &U _digitos `ui `ux `i -> *U + &U _digitos2 * -> -> -> 2 `i `ui `ux -> -> # *U &U _digitos2 `ui `ux `i -> *U + &U _digitos2 * -> -> -> 1 `i `ui `ux -> -> # *U &U _digitos2 `ui `ux `i -> *U + &U _digitos * -> -> -> 0 `i `ui `ux -> -> # *U &U _digitos `ui `ux `i _incre2 ]
-"116
-[; ;Lab3.c: 116:     }
-}
-[e :U 153 ]
-[e $U 154  ]
-[e :U 155 ]
-"117
-[; ;Lab3.c: 117: }
-[e :UE 152 ]
-}
-[p f _sprintf 8421504 ]
-[a 2C 37 51 105 0 ]
-[a 3C 37 105 46 37 105 37 105 86 0 ]
-[a 4C 37 105 46 37 105 37 105 86 0 ]
-[a 1C 32 83 49 58 32 32 32 83 50 58 32 32 32 83 51 58 32 0 ]
-[a 5C 37 105 46 37 105 37 105 86 32 37 105 46 37 105 37 105 86 32 37 105 13 10 0 ]

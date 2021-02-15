@@ -259,25 +259,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"11 INT.c
-[; ;INT.c: 11: void intr(void) {
+"12 INT.c
+[; ;INT.c: 12: void intr(void) {
 [v _intr `(v ~T0 @X0 1 ef ]
 {
 [e :U _intr ]
 [f ]
-"12
-[; ;INT.c: 12:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
 "13
-[; ;INT.c: 13:     INTCONbits.PEIE = 1;
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+[; ;INT.c: 13:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
 "14
-[; ;INT.c: 14:     PIE1bits.RCIE = 1;
+[; ;INT.c: 14:     INTCONbits.PEIE = 1;
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"15
+[; ;INT.c: 15:     PIE1bits.RCIE = 1;
 [e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
-"17
-[; ;INT.c: 17:     return;
+"16
+[; ;INT.c: 16:     PIE1bits.TXIE = 1;
+[e = . . _PIE1bits 0 4 -> -> 1 `i `uc ]
+"19
+[; ;INT.c: 19:     return;
 [e $UE 138  ]
-"18
-[; ;INT.c: 18: }
+"20
+[; ;INT.c: 20: }
 [e :UE 138 ]
 }

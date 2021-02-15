@@ -14,9 +14,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1478
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1478: extern volatile unsigned char TRISB __attribute__((address(0x086)));
 [v _TRISB `Vuc ~T0 @X0 0 e@134 ]
-"1540
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1540: extern volatile unsigned char TRISC __attribute__((address(0x087)));
-[v _TRISC `Vuc ~T0 @X0 0 e@135 ]
 "1602
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1602: extern volatile unsigned char TRISD __attribute__((address(0x088)));
 [v _TRISD `Vuc ~T0 @X0 0 e@136 ]
@@ -26,9 +23,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "228
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 228: extern volatile unsigned char PORTB __attribute__((address(0x006)));
 [v _PORTB `Vuc ~T0 @X0 0 e@6 ]
-"290
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 290: extern volatile unsigned char PORTC __attribute__((address(0x007)));
-[v _PORTC `Vuc ~T0 @X0 0 e@7 ]
 "352
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 352: extern volatile unsigned char PORTD __attribute__((address(0x008)));
 [v _PORTD `Vuc ~T0 @X0 0 e@8 ]
@@ -291,30 +285,24 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;CONFIG.c: 16:     TRISB = 0;
 [e = _TRISB -> -> 0 `i `uc ]
 "17
-[; ;CONFIG.c: 17:     TRISC = 0;
-[e = _TRISC -> -> 0 `i `uc ]
-"18
-[; ;CONFIG.c: 18:     TRISD = 0;
+[; ;CONFIG.c: 17:     TRISD = 0;
 [e = _TRISD -> -> 0 `i `uc ]
-"19
-[; ;CONFIG.c: 19:     PORTA = 0;
+"18
+[; ;CONFIG.c: 18:     PORTA = 0;
 [e = _PORTA -> -> 0 `i `uc ]
-"20
-[; ;CONFIG.c: 20:     PORTB = 0;
+"19
+[; ;CONFIG.c: 19:     PORTB = 0;
 [e = _PORTB -> -> 0 `i `uc ]
-"21
-[; ;CONFIG.c: 21:     PORTC = 0;
-[e = _PORTC -> -> 0 `i `uc ]
-"22
-[; ;CONFIG.c: 22:     PORTD = 0;
+"20
+[; ;CONFIG.c: 20:     PORTD = 0;
 [e = _PORTD -> -> 0 `i `uc ]
-"23
-[; ;CONFIG.c: 23:     PORTE = 0;
+"21
+[; ;CONFIG.c: 21:     PORTE = 0;
 [e = _PORTE -> -> 0 `i `uc ]
-"26
-[; ;CONFIG.c: 26:     return;
+"24
+[; ;CONFIG.c: 24:     return;
 [e $UE 138  ]
-"27
-[; ;CONFIG.c: 27: }
+"25
+[; ;CONFIG.c: 25: }
 [e :UE 138 ]
 }

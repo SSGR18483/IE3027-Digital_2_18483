@@ -2770,8 +2770,18 @@ void LCDWrite(uint8_t ch,uint8_t rs);
 void LCDGoto(uint8_t pos, uint8_t ln);
 # 15 "Lab3.c" 2
 
+# 1 "./EUSCON.h" 1
+# 13 "./EUSCON.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
+# 13 "./EUSCON.h" 2
+
+
+
+void CONUSART(const long int baudrate);
 # 16 "Lab3.c" 2
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
+# 17 "Lab3.c" 2
 
 
 char buffer[20];
@@ -2782,16 +2792,21 @@ float voltage1;
 int voltage_int1;
 float voltage2;
 int voltage_int2;
-char digits[3];
-char digits2[3];
+char digitos[3];
+char digitos2[3];
 int i;
 int fla;
+char datos[20];
+int incre = 0;
+int incre2 = 0;
+char leer;
+char datos2[20];
 
 void __attribute__((picinterrupt(("")))) intac(void) {
 
-    fla =1;
-    if (ADCON0bits.GO_DONE == 0) {
+    if (PIR1bits.ADIF == 1) {
 
+        fla = 1;
         if (cons == 0) {
             voltage1 = ADRESH;
         } else if (cons == 1) {
@@ -2805,6 +2820,24 @@ void __attribute__((picinterrupt(("")))) intac(void) {
         ADCON0bits.CHS = cons;
     }
 
+    if (PIR1bits.TXIF == 1) {
+        TXREG = datos[incre];
+        if (incre == 20) {
+            incre = 0;
+        } else {
+            incre++;
+        }
+    }
+    if (PIR1bits.RCIF == 1) {
+        leer = RCREG;
+        if (leer == '+') {
+            incre2++;
+        } else if (leer == '-') {
+            incre2--;
+        }
+    }
+
+
 }
 
 void main(void) {
@@ -2815,34 +2848,38 @@ void main(void) {
     LCD_Initialize();
     ADCL_con();
     ADCON0bits.GO_DONE = 1;
+    CONUSART(9600);
     LCDGoto(0, 0);
     LCDStr(" S1:   S2:   S3: ");
     while (1) {
-        if (fla==1){
-            fla=0;
+        if (fla == 1) {
+            fla = 0;
+            sprintf(datos2, "%3i", incre2);
+            LCDGoto(12, 1);
+            LCDStr(datos2);
             _delay((unsigned long)((25)*(8000000/4000000.0)));
-
             ADCON0bits.GO_DONE = 1;
-            if (cons == 0) {
-                voltage_int1 = (uint16_t) (((voltage1 * 500) / 255));
-                for (i = 0; i < 3; i++) {
-                    digits[i] = (char) (voltage_int1 % 10);
-                    voltage_int1 /= 10;
-                }
-                LCDGoto(0, 1);
-                sprintf(buffer, "%i.%i%iV", digits[2], digits[1], digits[0]);
-                LCDStr(buffer);
-            } else if (cons == 1) {
-                voltage_int2 = (uint16_t) (((voltage2 * 500) / 255));
-                for (i = 0; i < 3; i++) {
-                    digits2[i] = (char) (voltage_int2 % 10);
-                    voltage_int2 /= 10;
-                }
-                LCDGoto(7, 1);
-                sprintf(buffer2, "%i.%i%iV", digits2[2], digits2[1], digits2[0]);
-                LCDStr(buffer2);
-            }
-
         }
+        if (cons == 0) {
+            voltage_int1 = (uint16_t) ((((voltage1 * 500) / 255) - 300));
+            for (i = 0; i < 3; i++) {
+                digitos[i] = (char) (voltage_int1 % 10);
+                voltage_int1 /= 10;
+            }
+            LCDGoto(0, 1);
+            sprintf(buffer, "%i.%i%iV", digitos[2], digitos[1], digitos[0]);
+            LCDStr(buffer);
+        } else if (cons == 1) {
+            voltage_int2 = (uint16_t) (((voltage2 * 500) / 255));
+            for (i = 0; i < 3; i++) {
+                digitos2[i] = (char) (voltage_int2 % 10);
+                voltage_int2 /= 10;
+            }
+            LCDGoto(6, 1);
+            sprintf(buffer2, "%i.%i%iV", digitos2[2], digitos2[1], digitos2[0]);
+            LCDStr(buffer2);
+        }
+        sprintf(datos, "%i.%i%iV %i.%i%iV %i\r\n", digitos[2], digitos[1], digitos[0], digitos2[2], digitos2[1], digitos[0], incre2);
+
     }
 }

@@ -14,11 +14,9 @@ void setup(void) {
     TRISA = 0b000000011;
     TRISE =0;
     TRISB = 0;
-    TRISC = 0;
     TRISD = 0;
     PORTA = 0;
     PORTB = 0;
-    PORTC = 0;
     PORTD = 0;
     PORTE = 0;
 
