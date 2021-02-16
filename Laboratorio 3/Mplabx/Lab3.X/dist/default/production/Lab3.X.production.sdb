@@ -219,24 +219,21 @@
 "505 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\doprnt.c
 [v _sprintf sprintf `(i  1 e 2 0 ]
 {
-[v sprintf@sp sp `*.5uc  1 a 1 wreg ]
 "514
-[v sprintf@width width `i  1 a 2 43 ]
+[v sprintf@width width `i  1 a 2 45 ]
 "545
-[v sprintf@val val `ui  1 a 2 41 ]
+[v sprintf@val val `ui  1 a 2 43 ]
 "512
-[v sprintf@c c `uc  1 a 1 46 ]
+[v sprintf@c c `uc  1 a 1 47 ]
 "525
-[v sprintf@flag flag `uc  1 a 1 40 ]
+[v sprintf@flag flag `uc  1 a 1 42 ]
 "521
-[v sprintf@prec prec `c  1 a 1 39 ]
+[v sprintf@prec prec `c  1 a 1 41 ]
 "507
-[v sprintf@ap ap `[1]*.4v  1 a 1 38 ]
+[v sprintf@ap ap `[1]*.4v  1 a 1 40 ]
 "505
-[v sprintf@sp sp `*.5uc  1 a 1 wreg ]
-[v sprintf@f f `*.24DCuc  1 p 1 20 ]
-"550
-[v sprintf@sp sp `*.5uc  1 a 1 45 ]
+[v sprintf@sp sp `*.39uc  1 p 2 20 ]
+[v sprintf@f f `*.24DCuc  1 p 1 22 ]
 "1567
 } 0
 "8 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\isdigit.c
@@ -294,10 +291,10 @@
 [v ___fltol __fltol `(l  1 e 4 0 ]
 {
 "45
-[v ___fltol@exp1 exp1 `uc  1 a 1 34 ]
-[v ___fltol@sign1 sign1 `uc  1 a 1 33 ]
+[v ___fltol@exp1 exp1 `uc  1 a 1 61 ]
+[v ___fltol@sign1 sign1 `uc  1 a 1 60 ]
 "43
-[v ___fltol@f1 f1 `d  1 p 4 25 ]
+[v ___fltol@f1 f1 `d  1 p 4 13 ]
 "70
 } 0
 "8 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\sprcmul.c
@@ -358,22 +355,6 @@
 [v ___fldiv@a a `d  1 p 4 43 ]
 [v ___fldiv@b b `d  1 p 4 47 ]
 "185
-} 0
-"10 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\sprcadd.c
-[v ___fladd __fladd `(d  1 e 4 0 ]
-{
-"17
-[v ___fladd@grs grs `uc  1 a 1 24 ]
-"15
-[v ___fladd@bexp bexp `uc  1 a 1 23 ]
-"16
-[v ___fladd@aexp aexp `uc  1 a 1 22 ]
-"13
-[v ___fladd@signs signs `uc  1 a 1 21 ]
-"10
-[v ___fladd@b b `d  1 p 4 13 ]
-[v ___fladd@a a `d  1 p 4 17 ]
-"237
 } 0
 "5 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]

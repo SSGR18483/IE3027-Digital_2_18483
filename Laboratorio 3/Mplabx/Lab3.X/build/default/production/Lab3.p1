@@ -563,8 +563,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $ ! == _cons -> 0 `i 157  ]
 {
 "96
-[; ;Lab3.c: 96:             voltage_int1 = (uint16_t) ((((voltage1 * 500) / 255) - 300));
-[e = _voltage_int1 -> -> - / * _voltage1 -> -> 500 `i `f -> -> 255 `i `f -> -> 300 `i `f `ui `i ]
+[; ;Lab3.c: 96:             voltage_int1 = (uint16_t) ((((voltage1 * 500) / 255) ));
+[e = _voltage_int1 -> -> / * _voltage1 -> -> 500 `i `f -> -> 255 `i `f `ui `i ]
 "97
 [; ;Lab3.c: 97:             for (i = 0; i < 3; i++) {
 {

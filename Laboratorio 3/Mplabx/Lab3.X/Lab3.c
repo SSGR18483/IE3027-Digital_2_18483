@@ -93,7 +93,7 @@ void main(void) {
             ADCON0bits.GO_DONE = 1;
         }
         if (cons == 0) {
-            voltage_int1 = (uint16_t) ((((voltage1 * 500) / 255) - 300));
+            voltage_int1 = (uint16_t) ((((voltage1 * 500) / 255) ));
             for (i = 0; i < 3; i++) {
                 digitos[i] = (char) (voltage_int1 % 10);
                 voltage_int1 /= 10;
