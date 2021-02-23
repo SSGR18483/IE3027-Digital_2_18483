@@ -6,8 +6,10 @@
  */
 
 #include"conbits.h"
+#include"adc.h"
 #include <xc.h>
 unsigned char var1;
+#define _XTAL_FREQ 8000000
 void __interrupt() intadc(void) {
     if (ADCON0bits.GO == 0) {// reviso que el bit go done termine de convertir
         var1 = ADRESH; //muevo los valores a una variable para luego usarlo
@@ -18,7 +20,7 @@ void __interrupt() intadc(void) {
 }
 
 void main(void) {
-    ADCON();
+    ADCONS();
     SetupS1();
     __delay_us(25);
     ADCON0bits.GO_DONE = 1;

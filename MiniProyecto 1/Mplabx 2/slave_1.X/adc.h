@@ -8,7 +8,7 @@
 #ifndef ADC_H
 #define	ADC_H
 #include <xc.h> 
-void ADCON(void);
+void ADCONS(void);
 
 
 #endif	/* ADC_H */
