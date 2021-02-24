@@ -2535,6 +2535,11 @@ void SetupS1(void);
 void ADCONS(void);
 # 9 "slave1.c" 2
 
+# 1 "./spis1.h" 1
+# 12 "./spis1.h"
+void spicon(void);
+# 10 "slave1.c" 2
+
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v2.20\\pic\\include\\c90\\stdint.h" 3
@@ -2669,11 +2674,11 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 11 "slave1.c" 2
+# 12 "slave1.c" 2
 
 float potem = 0;
 int pruebaxd;
-uint8_t divisor = 0 ;
+uint8_t divisor = 0;
 
 
 void __attribute__((picinterrupt(("")))) intadc(void) {
@@ -2685,9 +2690,9 @@ void __attribute__((picinterrupt(("")))) intadc(void) {
         ADCON0bits.GO_DONE = 1;
     }
 
-    if (PIR1bits.SSPIF){
-        if(!SSPSTATbits.BF){
-        PORTD = SSPBUF;
+    if (PIR1bits.SSPIF) {
+        if (!SSPSTATbits.BF) {
+            PORTD = SSPBUF;
         }
         SSPBUF = divisor;
         PIR1bits.SSPIF = 0;
@@ -2699,8 +2704,9 @@ void __attribute__((picinterrupt(("")))) intadc(void) {
 
 void main(void) {
     ADCONS();
-    pruebaxd=0;
+    pruebaxd = 0;
     SetupS1();
+    spicon();
     _delay((unsigned long)((35)*(8000000/4000000.0)));
     ADCON0bits.GO_DONE = 1;
     while (1) {

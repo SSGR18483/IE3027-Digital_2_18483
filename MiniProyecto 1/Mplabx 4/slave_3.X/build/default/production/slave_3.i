@@ -2633,7 +2633,8 @@ typedef uint16_t uintptr_t;
 # 10 "slave_3.c" 2
 
 float potem = 0;
-int pruebab = 0;
+unsigned int pruebab = 0;
+unsigned int elc;
 uint16_t temperatura = 0;
 
 
@@ -2661,7 +2662,7 @@ uint16_t temperatura = 0;
 void setups3(void);
 void ADCONS3(void);
 void spis3(void);
-# 16 "slave_3.c" 2
+# 17 "slave_3.c" 2
 
 
 void __attribute__((picinterrupt(("")))) intadc(void) {
@@ -2672,6 +2673,16 @@ void __attribute__((picinterrupt(("")))) intadc(void) {
         PIR1bits.ADIF = 0;
         ADCON0bits.GO_DONE = 1;
     }
+    if (PIR1bits.SSPIF) {
+        if (SSPSTATbits.BF) {
+            elc = SSPBUF;
+        }
+
+        SSPBUF = potem;
+        PIR1bits.SSPIF = 0;
+    }
+
+
 }
 
 void main(void) {

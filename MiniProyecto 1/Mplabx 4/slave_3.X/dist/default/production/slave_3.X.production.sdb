@@ -5,6 +5,7 @@
 [d frameptr 0 ]
 "43 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\fltol.c
 [v ___fltol __fltol `(l  1 e 4 0 ]
+[v i1___fltol __fltol `(l  1 e 4 0 ]
 "10 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\sprcadd.c
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "8 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\sprcmul.c
@@ -23,15 +24,15 @@
 [v _ADCONS3 ADCONS3 `(v  1 e 1 0 ]
 "44
 [v _spis3 spis3 `(v  1 e 1 0 ]
-"18 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 4\slave_3.X\slave_3.c
+"19 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 4\slave_3.X\slave_3.c
 [v _intadc intadc `II(v  1 e 1 0 ]
-"28
+"39
 [v _main main `(v  1 e 1 0 ]
 "228 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
 "352
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
-[s S136 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S235 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -41,13 +42,13 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "482
-[s S145 . 1 `uc 1 . 1 0 :2:0 
+[s S244 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
-[u S150 . 1 `S136 1 . 1 0 `S145 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES150  1 e 1 @11 ]
+[u S249 . 1 `S235 1 . 1 0 `S244 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES249  1 e 1 @11 ]
 [s S22 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
@@ -59,6 +60,8 @@
 "553
 [u S30 . 1 `S22 1 . 1 0 ]
 [v _PIR1bits PIR1bits `VES30  1 e 1 @12 ]
+"843
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "850
 [v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
 "1238
@@ -92,7 +95,7 @@
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1478
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
-[s S200 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S299 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -102,11 +105,11 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1557
-[u S209 . 1 `S200 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES209  1 e 1 @135 ]
+[u S308 . 1 `S299 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES308  1 e 1 @135 ]
 "1602
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
-[s S168 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S267 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSPIE 1 0 :1:3 
@@ -115,10 +118,53 @@
 `uc 1 ADIE 1 0 :1:6 
 ]
 "1718
-[u S176 . 1 `S168 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES176  1 e 1 @140 ]
+[u S275 . 1 `S267 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES275  1 e 1 @140 ]
 "2177
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
+[s S94 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"2231
+[s S103 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S108 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DATA 1 0 :1:5 
+]
+[s S114 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S119 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S124 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S129 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[u S134 . 1 `S94 1 . 1 0 `S103 1 . 1 0 `S108 1 . 1 0 `S114 1 . 1 0 `S119 1 . 1 0 `S124 1 . 1 0 `S129 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES134  1 e 1 @148 ]
 "2977
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
 "3387
@@ -128,13 +174,15 @@
 "11 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 4\slave_3.X\slave_3.c
 [v _potem potem `f  1 e 4 0 ]
 "12
-[v _pruebab pruebab `i  1 e 2 0 ]
+[v _pruebab pruebab `ui  1 e 2 0 ]
 "13
+[v _elc elc `ui  1 e 2 0 ]
+"14
 [v _temperatura temperatura `ui  1 e 2 0 ]
-"28
+"39
 [v _main main `(v  1 e 1 0 ]
 {
-"48
+"59
 } 0
 "44 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 4\slave_3.X\CONFS3.c
 [v _spis3 spis3 `(v  1 e 1 0 ]
@@ -159,17 +207,17 @@
 "8 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\sprcmul.c
 [v ___flmul __flmul `(d  1 e 4 0 ]
 {
-[s S521 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
+[s S620 . 4 `uc 1 a 1 0 `uc 1 b 1 1 `uc 1 c 1 2 `uc 1 d 1 3 ]
 "13
-[s S526 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
-[u S529 . 4 `l 1 i 4 0 `d 1 f 4 0 `S521 1 fAsBytes 4 0 `S526 1 fAsWords 4 0 ]
-[v ___flmul@prod prod `S529  1 a 4 36 ]
+[s S625 . 4 `i 1 wordA 2 0 `i 1 wordB 2 2 ]
+[u S628 . 4 `l 1 i 4 0 `d 1 f 4 0 `S620 1 fAsBytes 4 0 `S625 1 fAsWords 4 0 ]
+[v ___flmul@prod prod `S628  1 a 4 36 ]
 "12
 [v ___flmul@grs grs `ul  1 a 4 30 ]
-[s S598 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
+[s S697 . 2 `uc 1 a 1 0 `uc 1 b 1 1 ]
 "14
-[u S601 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S598 1 nAsBytes 2 0 ]
-[v ___flmul@temp temp `S601  1 a 2 40 ]
+[u S700 . 2 `i 1 i 2 0 `ui 1 n 2 0 `S697 1 nAsBytes 2 0 ]
+[v ___flmul@temp temp `S700  1 a 2 40 ]
 "10
 [v ___flmul@bexp bexp `uc  1 a 1 35 ]
 "11
@@ -200,10 +248,20 @@
 {
 "42
 } 0
-"18 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 4\slave_3.X\slave_3.c
+"19 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 4\slave_3.X\slave_3.c
 [v _intadc intadc `II(v  1 e 1 0 ]
 {
-"26
+"37
+} 0
+"43 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\fltol.c
+[v i1___fltol __fltol `(l  1 e 4 0 ]
+{
+"45
+[v i1___fltol@exp1 exp1 `uc  1 a 1 9 ]
+[v i1___fltol@sign1 sign1 `uc  1 a 1 8 ]
+"43
+[v i1___fltol@f1 f1 `d  1 p 4 0 ]
+"70
 } 0
 "10 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]

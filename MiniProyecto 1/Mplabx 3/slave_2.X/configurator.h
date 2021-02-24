@@ -33,5 +33,6 @@
 // Use project enums instead of #define for ON and OFF.
 void confi(void);
 void int_portb(void);
+void spis2(void);
 #endif	/* CONFIGURATOR_H */
 

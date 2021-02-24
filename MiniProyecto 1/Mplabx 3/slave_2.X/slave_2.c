@@ -10,6 +10,7 @@
 #define _XTAL_FREQ 8000000
 #include"configurator.h"
 unsigned char CONTL;
+unsigned int elc;
 
 void __interrupt() intpb(void) {
     if (INTCONbits.RBIF == 1) {
@@ -21,10 +22,21 @@ void __interrupt() intpb(void) {
         }
         INTCONbits.RBIF = 0;
     }
+
+    if (PIR1bits.SSPIF) {
+        if (SSPSTATbits.BF) {
+            elc = SSPBUF;
+        }
+
+        SSPBUF = CONTL;
+        PIR1bits.SSPIF = 0;
+    }
+
 }
 
 void main(void) {
     confi();
+    spis2();
     int_portb();
     while (1) {
         PORTD = CONTL;

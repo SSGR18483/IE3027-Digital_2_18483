@@ -9,7 +9,8 @@
 #include <xc.h>
 #include <stdint.h>
 float potem = 0;
-int pruebab = 0;
+unsigned int pruebab = 0;
+unsigned int elc; 
 uint16_t temperatura = 0;
 
 #define _XTAL_FREQ 8000000
@@ -23,8 +24,16 @@ void __interrupt() intadc(void) {
         PIR1bits.ADIF = 0;
         ADCON0bits.GO_DONE = 1; //espero despues para poder realizar otra conversion
     }
-    
-    
+    if (PIR1bits.SSPIF) {
+        if (SSPSTATbits.BF) {
+            elc = SSPBUF;
+        }
+
+        SSPBUF = potem;
+        PIR1bits.SSPIF = 0;
+    }
+
+
 }
 
 void main(void) {

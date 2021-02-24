@@ -11,13 +11,15 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"4 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 3\slave_2.X\configurator.c
+"3 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 3\slave_2.X\configurator.c
 [v _confi confi `(v  1 e 1 0 ]
-"20
+"19
 [v _int_portb int_portb `(v  1 e 1 0 ]
-"14 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 3\slave_2.X\slave_2.c
+"29
+[v _spis2 spis2 `(v  1 e 1 0 ]
+"15 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 3\slave_2.X\slave_2.c
 [v _intpb intpb `II(v  1 e 1 0 ]
-"26
+"37
 [v _main main `(v  1 e 1 0 ]
 "166 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
@@ -46,20 +48,115 @@
 ]
 [u S36 . 1 `S22 1 . 1 0 `S31 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES36  1 e 1 @11 ]
+[s S56 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSPIF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+]
+"553
+[u S64 . 1 `S56 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES64  1 e 1 @12 ]
+"843
+[v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
+"850
+[v _SSPCON SSPCON `VEuc  1 e 1 @20 ]
 "1416
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
+[s S290 . 1 `uc 1 TRISA0 1 0 :1:0 
+`uc 1 TRISA1 1 0 :1:1 
+`uc 1 TRISA2 1 0 :1:2 
+`uc 1 TRISA3 1 0 :1:3 
+`uc 1 TRISA4 1 0 :1:4 
+`uc 1 TRISA5 1 0 :1:5 
+`uc 1 TRISA6 1 0 :1:6 
+`uc 1 TRISA7 1 0 :1:7 
+]
+"1433
+[u S299 . 1 `S290 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES299  1 e 1 @133 ]
 "1478
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
 "1540
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
+[s S269 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 TRISC3 1 0 :1:3 
+`uc 1 TRISC4 1 0 :1:4 
+`uc 1 TRISC5 1 0 :1:5 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"1557
+[u S278 . 1 `S269 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES278  1 e 1 @135 ]
 "1602
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
 "1664
 [v _TRISE TRISE `VEuc  1 e 1 @137 ]
-[s S114 . 1 `uc 1 IOCB 1 0 :8:0 
+[s S324 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSPIE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+]
+"1718
+[u S332 . 1 `S324 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES332  1 e 1 @140 ]
+"2177
+[v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
+[s S75 . 1 `uc 1 BF 1 0 :1:0 
+`uc 1 UA 1 0 :1:1 
+`uc 1 R_nW 1 0 :1:2 
+`uc 1 S 1 0 :1:3 
+`uc 1 P 1 0 :1:4 
+`uc 1 D_nA 1 0 :1:5 
+`uc 1 CKE 1 0 :1:6 
+`uc 1 SMP 1 0 :1:7 
+]
+"2231
+[s S84 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D 1 0 :1:5 
+]
+[s S89 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 I2C_READ 1 0 :1:2 
+`uc 1 I2C_START 1 0 :1:3 
+`uc 1 I2C_STOP 1 0 :1:4 
+`uc 1 I2C_DATA 1 0 :1:5 
+]
+[s S95 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nW 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nA 1 0 :1:5 
+]
+[s S100 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 nWRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 nADDRESS 1 0 :1:5 
+]
+[s S105 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 R_W 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 D_A 1 0 :1:5 
+]
+[s S110 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 READ_WRITE 1 0 :1:2 
+`uc 1 . 1 0 :2:3 
+`uc 1 DATA_ADDRESS 1 0 :1:5 
+]
+[u S115 . 1 `S75 1 . 1 0 `S84 1 . 1 0 `S89 1 . 1 0 `S95 1 . 1 0 `S100 1 . 1 0 `S105 1 . 1 0 `S110 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES115  1 e 1 @148 ]
+[s S243 . 1 `uc 1 IOCB 1 0 :8:0 
 ]
 "2436
-[s S116 . 1 `uc 1 IOCB0 1 0 :1:0 
+[s S245 . 1 `uc 1 IOCB0 1 0 :1:0 
 `uc 1 IOCB1 1 0 :1:1 
 `uc 1 IOCB2 1 0 :1:2 
 `uc 1 IOCB3 1 0 :1:3 
@@ -68,8 +165,8 @@
 `uc 1 IOCB6 1 0 :1:6 
 `uc 1 IOCB7 1 0 :1:7 
 ]
-[u S125 . 1 `S114 1 . 1 0 `S116 1 . 1 0 ]
-[v _IOCBbits IOCBbits `VES125  1 e 1 @150 ]
+[u S254 . 1 `S243 1 . 1 0 `S245 1 . 1 0 ]
+[v _IOCBbits IOCBbits `VES254  1 e 1 @150 ]
 "3387
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 "3449
@@ -80,23 +177,30 @@
 [v _RB1 RB1 `VEb  1 e 0 @49 ]
 "12 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 3\slave_2.X\slave_2.c
 [v _CONTL CONTL `uc  1 e 1 0 ]
-"26
+"13
+[v _elc elc `ui  1 e 2 0 ]
+"37
 [v _main main `(v  1 e 1 0 ]
 {
-"33
+"45
 } 0
-"20 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 3\slave_2.X\configurator.c
+"29 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 3\slave_2.X\configurator.c
+[v _spis2 spis2 `(v  1 e 1 0 ]
+{
+"38
+} 0
+"19
 [v _int_portb int_portb `(v  1 e 1 0 ]
 {
-"28
+"27
 } 0
-"4
+"3
 [v _confi confi `(v  1 e 1 0 ]
 {
-"18
+"17
 } 0
-"14 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 3\slave_2.X\slave_2.c
+"15 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 3\slave_2.X\slave_2.c
 [v _intpb intpb `II(v  1 e 1 0 ]
 {
-"24
+"35
 } 0

@@ -2519,9 +2519,11 @@ extern __bank0 __bit __timeout;
 
 void confi(void);
 void int_portb(void);
+void spis2(void);
 # 11 "slave_2.c" 2
 
 unsigned char CONTL;
+unsigned int elc;
 
 void __attribute__((picinterrupt(("")))) intpb(void) {
     if (INTCONbits.RBIF == 1) {
@@ -2533,10 +2535,21 @@ void __attribute__((picinterrupt(("")))) intpb(void) {
         }
         INTCONbits.RBIF = 0;
     }
+
+    if (PIR1bits.SSPIF) {
+        if (SSPSTATbits.BF) {
+            elc = SSPBUF;
+        }
+
+        SSPBUF = CONTL;
+        PIR1bits.SSPIF = 0;
+    }
+
 }
 
 void main(void) {
     confi();
+    spis2();
     int_portb();
     while (1) {
         PORTD = CONTL;

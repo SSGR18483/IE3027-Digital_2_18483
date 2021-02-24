@@ -76,10 +76,9 @@ void main(void) {
             digitos[i] = (char) (voltage_int1 % 10);
             voltage_int1 /= 10;
         }
-
-    }
     LCDGoto(0, 1);
     sprintf(datos, "%i.%i%iV\r\n", digitos[2], digitos[1], digitos[0]);
     LCDStr(datos);
+    }
 }
 

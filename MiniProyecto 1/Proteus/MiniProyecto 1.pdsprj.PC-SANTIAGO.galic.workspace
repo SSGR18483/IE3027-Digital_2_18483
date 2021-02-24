@@ -6,7 +6,7 @@
  </FRAME>
  <MODULE name="VSMDEBUG">
   <PWI>
-   <POPUP w="800" x="276" flags="00000002" y="233" h="200" pid="0" iid="-1">
+   <POPUP w="800" x="1295" flags="00000003" y="772" h="200" pid="0" iid="-1">
     <PROPERTIES>
      <ITEM name="Message Column Width">542</ITEM>
      <ITEM name="ShowGrid">No</ITEM>
@@ -32,25 +32,25 @@
      <ITEM name="nItems">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="450" x="1370" flags="00008023" y="758" h="250" pid="0" iid="45">
+   <POPUP w="450" x="1222" flags="00000023" y="955" h="250" pid="0" iid="45">
     <PROPERTIES>
      <ITEM name="HSplitter1Pos">100</ITEM>
      <ITEM name="VSplitter1Pos">238</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="450" x="1617" flags="00000023" y="495" h="250" pid="0" iid="46">
+   <POPUP w="450" x="1171" flags="00000023" y="727" h="250" pid="0" iid="46">
     <PROPERTIES>
      <ITEM name="HSplitter1Pos">100</ITEM>
      <ITEM name="VSplitter1Pos">238</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="450" x="1141" flags="00000023" y="677" h="250" pid="0" iid="47">
+   <POPUP w="450" x="1478" flags="00000023" y="524" h="250" pid="0" iid="47">
     <PROPERTIES>
      <ITEM name="HSplitter1Pos">100</ITEM>
      <ITEM name="VSplitter1Pos">238</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="450" x="590" flags="00000023" y="675" h="250" pid="0" iid="18">
+   <POPUP w="450" x="770" flags="00008023" y="799" h="250" pid="0" iid="18">
     <PROPERTIES>
      <ITEM name="AutoEcho">0</ITEM>
      <ITEM name="HexMode">0</ITEM>

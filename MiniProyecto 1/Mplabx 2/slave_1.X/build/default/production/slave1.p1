@@ -89,6 +89,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _ADCONS `(v ~T0 @X0 0 ef ]
 "32 ./conbits.h
 [v _SetupS1 `(v ~T0 @X0 0 ef ]
+"12 ./spis1.h
+[; ;./spis1.h: 12: void spicon(void);
+[v _spicon `(v ~T0 @X0 0 ef ]
 "54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -347,113 +350,116 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x BOR4V = BOR40V ]
 "28
 [p x WRT = OFF ]
-"12 slave1.c
-[; ;slave1.c: 12: float potem = 0;
+"13 slave1.c
+[; ;slave1.c: 13: float potem = 0;
 [v _potem `f ~T0 @X0 1 e ]
 [i _potem
 -> -> 0 `i `f
 ]
-"13
-[; ;slave1.c: 13: int pruebaxd;
-[v _pruebaxd `i ~T0 @X0 1 e ]
 "14
-[; ;slave1.c: 14: uint8_t divisor = 0 ;
+[; ;slave1.c: 14: int pruebaxd;
+[v _pruebaxd `i ~T0 @X0 1 e ]
+"15
+[; ;slave1.c: 15: uint8_t divisor = 0;
 [v _divisor `uc ~T0 @X0 1 e ]
 [i _divisor
 -> -> 0 `i `uc
 ]
 [v $root$_intadc `(v ~T0 @X0 0 e ]
-"17
-[; ;slave1.c: 17: void __attribute__((picinterrupt(("")))) intadc(void) {
+"18
+[; ;slave1.c: 18: void __attribute__((picinterrupt(("")))) intadc(void) {
 [v _intadc `(v ~T1 @X0 1 ef ]
 {
 [e :U _intadc ]
 [f ]
-"18
-[; ;slave1.c: 18:     if (PIR1bits.ADIF == 1) {
+"19
+[; ;slave1.c: 19:     if (PIR1bits.ADIF == 1) {
 [e $ ! == -> . . _PIR1bits 0 6 `i -> 1 `i 139  ]
 {
-"19
-[; ;slave1.c: 19:         potem = ADRESH;
-[e = _potem -> _ADRESH `f ]
 "20
-[; ;slave1.c: 20:         pruebaxd = ADRESH;
-[e = _pruebaxd -> _ADRESH `i ]
+[; ;slave1.c: 20:         potem = ADRESH;
+[e = _potem -> _ADRESH `f ]
 "21
-[; ;slave1.c: 21:         _delay((unsigned long)((35)*(8000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 35 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;slave1.c: 21:         pruebaxd = ADRESH;
+[e = _pruebaxd -> _ADRESH `i ]
 "22
-[; ;slave1.c: 22:         PIR1bits.ADIF = 0;
-[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;slave1.c: 22:         _delay((unsigned long)((35)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 35 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
 "23
-[; ;slave1.c: 23:         ADCON0bits.GO_DONE = 1;
-[e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
+[; ;slave1.c: 23:         PIR1bits.ADIF = 0;
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
 "24
-[; ;slave1.c: 24:     }
+[; ;slave1.c: 24:         ADCON0bits.GO_DONE = 1;
+[e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
+"25
+[; ;slave1.c: 25:     }
 }
 [e :U 139 ]
-"26
-[; ;slave1.c: 26:     if (PIR1bits.SSPIF){
+"27
+[; ;slave1.c: 27:     if (PIR1bits.SSPIF) {
 [e $ ! != -> . . _PIR1bits 0 3 `i -> 0 `i 140  ]
 {
-"27
-[; ;slave1.c: 27:         if(!SSPSTATbits.BF){
+"28
+[; ;slave1.c: 28:         if (!SSPSTATbits.BF) {
 [e $ ! ! != -> . . _SSPSTATbits 0 0 `i -> 0 `i 141  ]
 {
-"28
-[; ;slave1.c: 28:         PORTD = SSPBUF;
-[e = _PORTD _SSPBUF ]
 "29
-[; ;slave1.c: 29:         }
+[; ;slave1.c: 29:             PORTD = SSPBUF;
+[e = _PORTD _SSPBUF ]
+"30
+[; ;slave1.c: 30:         }
 }
 [e :U 141 ]
-"30
-[; ;slave1.c: 30:         SSPBUF = divisor;
-[e = _SSPBUF _divisor ]
 "31
-[; ;slave1.c: 31:         PIR1bits.SSPIF = 0;
+[; ;slave1.c: 31:         SSPBUF = divisor;
+[e = _SSPBUF _divisor ]
+"32
+[; ;slave1.c: 32:         PIR1bits.SSPIF = 0;
 [e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-"33
-[; ;slave1.c: 33:     }
+"34
+[; ;slave1.c: 34:     }
 }
 [e :U 140 ]
-"36
-[; ;slave1.c: 36: }
+"37
+[; ;slave1.c: 37: }
 [e :UE 138 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"38
-[; ;slave1.c: 38: void main(void) {
+"39
+[; ;slave1.c: 39: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"39
-[; ;slave1.c: 39:     ADCONS();
-[e ( _ADCONS ..  ]
 "40
-[; ;slave1.c: 40:     pruebaxd=0;
-[e = _pruebaxd -> 0 `i ]
+[; ;slave1.c: 40:     ADCONS();
+[e ( _ADCONS ..  ]
 "41
-[; ;slave1.c: 41:     SetupS1();
-[e ( _SetupS1 ..  ]
+[; ;slave1.c: 41:     pruebaxd = 0;
+[e = _pruebaxd -> 0 `i ]
 "42
-[; ;slave1.c: 42:     _delay((unsigned long)((35)*(8000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 35 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;slave1.c: 42:     SetupS1();
+[e ( _SetupS1 ..  ]
 "43
-[; ;slave1.c: 43:     ADCON0bits.GO_DONE = 1;
-[e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
+[; ;slave1.c: 43:     spicon();
+[e ( _spicon ..  ]
 "44
-[; ;slave1.c: 44:     while (1) {
+[; ;slave1.c: 44:     _delay((unsigned long)((35)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 35 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+"45
+[; ;slave1.c: 45:     ADCON0bits.GO_DONE = 1;
+[e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
+"46
+[; ;slave1.c: 46:     while (1) {
 [e :U 144 ]
 {
-"45
-[; ;slave1.c: 45:     }
+"47
+[; ;slave1.c: 47:     }
 }
 [e :U 143 ]
 [e $U 144  ]
 [e :U 145 ]
-"46
-[; ;slave1.c: 46: }
+"48
+[; ;slave1.c: 48: }
 [e :UE 142 ]
 }
