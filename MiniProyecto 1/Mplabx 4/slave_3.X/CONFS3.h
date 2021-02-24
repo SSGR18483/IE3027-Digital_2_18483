@@ -1,5 +1,12 @@
+/* 
+ * File:   CONFS3.h
+ * Author: galic
+ *
+ * Created on 23 de febrero de 2021, 06:27 PM
+ */
 
-#include"conbits.h"
+#ifndef CONFS3_H
+#define	CONFS3_H
 
 // PIC16F887 Configuration Bit Settings
 
@@ -23,15 +30,10 @@
 
 // #pragma config statements should precede project file includes.
 // Use project enums instead of #define for ON and OFF.
+#include <xc.h> 
+void setups3(void);
+void ADCONS3(void);
+void spis3(void);
 
-void SetupS1(void) {
-    ANSEL = 0b00000001;
-    ANSELH = 0;
-    TRISA = 0b00000001;
-    TRISB = 0;
-    TRISD = 0;
-    PORTA = 0;
-    PORTB = 0;
-    PORTD = 0;
+#endif	/* CONFS3_H */
 
-}

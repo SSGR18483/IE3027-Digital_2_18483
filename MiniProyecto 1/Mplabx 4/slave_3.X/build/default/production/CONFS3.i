@@ -1,4 +1,4 @@
-# 1 "adc.c"
+# 1 "CONFS3.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,28 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "adc.c" 2
+# 1 "CONFS3.c" 2
 
-# 1 "./adc.h" 1
-# 10 "./adc.h"
+# 1 "./CONFS3.h" 1
+# 16 "./CONFS3.h"
+#pragma config FOSC = EXTRC_CLKOUT
+#pragma config WDTE = OFF
+#pragma config PWRTE = OFF
+#pragma config MCLRE = OFF
+#pragma config CP = OFF
+#pragma config CPD = OFF
+#pragma config BOREN = ON
+#pragma config IESO = OFF
+#pragma config FCMEN = OFF
+#pragma config LVP = OFF
+
+
+#pragma config BOR4V = BOR40V
+#pragma config WRT = OFF
+
+
+
+
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2490,12 +2508,45 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 10 "./adc.h" 2
+# 33 "./CONFS3.h" 2
 
-void ADCONS(void);
-# 2 "adc.c" 2
+void setups3(void);
+void ADCONS3(void);
+void spis3(void);
+# 2 "CONFS3.c" 2
 
-void ADCONS(void){
+
+
+
+
+
+#pragma config FOSC = EXTRC_CLKOUT
+#pragma config WDTE = OFF
+#pragma config PWRTE = OFF
+#pragma config MCLRE = OFF
+#pragma config CP = OFF
+#pragma config CPD = OFF
+#pragma config BOREN = ON
+#pragma config IESO = OFF
+#pragma config FCMEN = OFF
+#pragma config LVP = OFF
+
+
+#pragma config BOR4V = BOR40V
+#pragma config WRT = OFF
+
+
+
+
+void setups3(void) {
+    ANSEL = 0b00000011;
+    ANSELH = 0;
+    TRISA = 0b00000001;
+    TRISD = 0;
+    PORTD = 0;
+}
+
+void ADCONS3(void) {
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
     PIE1bits.RCIE = 1;
@@ -2503,4 +2554,14 @@ void ADCONS(void){
     PIE1bits.ADIE = 1;
     ADCON0 = 0b10000001;
     ADCON1 = 0;
+}
+
+void spis3(void) {
+    PIE1bits.SSPIE = 1;
+    PIR1bits.SSPIF = 0;
+    TRISCbits.TRISC3 = 1;
+    TRISCbits.TRISC4 = 0;
+    TRISCbits.TRISC5 = 1;
+    SSPCON = 0b00100100;
+    SSPSTAT = 0;
 }

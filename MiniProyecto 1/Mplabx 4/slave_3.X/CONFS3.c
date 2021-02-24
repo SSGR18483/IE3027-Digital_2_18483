@@ -1,6 +1,5 @@
 
-#include"conbits.h"
-
+#include"CONFS3.h"
 // PIC16F887 Configuration Bit Settings
 
 // 'C' source line config statements
@@ -24,14 +23,31 @@
 // #pragma config statements should precede project file includes.
 // Use project enums instead of #define for ON and OFF.
 
-void SetupS1(void) {
-    ANSEL = 0b00000001;
+void setups3(void) {
+    ANSEL = 0b00000011;
     ANSELH = 0;
     TRISA = 0b00000001;
-    TRISB = 0;
     TRISD = 0;
-    PORTA = 0;
-    PORTB = 0;
     PORTD = 0;
-
 }
+
+void ADCONS3(void) {
+    INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
+    PIE1bits.RCIE = 1;
+    PIE1bits.TXIE = 1;
+    PIE1bits.ADIE = 1;
+    ADCON0 = 0b10000001;
+    ADCON1 = 0;
+}
+
+void spis3(void) {
+    PIE1bits.SSPIE = 1;
+    PIR1bits.SSPIF = 0;
+    TRISCbits.TRISC3 = 1;
+    TRISCbits.TRISC4 = 0;
+    TRISCbits.TRISC5 = 1;
+    SSPCON = 0b00100100;
+    SSPSTAT = 0;
+}
+

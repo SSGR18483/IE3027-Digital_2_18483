@@ -12,16 +12,18 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\slave_1.X.production.o
-cinit CODE 0 13 13 5 2
-text1 CODE 0 48 48 13 2
-text2 CODE 0 5B 5B B 2
-text3 CODE 0 18 18 1A 2
-maintext CODE 0 32 32 16 2
-cstackCOMMON COMMON 1 70 70 5 1
+cinit CODE 0 13 13 C 2
+text1 CODE 0 12C 12C 11 2
+text2 CODE 0 13D 13D F 2
+text3 CODE 0 D9 D9 3C 2
+text4 CODE 0 1F 1F BA 2
+maintext CODE 0 115 115 17 2
+cstackCOMMON COMMON 1 70 70 E 1
+cstackBANK0 BANK0 1 20 20 7 1
 intentry CODE 0 4 4 C 2
-bssCOMMON COMMON 1 75 75 1 1
+bssBANK0 BANK0 1 27 27 6 1
 config CONFIG 4 2007 2007 2 2
-$C:\Users\galic\AppData\Local\Temp\s964.o
+$C:\Users\galic\AppData\Local\Temp\sd14.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 10 10 3 2
 config CONFIG 4 2007 2007 2 2
@@ -31,32 +33,31 @@ config CONFIG 4 2007 2007 2 2
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 20-6F 1
+RAM 2D-6F 1
 RAM A0-EF 1
 RAM 110-16F 1
 RAM 190-1EF 1
-BANK0 20-6F 1
+BANK0 2D-6F 1
 BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST 66-1FFF 2
+CONST 14C-1FFF 2
 ENTRY 3-3 2
-ENTRY 66-1FFF 2
+ENTRY 14C-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
 CODE 3-3 2
-CODE 66-1FFF 2
+CODE 14C-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
 SFR3 180-18F 1
-COMMON 76-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE 66-1FFF 2
+STRCODE 14C-1FFF 2
 STRING 3-3 2
-STRING 66-1FFF 2
+STRING 14C-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -71,44 +72,81 @@ STRING 66-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\slave_1.X.production.o
-13 cinit CODE >773:C:\Users\galic\AppData\Local\Temp\s964.s
-13 cinit CODE >776:C:\Users\galic\AppData\Local\Temp\s964.s
-13 cinit CODE >787:C:\Users\galic\AppData\Local\Temp\s964.s
-14 cinit CODE >793:C:\Users\galic\AppData\Local\Temp\s964.s
-14 cinit CODE >795:C:\Users\galic\AppData\Local\Temp\s964.s
-15 cinit CODE >796:C:\Users\galic\AppData\Local\Temp\s964.s
-4 intentry CODE >13:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
-18 text3 CODE >13:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
-18 text3 CODE >14:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
-1C text3 CODE >15:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
-20 text3 CODE >16:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
-25 text3 CODE >17:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
-28 text3 CODE >18:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
-29 text3 CODE >20:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
-5B text2 CODE >3:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\adc.c
-5B text2 CODE >4:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\adc.c
-5E text2 CODE >5:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\adc.c
-62 text2 CODE >6:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\adc.c
-65 text2 CODE >7:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\adc.c
-48 text1 CODE >27:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\conbits.c
-48 text1 CODE >28:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\conbits.c
-4C text1 CODE >29:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\conbits.c
-4D text1 CODE >30:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\conbits.c
-51 text1 CODE >31:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\conbits.c
-52 text1 CODE >32:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\conbits.c
-53 text1 CODE >33:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\conbits.c
-54 text1 CODE >34:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\conbits.c
-57 text1 CODE >35:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\conbits.c
-58 text1 CODE >36:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\conbits.c
-59 text1 CODE >37:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\conbits.c
-5A text1 CODE >39:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\conbits.c
-32 maintext CODE >22:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
-32 maintext CODE >23:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
-37 maintext CODE >24:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
-3C maintext CODE >25:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
-41 maintext CODE >26:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
-44 maintext CODE >27:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
-44 maintext CODE >28:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
+13 cinit CODE >935:C:\Users\galic\AppData\Local\Temp\sd14.s
+13 cinit CODE >938:C:\Users\galic\AppData\Local\Temp\sd14.s
+13 cinit CODE >952:C:\Users\galic\AppData\Local\Temp\sd14.s
+14 cinit CODE >953:C:\Users\galic\AppData\Local\Temp\sd14.s
+15 cinit CODE >954:C:\Users\galic\AppData\Local\Temp\sd14.s
+16 cinit CODE >955:C:\Users\galic\AppData\Local\Temp\sd14.s
+17 cinit CODE >956:C:\Users\galic\AppData\Local\Temp\sd14.s
+18 cinit CODE >957:C:\Users\galic\AppData\Local\Temp\sd14.s
+19 cinit CODE >958:C:\Users\galic\AppData\Local\Temp\sd14.s
+1A cinit CODE >959:C:\Users\galic\AppData\Local\Temp\sd14.s
+1B cinit CODE >965:C:\Users\galic\AppData\Local\Temp\sd14.s
+1B cinit CODE >967:C:\Users\galic\AppData\Local\Temp\sd14.s
+1C cinit CODE >968:C:\Users\galic\AppData\Local\Temp\sd14.s
+4 intentry CODE >16:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
+1F text4 CODE >10:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+20 text4 CODE >15:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+29 text4 CODE >16:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+38 text4 CODE >17:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+39 text4 CODE >19:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+41 text4 CODE >20:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+41 text4 CODE >21:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+49 text4 CODE >22:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+52 text4 CODE >23:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+56 text4 CODE >24:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+57 text4 CODE >25:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+5B text4 CODE >26:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+64 text4 CODE >24:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+6B text4 CODE >29:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+6F text4 CODE >30:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+7D text4 CODE >31:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+86 text4 CODE >28:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+8D text4 CODE >34:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+8F text4 CODE >35:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+98 text4 CODE >33:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+A2 text4 CODE >37:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+A6 text4 CODE >38:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+AE text4 CODE >39:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+B0 text4 CODE >40:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+C6 text4 CODE >41:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+CF text4 CODE >42:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+D0 text4 CODE >43:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+D8 text4 CODE >44:C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
+D9 text3 CODE >16:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
+D9 text3 CODE >17:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
+DD text3 CODE >18:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
+FA text3 CODE >19:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
+101 text3 CODE >20:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
+108 text3 CODE >21:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
+10B text3 CODE >22:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
+10C text3 CODE >24:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
+13D text2 CODE >3:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\adc.c
+13D text2 CODE >4:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\adc.c
+13E text2 CODE >5:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\adc.c
+13F text2 CODE >6:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\adc.c
+142 text2 CODE >7:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\adc.c
+143 text2 CODE >8:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\adc.c
+144 text2 CODE >9:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\adc.c
+148 text2 CODE >10:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\adc.c
+14B text2 CODE >11:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\adc.c
+12C text1 CODE >27:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\conbits.c
+12C text1 CODE >28:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\conbits.c
+130 text1 CODE >29:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\conbits.c
+131 text1 CODE >30:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\conbits.c
+135 text1 CODE >31:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\conbits.c
+136 text1 CODE >32:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\conbits.c
+137 text1 CODE >33:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\conbits.c
+13A text1 CODE >34:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\conbits.c
+13B text1 CODE >35:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\conbits.c
+13C text1 CODE >37:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\conbits.c
+115 maintext CODE >26:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
+115 maintext CODE >27:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
+11A maintext CODE >28:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
+11E maintext CODE >29:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
+123 maintext CODE >30:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
+126 maintext CODE >32:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -122,51 +160,55 @@ $dist/default/production\slave_1.X.production.o
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production\slave_1.X.production.o
-__Hspace_0 66 0 ABS 0 - -
-__Hspace_1 76 0 ABS 0 - -
+__Hspace_0 14C 0 ABS 0 - -
+__Hspace_1 7E 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\galic\AppData\Local\Temp\s964.o
-_main 64 0 CODE 0 maintext dist/default/production\slave_1.X.production.o
-_var1 75 0 COMMON 1 bssCOMMON dist/default/production\slave_1.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\galic\AppData\Local\Temp\sd14.o
+_main 22A 0 CODE 0 maintext dist/default/production\slave_1.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\slave_1.X.production.o
-start 20 0 CODE 0 init C:\Users\galic\AppData\Local\Temp\s964.o
-_SetupS1 90 0 CODE 0 text1 dist/default/production\slave_1.X.production.o
+start 20 0 CODE 0 init C:\Users\galic\AppData\Local\Temp\sd14.o
+_SetupS1 258 0 CODE 0 text1 dist/default/production\slave_1.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\slave_1.X.production.o
-__HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s964.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s964.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s964.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s964.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s964.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s964.o
-__LbssCOMMON 0 0 ABS 0 bssCOMMON -
+intlevel0 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\sd14.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\sd14.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\sd14.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\sd14.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\sd14.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\sd14.o
 wtemp0 7E 0 ABS 0 - dist/default/production\slave_1.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
 _ADCON0 1F 0 ABS 0 - dist/default/production\slave_1.X.production.o
 _ADCON1 9F 0 ABS 0 - dist/default/production\slave_1.X.production.o
-_ADCONS B6 0 CODE 0 text2 dist/default/production\slave_1.X.production.o
+_ADCONS 27A 0 CODE 0 text2 dist/default/production\slave_1.X.production.o
 _ADRESH 1E 0 ABS 0 - dist/default/production\slave_1.X.production.o
 _ANSELH 189 0 ABS 0 - dist/default/production\slave_1.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\galic\AppData\Local\Temp\s964.o
-___stacklo 0 0 ABS 0 - C:\Users\galic\AppData\Local\Temp\s964.o
+___stackhi 0 0 ABS 0 - C:\Users\galic\AppData\Local\Temp\sd14.o
+___stacklo 0 0 ABS 0 - C:\Users\galic\AppData\Local\Temp\sd14.o
 __size_of_ADCONS 0 0 ABS 0 - dist/default/production\slave_1.X.production.o
-__end_of_intadc 64 0 CODE 0 text3 dist/default/production\slave_1.X.production.o
+__end_of_intadc 22A 0 CODE 0 text3 dist/default/production\slave_1.X.production.o
 start_initialization 26 0 CODE 0 cinit dist/default/production\slave_1.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\galic\AppData\Local\Temp\s964.o
+_TRISCbits 87 0 ABS 0 - dist/default/production\slave_1.X.production.o
+__pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\slave_1.X.production.o
+_SSPCON 14 0 ABS 0 - dist/default/production\slave_1.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\galic\AppData\Local\Temp\sd14.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
-__Hcinit 30 0 CODE 0 cinit -
+__Hcinit 3E 0 CODE 0 cinit -
 __Hstack 0 0 STACK 2 stack -
+__size_of___xxtofl 0 0 ABS 0 - dist/default/production\slave_1.X.production.o
 __Hmaintext 0 0 ABS 0 maintext -
+___xxtofl@arg 7A 0 COMMON 1 cstackCOMMON dist/default/production\slave_1.X.production.o
+___xxtofl@exp 79 0 COMMON 1 cstackCOMMON dist/default/production\slave_1.X.production.o
+___xxtofl@val 70 0 COMMON 1 cstackCOMMON dist/default/production\slave_1.X.production.o
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 4012 0 CONFIG 4 config -
 __Lbank0 0 0 ABS 0 bank0 -
@@ -175,6 +217,7 @@ __Lbank2 0 0 ABS 0 bank2 -
 __Lbank3 0 0 ABS 0 bank3 -
 __Lcinit 26 0 CODE 0 cinit -
 __Lstack 0 0 STACK 2 stack -
+_INTCONbits B 0 ABS 0 - dist/default/production\slave_1.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
 __Hinit 20 0 CODE 0 init -
@@ -191,18 +234,22 @@ __Lsfr1 0 0 ABS 0 sfr1 -
 __Lsfr2 0 0 ABS 0 sfr2 -
 __Lsfr3 0 0 ABS 0 sfr3 -
 __Ltext 0 0 ABS 0 text -
+__LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-__S0 66 0 ABS 0 - -
-__S1 76 0 ABS 0 - -
+__S0 14C 0 ABS 0 - -
+__S1 7E 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 saved_w 7E 0 ABS 0 - dist/default/production\slave_1.X.production.o
 __size_of_SetupS1 0 0 ABS 0 - dist/default/production\slave_1.X.production.o
+___xxtofl 3E 0 CODE 0 text4 dist/default/production\slave_1.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\galic\AppData\Local\Temp\s964.o
-_intadc 30 0 CODE 0 text3 dist/default/production\slave_1.X.production.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\galic\AppData\Local\Temp\sd14.o
+__end_of___xxtofl 1B2 0 CODE 0 text4 dist/default/production\slave_1.X.production.o
+_intadc 1B2 0 CODE 0 text3 dist/default/production\slave_1.X.production.o
+__LbssBANK0 0 0 ABS 0 bssBANK0 -
 _PIE1bits 8C 0 ABS 0 - dist/default/production\slave_1.X.production.o
-__pmaintext 64 0 CODE 0 maintext dist/default/production\slave_1.X.production.o
+__pmaintext 22A 0 CODE 0 maintext dist/default/production\slave_1.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
 __size_of_intadc 0 0 ABS 0 - dist/default/production\slave_1.X.production.o
@@ -212,42 +259,48 @@ __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lspace_4 0 0 ABS 0 - -
-__end_of_SetupS1 B6 0 CODE 0 text1 dist/default/production\slave_1.X.production.o
-__pbssCOMMON 75 0 COMMON 1 bssCOMMON dist/default/production\slave_1.X.production.o
+__end_of_SetupS1 27A 0 CODE 0 text1 dist/default/production\slave_1.X.production.o
+__HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _PIR1bits C 0 ABS 0 - dist/default/production\slave_1.X.production.o
 __Lend_init 20 0 CODE 0 end_init -
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-end_of_initialization 28 0 CODE 0 cinit dist/default/production\slave_1.X.production.o
+end_of_initialization 36 0 CODE 0 cinit dist/default/production\slave_1.X.production.o
 __Hintentry 20 0 CODE 0 intentry -
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 6 0 CODE 0 reset_vec -
-__ptext1 90 0 CODE 0 text1 dist/default/production\slave_1.X.production.o
-__ptext2 B6 0 CODE 0 text2 dist/default/production\slave_1.X.production.o
-__ptext3 30 0 CODE 0 text3 dist/default/production\slave_1.X.production.o
+__HbssBANK0 0 0 ABS 0 bssBANK0 -
+__ptext1 258 0 CODE 0 text1 dist/default/production\slave_1.X.production.o
+__ptext2 27A 0 CODE 0 text2 dist/default/production\slave_1.X.production.o
+__ptext3 1B2 0 CODE 0 text3 dist/default/production\slave_1.X.production.o
+__ptext4 3E 0 CODE 0 text4 dist/default/production\slave_1.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
+?___xxtofl 70 0 COMMON 1 cstackCOMMON dist/default/production\slave_1.X.production.o
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
-__end_of__initialization 28 0 CODE 0 cinit dist/default/production\slave_1.X.production.o
+__end_of__initialization 36 0 CODE 0 cinit dist/default/production\slave_1.X.production.o
 __Lfunctab 0 0 ENTRY 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/default/production\slave_1.X.production.o
+_SSPSTAT 94 0 ABS 0 - dist/default/production\slave_1.X.production.o
 __Hend_init 26 0 CODE 0 end_init -
-__end_of_main 90 0 CODE 0 maintext dist/default/production\slave_1.X.production.o
+__end_of_main 258 0 CODE 0 maintext dist/default/production\slave_1.X.production.o
+_pruebaxd 2B 0 BANK0 1 bssBANK0 dist/default/production\slave_1.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\slave_1.X.production.o
 _PORTA 5 0 ABS 0 - dist/default/production\slave_1.X.production.o
 _PORTB 6 0 ABS 0 - dist/default/production\slave_1.X.production.o
 _PORTD 8 0 ABS 0 - dist/default/production\slave_1.X.production.o
-_PORTE 9 0 ABS 0 - dist/default/production\slave_1.X.production.o
 _TRISA 85 0 ABS 0 - dist/default/production\slave_1.X.production.o
 _TRISB 86 0 ABS 0 - dist/default/production\slave_1.X.production.o
 _TRISD 88 0 ABS 0 - dist/default/production\slave_1.X.production.o
-_TRISE 89 0 ABS 0 - dist/default/production\slave_1.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/production\slave_1.X.production.o
+_potem 27 0 BANK0 1 bssBANK0 dist/default/production\slave_1.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\slave_1.X.production.o
-__end_of_ADCONS CC 0 CODE 0 text2 dist/default/production\slave_1.X.production.o
+__end_of_ADCONS 298 0 CODE 0 text2 dist/default/production\slave_1.X.production.o
 __initialization 26 0 CODE 0 cinit dist/default/production\slave_1.X.production.o
+___xxtofl@sign 78 0 COMMON 1 cstackCOMMON dist/default/production\slave_1.X.production.o
+__pbssBANK0 27 0 BANK0 1 bssBANK0 dist/default/production\slave_1.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -273,8 +326,9 @@ __initialization 26 0 CODE 0 cinit dist/default/production\slave_1.X.production.
 # and size are in units of delta. The file address is in units of bytes.
 # All other numeric quantities are in decimal.
 %SEGMENTS
-cstackCOMMON 1 70 70 6 1
-intentry 0 4 8 62 2
+cstackCOMMON 1 70 70 E 1
+cstackBANK0 1 20 20 D 1
+intentry 0 4 8 148 2
 reset_vec 0 0 0 3 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section

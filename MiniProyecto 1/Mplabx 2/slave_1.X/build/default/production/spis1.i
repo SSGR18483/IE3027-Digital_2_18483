@@ -1,4 +1,4 @@
-# 1 "adc.c"
+# 1 "spis1.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,9 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "adc.c" 2
-
-# 1 "./adc.h" 1
-# 10 "./adc.h"
+# 1 "spis1.c" 2
+# 1 "./spis1.h" 1
+# 10 "./spis1.h"
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2490,17 +2489,19 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 10 "./adc.h" 2
+# 10 "./spis1.h" 2
 
-void ADCONS(void);
-# 2 "adc.c" 2
 
-void ADCONS(void){
-    INTCONbits.GIE = 1;
-    INTCONbits.PEIE = 1;
-    PIE1bits.RCIE = 1;
-    PIE1bits.TXIE = 1;
-    PIE1bits.ADIE = 1;
-    ADCON0 = 0b10000001;
-    ADCON1 = 0;
+void spicon(void);
+# 1 "spis1.c" 2
+
+
+void spicon(void) {
+    PIE1bits.SSPIE = 1;
+    PIR1bits.SSPIF = 0;
+    TRISCbits.TRISC3 = 1;
+    TRISCbits.TRISC4 = 0;
+    TRISCbits.TRISC5 = 1;
+    SSPCON = 0b00100100;
+    SSPSTAT = 0;
 }

@@ -1,5 +1,20 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"465 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
+"3387 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3387: extern volatile unsigned char ANSEL __attribute__((address(0x188)));
+[v _ANSEL `Vuc ~T0 @X0 0 e@392 ]
+"3449
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3449: extern volatile unsigned char ANSELH __attribute__((address(0x189)));
+[v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
+"1416
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1416: extern volatile unsigned char TRISA __attribute__((address(0x085)));
+[v _TRISA `Vuc ~T0 @X0 0 e@133 ]
+"1602
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1602: extern volatile unsigned char TRISD __attribute__((address(0x088)));
+[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
+"352
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 352: extern volatile unsigned char PORTD __attribute__((address(0x008)));
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
+"465
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 465:     struct {
 [s S16 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S16 . RBIF INTF T0IF RBIE INTE T0IE PEIE GIE ]
@@ -31,6 +46,58 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2977
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2977: extern volatile unsigned char ADCON1 __attribute__((address(0x09F)));
 [v _ADCON1 `Vuc ~T0 @X0 0 e@159 ]
+"543
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 543:     struct {
+[s S19 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S19 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF ]
+"542
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 542: typedef union {
+[u S18 `S19 1 ]
+[n S18 . . ]
+"553
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 553: extern volatile PIR1bits_t PIR1bits __attribute__((address(0x00C)));
+[v _PIR1bits `VS18 ~T0 @X0 0 e@12 ]
+"1546
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1546:     struct {
+[s S57 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S57 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"1545
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1545: typedef union {
+[u S56 `S57 1 ]
+[n S56 . . ]
+"1557
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1557: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x087)));
+[v _TRISCbits `VS56 ~T0 @X0 0 e@135 ]
+"850
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 850: extern volatile unsigned char SSPCON __attribute__((address(0x014)));
+[v _SSPCON `Vuc ~T0 @X0 0 e@20 ]
+"2177
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2177: extern volatile unsigned char SSPSTAT __attribute__((address(0x094)));
+[v _SSPSTAT `Vuc ~T0 @X0 0 e@148 ]
+"16 ./CONFS3.h
+[p x FOSC = EXTRC_CLKOUT ]
+"17
+[p x WDTE = OFF ]
+"18
+[p x PWRTE = OFF ]
+"19
+[p x MCLRE = OFF ]
+"20
+[p x CP = OFF ]
+"21
+[p x CPD = OFF ]
+"22
+[p x BOREN = ON ]
+"23
+[p x IESO = OFF ]
+"24
+[p x FCMEN = OFF ]
+"25
+[p x LVP = OFF ]
+"28
+[p x BOR4V = BOR40V ]
+"29
+[p x WRT = OFF ]
 "54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -265,34 +332,105 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"3 adc.c
-[; ;adc.c: 3: void ADCONS(void){
-[v _ADCONS `(v ~T0 @X0 1 ef ]
-{
-[e :U _ADCONS ]
-[f ]
-"4
-[; ;adc.c: 4:     INTCONbits.GIE = 1;
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
-"5
-[; ;adc.c: 5:     INTCONbits.PEIE = 1;
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
-"6
-[; ;adc.c: 6:     PIE1bits.RCIE = 1;
-[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
-"7
-[; ;adc.c: 7:     PIE1bits.TXIE = 1;
-[e = . . _PIE1bits 0 4 -> -> 1 `i `uc ]
-"8
-[; ;adc.c: 8:     PIE1bits.ADIE = 1;
-[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
+"8 CONFS3.c
+[; ;CONFS3.c: 8:     PORTD = 0;
+[p x FOSC = EXTRC_CLKOUT ]
 "9
-[; ;adc.c: 9:     ADCON0 = 0b10000001;
-[e = _ADCON0 -> -> 129 `i `uc ]
+[; ;CONFS3.c: 9: }
+[p x WDTE = OFF ]
 "10
-[; ;adc.c: 10:     ADCON1 = 0;
-[e = _ADCON1 -> -> 0 `i `uc ]
+[; ;CONFS3.c: 10: 
+[p x PWRTE = OFF ]
 "11
-[; ;adc.c: 11: }
+[; ;CONFS3.c: 11: void ADCONS3(void) {
+[p x MCLRE = OFF ]
+"12
+[; ;CONFS3.c: 12:     INTCONbits.GIE = 1;
+[p x CP = OFF ]
+"13
+[; ;CONFS3.c: 13:     INTCONbits.PEIE = 1;
+[p x CPD = OFF ]
+"14
+[; ;CONFS3.c: 14:     PIE1bits.RCIE = 1;
+[p x BOREN = ON ]
+"15
+[; ;CONFS3.c: 15:     PIE1bits.TXIE = 1;
+[p x IESO = OFF ]
+"16
+[; ;CONFS3.c: 16:     PIE1bits.ADIE = 1;
+[p x FCMEN = OFF ]
+"17
+[; ;CONFS3.c: 17:     ADCON0 = 0b10000001;
+[p x LVP = OFF ]
+"20
+[; ;CONFS3.c: 20: 
+[p x BOR4V = BOR40V ]
+"21
+[; ;CONFS3.c: 21: void spis3(void) {
+[p x WRT = OFF ]
+"26
+[; ;CONFS3.c: 26:     TRISCbits.TRISC5 = 1;
+[v _setups3 `(v ~T0 @X0 1 ef ]
+{
+[e :U _setups3 ]
+[f ]
+"27
+[; ;CONFS3.c: 27:     SSPCON = 0b00100100;
+[e = _ANSEL -> -> 3 `i `uc ]
+"28
+[; ;CONFS3.c: 28:     SSPSTAT = 0;
+[e = _ANSELH -> -> 0 `i `uc ]
+"29
+[; ;CONFS3.c: 29: }
+[e = _TRISA -> -> 1 `i `uc ]
+"30
+[e = _TRISD -> -> 0 `i `uc ]
+"31
+[e = _PORTD -> -> 0 `i `uc ]
+"32
 [e :UE 138 ]
+}
+"34
+[v _ADCONS3 `(v ~T0 @X0 1 ef ]
+{
+[e :U _ADCONS3 ]
+[f ]
+"35
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"36
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"37
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+"38
+[e = . . _PIE1bits 0 4 -> -> 1 `i `uc ]
+"39
+[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
+"40
+[e = _ADCON0 -> -> 129 `i `uc ]
+"41
+[e = _ADCON1 -> -> 0 `i `uc ]
+"42
+[e :UE 139 ]
+}
+"44
+[v _spis3 `(v ~T0 @X0 1 ef ]
+{
+[e :U _spis3 ]
+[f ]
+"45
+[e = . . _PIE1bits 0 3 -> -> 1 `i `uc ]
+"46
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"47
+[e = . . _TRISCbits 0 3 -> -> 1 `i `uc ]
+"48
+[e = . . _TRISCbits 0 4 -> -> 0 `i `uc ]
+"49
+[e = . . _TRISCbits 0 5 -> -> 1 `i `uc ]
+"50
+[e = _SSPCON -> -> 36 `i `uc ]
+"51
+[e = _SSPSTAT -> -> 0 `i `uc ]
+"52
+[e :UE 140 ]
 }

@@ -2549,15 +2549,13 @@ void SetupS1(void);
 
 
 void SetupS1(void) {
-    ANSEL = 0b00000011;
+    ANSEL = 0b00000001;
     ANSELH = 0;
-    TRISA = 1;
-    TRISE = 0;
+    TRISA = 0b00000001;
     TRISB = 0;
     TRISD = 0;
     PORTA = 0;
     PORTB = 0;
     PORTD = 0;
-    PORTE = 0;
 
 }

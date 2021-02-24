@@ -8,9 +8,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1416
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1416: extern volatile unsigned char TRISA __attribute__((address(0x085)));
 [v _TRISA `Vuc ~T0 @X0 0 e@133 ]
-"1664
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1664: extern volatile unsigned char TRISE __attribute__((address(0x089)));
-[v _TRISE `Vuc ~T0 @X0 0 e@137 ]
 "1478
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1478: extern volatile unsigned char TRISB __attribute__((address(0x086)));
 [v _TRISB `Vuc ~T0 @X0 0 e@134 ]
@@ -26,9 +23,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "352
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 352: extern volatile unsigned char PORTD __attribute__((address(0x008)));
 [v _PORTD `Vuc ~T0 @X0 0 e@8 ]
-"414
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 414: extern volatile unsigned char PORTE __attribute__((address(0x009)));
-[v _PORTE `Vuc ~T0 @X0 0 e@9 ]
 "54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 54: __asm("INDF equ 00h");
 [; <" INDF equ 00h ;# ">
@@ -288,25 +282,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 "28
 [p x WRT = OFF ]
 "9 conbits.c
-[; ;conbits.c: 9:     TRISD = 0;
+[; ;conbits.c: 9:     PORTA = 0;
 [p x FOSC = EXTRC_CLKOUT ]
 "10
-[; ;conbits.c: 10:     PORTA = 0;
+[; ;conbits.c: 10:     PORTB = 0;
 [p x WDTE = OFF ]
 "11
-[; ;conbits.c: 11:     PORTB = 0;
+[; ;conbits.c: 11:     PORTD = 0;
 [p x PWRTE = OFF ]
 "12
-[; ;conbits.c: 12:     PORTD = 0;
+[; ;conbits.c: 12: 
 [p x MCLRE = OFF ]
 "13
-[; ;conbits.c: 13:     PORTE = 0;
+[; ;conbits.c: 13: }
 [p x CP = OFF ]
 "14
-[; ;conbits.c: 14: 
 [p x CPD = OFF ]
 "15
-[; ;conbits.c: 15: }
 [p x BOREN = ON ]
 "16
 [p x IESO = OFF ]
@@ -324,25 +316,21 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _SetupS1 ]
 [f ]
 "28
-[e = _ANSEL -> -> 3 `i `uc ]
+[e = _ANSEL -> -> 1 `i `uc ]
 "29
 [e = _ANSELH -> -> 0 `i `uc ]
 "30
 [e = _TRISA -> -> 1 `i `uc ]
 "31
-[e = _TRISE -> -> 0 `i `uc ]
-"32
 [e = _TRISB -> -> 0 `i `uc ]
-"33
+"32
 [e = _TRISD -> -> 0 `i `uc ]
-"34
+"33
 [e = _PORTA -> -> 0 `i `uc ]
-"35
+"34
 [e = _PORTB -> -> 0 `i `uc ]
-"36
+"35
 [e = _PORTD -> -> 0 `i `uc ]
 "37
-[e = _PORTE -> -> 0 `i `uc ]
-"39
 [e :UE 138 ]
 }
