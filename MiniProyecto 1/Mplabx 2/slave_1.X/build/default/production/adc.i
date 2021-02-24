@@ -2495,7 +2495,9 @@ extern __bank0 __bit __timeout;
 void ADCONS(void);
 # 2 "adc.c" 2
 
+
 void ADCONS(void){
+
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
     PIE1bits.RCIE = 1;

@@ -1,6 +1,8 @@
 
 #include"adc.h"
+
 void ADCONS(void){
+    
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
     PIE1bits.RCIE = 1;

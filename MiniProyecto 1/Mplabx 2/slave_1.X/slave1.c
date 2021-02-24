@@ -11,6 +11,7 @@
 #include<stdint.h>
 float potem = 0;
 int pruebaxd;
+uint8_t divisor = 0 ;
 #define _XTAL_FREQ 8000000
 
 void __interrupt() intadc(void) {
@@ -21,15 +22,25 @@ void __interrupt() intadc(void) {
         PIR1bits.ADIF = 0;
         ADCON0bits.GO_DONE = 1; //espero despues para poder realizar otra conversion
     }
+    
+    if (PIR1bits.SSPIF){
+        if(!SSPSTATbits.BF){
+        PORTD = SSPBUF;
+        }
+        SSPBUF = divisor;
+        PIR1bits.SSPIF = 0;
+        
+    }
+    
+    
 }
 
 void main(void) {
     ADCONS();
     pruebaxd=0;
     SetupS1();
+    __delay_us(35);
     ADCON0bits.GO_DONE = 1;
     while (1) {
-        PORTD= pruebaxd;
     }
-    return;
 }
