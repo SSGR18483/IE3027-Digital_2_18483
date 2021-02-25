@@ -2813,28 +2813,24 @@ void spiconm(void);
 
 
 char buffer[20];
-char buffer2[20];
-int cons;
-unsigned char var1;
 float divisor;
-int voltage_int1;
-float voltage2;
-int voltage_int2;
+uint16_t voltage_int1;
 char digitos[3];
-char digitos2[3];
+unsigned int contador2;
 int i;
-int fla;
 char datos[20];
 int incre = 0;
-int incre2 = 0;
 char leer;
-char datos2[20];
+unsigned int temperatura;
+char hola[25] = "noxd";
 
 void __attribute__((picinterrupt(("")))) intac(void) {
 
     if (PIR1bits.TXIF == 1) {
         TXREG = datos[incre];
-        if (incre == 20) {
+
+
+        if (incre == 16) {
             incre = 0;
         } else {
             incre++;
@@ -2847,37 +2843,50 @@ void __attribute__((picinterrupt(("")))) intac(void) {
 void main(void) {
     setupm1();
     inter();
-    spiconm();
-    cons = 0;
     _delay((unsigned long)((25)*(8000000/4000000.0)));
     LCD_Initialize();
     CONUSARTM(9600);
-    LCDGoto(0, 0);
-    LCDStr(" S1:   S2:   S3: ");
+    spiconm();
     TRISCbits.TRISC0 = 0;
     TRISCbits.TRISC1 = 0;
     TRISCbits.TRISC2 = 0;
     PORTCbits.RC0 = 0;
     PORTCbits.RC1 = 1;
     PORTCbits.RC2 = 1;
-
     while (1) {
         PORTCbits.RC0 = 0;
         SSPBUF = 1;
         if (!SSPSTATbits.BF) {
             divisor = SSPBUF;
         }
-        _delay((unsigned long)((5)*(8000000/4000.0)));
+        _delay((unsigned long)((2)*(8000000/4000.0)));
         PORTCbits.RC0 = 1;
+
+        PORTCbits.RC1 = 0;
+        SSPBUF = 1;
+        if (!SSPSTATbits.BF) {
+            contador2 = SSPBUF;
+        }
+        _delay((unsigned long)((2)*(8000000/4000.0)));
+        PORTCbits.RC1 = 1;
+
+        PORTCbits.RC2 = 0;
+        SSPBUF = 1;
+        if(!SSPSTATbits.BF){
+            temperatura = SSPBUF;
+        }
+        _delay((unsigned long)((2)*(8000000/4000.0)));
+        PORTCbits.RC2 = 1;
 
         voltage_int1 = (uint16_t) ((((divisor * 500) / 255)));
         for (i = 0; i < 3; i++) {
             digitos[i] = (char) (voltage_int1 % 10);
             voltage_int1 /= 10;
         }
-
+        sprintf(datos, "%i.%i%iV %3i %3i\r\n", digitos[2], digitos[1], digitos[0],contador2,temperatura);
+        LCDGoto(0, 0);
+        LCDStr(" S1    S2    S3 ");
+        LCDGoto(0, 1);
+        LCDStr(datos);
     }
-    LCDGoto(0, 1);
-    sprintf(datos, "%i.%i%iV\r\n", digitos[2], digitos[1], digitos[0]);
-    LCDStr(datos);
 }

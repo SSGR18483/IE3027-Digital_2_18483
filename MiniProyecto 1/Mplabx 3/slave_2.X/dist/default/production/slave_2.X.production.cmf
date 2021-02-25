@@ -11,10 +11,6 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\galic\AppData\Local\Temp\s11gs.o
-reset_vec CODE 0 0 0 3 2
-end_init CODE 0 10 10 3 2
-config CONFIG 4 2007 2007 2 2
 $dist/default/production\slave_2.X.production.o
 cinit CODE 0 13 13 7 2
 text1 CODE 0 89 89 13 2
@@ -25,6 +21,10 @@ maintext CODE 0 72 72 17 2
 cstackCOMMON COMMON 1 70 70 5 1
 intentry CODE 0 4 4 C 2
 bssCOMMON COMMON 1 75 75 3 1
+config CONFIG 4 2007 2007 2 2
+$C:\Users\galic\AppData\Local\Temp\s2eg.o
+reset_vec CODE 0 0 0 3 2
+end_init CODE 0 10 10 3 2
 config CONFIG 4 2007 2007 2 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
@@ -72,14 +72,14 @@ STRING A5-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\slave_2.X.production.o
-13 cinit CODE >635:C:\Users\galic\AppData\Local\Temp\s11gs.s
-13 cinit CODE >638:C:\Users\galic\AppData\Local\Temp\s11gs.s
-13 cinit CODE >652:C:\Users\galic\AppData\Local\Temp\s11gs.s
-14 cinit CODE >653:C:\Users\galic\AppData\Local\Temp\s11gs.s
-15 cinit CODE >654:C:\Users\galic\AppData\Local\Temp\s11gs.s
-16 cinit CODE >660:C:\Users\galic\AppData\Local\Temp\s11gs.s
-16 cinit CODE >662:C:\Users\galic\AppData\Local\Temp\s11gs.s
-17 cinit CODE >663:C:\Users\galic\AppData\Local\Temp\s11gs.s
+13 cinit CODE >635:C:\Users\galic\AppData\Local\Temp\s2eg.s
+13 cinit CODE >638:C:\Users\galic\AppData\Local\Temp\s2eg.s
+13 cinit CODE >652:C:\Users\galic\AppData\Local\Temp\s2eg.s
+14 cinit CODE >653:C:\Users\galic\AppData\Local\Temp\s2eg.s
+15 cinit CODE >654:C:\Users\galic\AppData\Local\Temp\s2eg.s
+16 cinit CODE >660:C:\Users\galic\AppData\Local\Temp\s2eg.s
+16 cinit CODE >662:C:\Users\galic\AppData\Local\Temp\s2eg.s
+17 cinit CODE >663:C:\Users\galic\AppData\Local\Temp\s2eg.s
 4 intentry CODE >15:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 3\slave_2.X\slave_2.c
 1A text4 CODE >15:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 3\slave_2.X\slave_2.c
 1A text4 CODE >16:C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 3\slave_2.X\slave_2.c
@@ -152,27 +152,27 @@ __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\galic\AppData\Local\Temp\s11gs.o
+___sp 0 0 STACK 2 stack C:\Users\galic\AppData\Local\Temp\s2eg.o
 _main E4 0 CODE 0 maintext dist/default/production\slave_2.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\slave_2.X.production.o
-start 20 0 CODE 0 init C:\Users\galic\AppData\Local\Temp\s11gs.o
+start 20 0 CODE 0 init C:\Users\galic\AppData\Local\Temp\s2eg.o
 __size_of_main 0 0 ABS 0 - dist/default/production\slave_2.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s11gs.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s11gs.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s11gs.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s11gs.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s11gs.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s11gs.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s2eg.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s2eg.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s2eg.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s2eg.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s2eg.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s2eg.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 wtemp0 7E 0 ABS 0 - dist/default/production\slave_2.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
 _ANSELH 189 0 ABS 0 - dist/default/production\slave_2.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
-___stackhi 0 0 ABS 0 - C:\Users\galic\AppData\Local\Temp\s11gs.o
-___stacklo 0 0 ABS 0 - C:\Users\galic\AppData\Local\Temp\s11gs.o
+___stackhi 0 0 ABS 0 - C:\Users\galic\AppData\Local\Temp\s2eg.o
+___stacklo 0 0 ABS 0 - C:\Users\galic\AppData\Local\Temp\s2eg.o
 __size_of_confi 0 0 ABS 0 - dist/default/production\slave_2.X.production.o
 __size_of_intpb 0 0 ABS 0 - dist/default/production\slave_2.X.production.o
 __size_of_spis2 0 0 ABS 0 - dist/default/production\slave_2.X.production.o
@@ -181,7 +181,7 @@ _TRISAbits 85 0 ABS 0 - dist/default/production\slave_2.X.production.o
 _TRISCbits 87 0 ABS 0 - dist/default/production\slave_2.X.production.o
 _SSPBUF 13 0 ABS 0 - dist/default/production\slave_2.X.production.o
 _SSPCON 14 0 ABS 0 - dist/default/production\slave_2.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\galic\AppData\Local\Temp\s11gs.o
+___int_sp 0 0 STACK 2 stack C:\Users\galic\AppData\Local\Temp\s2eg.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -224,7 +224,7 @@ __S3 0 0 ABS 0 - -
 _elc 75 0 COMMON 1 bssCOMMON dist/default/production\slave_2.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\slave_2.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\galic\AppData\Local\Temp\s11gs.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\galic\AppData\Local\Temp\s2eg.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\slave_2.X.production.o
 __pmaintext E4 0 CODE 0 maintext dist/default/production\slave_2.X.production.o
 __Lcommon 0 0 ABS 0 common -

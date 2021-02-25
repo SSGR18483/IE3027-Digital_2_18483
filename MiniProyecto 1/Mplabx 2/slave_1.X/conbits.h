@@ -4,7 +4,7 @@
  *
  * Created on 22 de febrero de 2021, 05:13 PM
  */
-#include <xc.h> 
+
 #ifndef CONBITS_H
 #define	CONBITS_H
 // PIC16F887 Configuration Bit Settings
@@ -26,7 +26,7 @@
 // CONFIG2
 #pragma config BOR4V = BOR40V   // Brown-out Reset Selection bit (Brown-out Reset set to 4.0V)
 #pragma config WRT = OFF        // Flash Program Memory Self Write Enable bits (Write protection off)
-
+#include <xc.h> 
 // #pragma config statements should precede project file includes.
 // Use project enums instead of #define for ON and OFF.
 void SetupS1(void);

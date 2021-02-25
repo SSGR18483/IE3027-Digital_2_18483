@@ -9,8 +9,6 @@
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"10 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
-[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
 "6 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\pic\__eeprom.c
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
@@ -19,7 +17,7 @@
 [v _SetupS1 SetupS1 `(v  1 e 1 0 ]
 "18 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
 [v _intadc intadc `II(v  1 e 1 0 ]
-"39
+"38
 [v _main main `(v  1 e 1 0 ]
 "3 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\spis1.c
 [v _spicon spicon `(v  1 e 1 0 ]
@@ -46,7 +44,7 @@
 ]
 [u S36 . 1 `S22 1 . 1 0 `S31 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES36  1 e 1 @11 ]
-[s S100 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[s S155 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -55,8 +53,8 @@
 `uc 1 ADIF 1 0 :1:6 
 ]
 "553
-[u S108 . 1 `S100 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES108  1 e 1 @12 ]
+[u S163 . 1 `S155 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES163  1 e 1 @12 ]
 "843
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "850
@@ -65,13 +63,13 @@
 [v _ADRESH ADRESH `VEuc  1 e 1 @30 ]
 "1245
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @31 ]
-[s S126 . 1 `uc 1 ADON 1 0 :1:0 
+[s S216 . 1 `uc 1 ADON 1 0 :1:0 
 `uc 1 GO_nDONE 1 0 :1:1 
 `uc 1 CHS 1 0 :4:2 
 `uc 1 ADCS 1 0 :2:6 
 ]
 "1276
-[s S131 . 1 `uc 1 . 1 0 :1:0 
+[s S221 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO 1 0 :1:1 
 `uc 1 CHS0 1 0 :1:2 
 `uc 1 CHS1 1 0 :1:3 
@@ -80,17 +78,17 @@
 `uc 1 ADCS0 1 0 :1:6 
 `uc 1 ADCS1 1 0 :1:7 
 ]
-[s S140 . 1 `uc 1 . 1 0 :1:0 
+[s S230 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 nDONE 1 0 :1:1 
 ]
-[s S143 . 1 `uc 1 . 1 0 :1:0 
+[s S233 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 GO_DONE 1 0 :1:1 
 ]
-[u S146 . 1 `S126 1 . 1 0 `S131 1 . 1 0 `S140 1 . 1 0 `S143 1 . 1 0 ]
-[v _ADCON0bits ADCON0bits `VES146  1 e 1 @31 ]
+[u S236 . 1 `S216 1 . 1 0 `S221 1 . 1 0 `S230 1 . 1 0 `S233 1 . 1 0 ]
+[v _ADCON0bits ADCON0bits `VES236  1 e 1 @31 ]
 "1416
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
-[s S322 . 1 `uc 1 TRISA0 1 0 :1:0 
+[s S121 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -100,11 +98,11 @@
 `uc 1 TRISA7 1 0 :1:7 
 ]
 "1433
-[u S331 . 1 `S322 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES331  1 e 1 @133 ]
+[u S130 . 1 `S121 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES130  1 e 1 @133 ]
 "1478
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
-[s S301 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S100 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -114,8 +112,8 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1557
-[u S310 . 1 `S301 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES310  1 e 1 @135 ]
+[u S109 . 1 `S100 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES109  1 e 1 @135 ]
 "1602
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
 [s S54 . 1 `uc 1 TMR1IE 1 0 :1:0 
@@ -131,7 +129,7 @@
 [v _PIE1bits PIE1bits `VES62  1 e 1 @140 ]
 "2177
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @148 ]
-[s S172 . 1 `uc 1 BF 1 0 :1:0 
+[s S262 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -141,55 +139,53 @@
 `uc 1 SMP 1 0 :1:7 
 ]
 "2231
-[s S181 . 1 `uc 1 . 1 0 :2:0 
+[s S271 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D 1 0 :1:5 
 ]
-[s S186 . 1 `uc 1 . 1 0 :2:0 
+[s S276 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DATA 1 0 :1:5 
 ]
-[s S192 . 1 `uc 1 . 1 0 :2:0 
+[s S282 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S197 . 1 `uc 1 . 1 0 :2:0 
+[s S287 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S202 . 1 `uc 1 . 1 0 :2:0 
+[s S292 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S207 . 1 `uc 1 . 1 0 :2:0 
+[s S297 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[u S212 . 1 `S172 1 . 1 0 `S181 1 . 1 0 `S186 1 . 1 0 `S192 1 . 1 0 `S197 1 . 1 0 `S202 1 . 1 0 `S207 1 . 1 0 ]
-[v _SSPSTATbits SSPSTATbits `VES212  1 e 1 @148 ]
+[u S302 . 1 `S262 1 . 1 0 `S271 1 . 1 0 `S276 1 . 1 0 `S282 1 . 1 0 `S287 1 . 1 0 `S292 1 . 1 0 `S297 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES302  1 e 1 @148 ]
 "2977
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @159 ]
 "3387
 [v _ANSEL ANSEL `VEuc  1 e 1 @392 ]
 "3449
 [v _ANSELH ANSELH `VEuc  1 e 1 @393 ]
-"13 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
-[v _potem potem `f  1 e 4 0 ]
-"14
+"14 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
 [v _pruebaxd pruebaxd `i  1 e 2 0 ]
 "15
 [v _divisor divisor `uc  1 e 1 0 ]
-"39
+"38
 [v _main main `(v  1 e 1 0 ]
 {
-"48
+"46
 } 0
 "3 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\spis1.c
 [v _spicon spicon `(v  1 e 1 0 ]
@@ -209,20 +205,5 @@
 "18 C:\Documentos\UVG\CUARTO AÑO\Primer Semestre\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto 1\Mplabx 2\slave_1.X\slave1.c
 [v _intadc intadc `II(v  1 e 1 0 ]
 {
-"37
-} 0
-"10 C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
-[v ___xxtofl __xxtofl `(d  1 e 4 0 ]
-{
-[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-"13
-[v ___xxtofl@arg arg `ul  1 a 4 10 ]
-"12
-[v ___xxtofl@exp exp `uc  1 a 1 9 ]
-"10
-[v ___xxtofl@sign sign `uc  1 a 1 wreg ]
-[v ___xxtofl@val val `l  1 p 4 0 ]
-"15
-[v ___xxtofl@sign sign `uc  1 a 1 8 ]
-"44
+"36
 } 0

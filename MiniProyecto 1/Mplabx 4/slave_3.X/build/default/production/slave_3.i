@@ -2635,6 +2635,8 @@ typedef uint16_t uintptr_t;
 float potem = 0;
 unsigned int pruebab = 0;
 unsigned int elc;
+int pruebaxd;
+uint8_t divisor = 0;
 uint16_t temperatura = 0;
 
 
@@ -2662,39 +2664,41 @@ uint16_t temperatura = 0;
 void setups3(void);
 void ADCONS3(void);
 void spis3(void);
-# 17 "slave_3.c" 2
+# 19 "slave_3.c" 2
 
 
 void __attribute__((picinterrupt(("")))) intadc(void) {
     if (PIR1bits.ADIF == 1) {
-        potem = ADRESH;
+        divisor = ADRESH;
         pruebab = ADRESH;
-        _delay((unsigned long)((45)*(8000000/4000000.0)));
+        _delay((unsigned long)((1)*(8000000/4000.0)));
         PIR1bits.ADIF = 0;
         ADCON0bits.GO_DONE = 1;
     }
     if (PIR1bits.SSPIF) {
         if (SSPSTATbits.BF) {
-            elc = SSPBUF;
+            pruebaxd = SSPBUF;
         }
-
-        SSPBUF = potem;
+        SSPBUF = divisor;
         PIR1bits.SSPIF = 0;
+
     }
 
 
 }
 
 void main(void) {
-    spis3();
-    ADCONS3();
     setups3();
+    spis3();
+    _delay((unsigned long)((40)*(8000000/4000000.0)));
+    ADCONS3();
     TRISB = 0;
     PORTB = 0;
+
     ADCON0bits.GO_DONE = 1;
     while (1) {
         PORTB = pruebab;
-        temperatura = (uint16_t) (potem * 2);
+        temperatura = (uint16_t) (divisor * 2);
         if (temperatura < 25) {
             PORTD = 0b00000001;
         } else if ((temperatura >= 25) && (temperatura <= 36)) {

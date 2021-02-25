@@ -81,12 +81,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 843: extern volatile unsigned char SSPBUF __attribute__((address(0x013)));
 [v _SSPBUF `Vuc ~T0 @X0 0 e@19 ]
 [p mainexit ]
-"36 ./CONFS3.h
+"34 ./CONFS3.h
+[v _setups3 `(v ~T0 @X0 0 ef ]
+"36
 [v _spis3 `(v ~T0 @X0 0 ef ]
 "35
 [v _ADCONS3 `(v ~T0 @X0 0 ef ]
-"34
-[v _setups3 `(v ~T0 @X0 0 ef ]
 "1478 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1478: extern volatile unsigned char TRISB __attribute__((address(0x086)));
 [v _TRISB `Vuc ~T0 @X0 0 e@134 ]
@@ -346,7 +346,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;slave_3.c: 13: unsigned int elc;
 [v _elc `ui ~T0 @X0 1 e ]
 "14
-[; ;slave_3.c: 14: uint16_t temperatura = 0;
+[; ;slave_3.c: 14: int pruebaxd;
+[v _pruebaxd `i ~T0 @X0 1 e ]
+"15
+[; ;slave_3.c: 15: uint8_t divisor = 0;
+[v _divisor `uc ~T0 @X0 1 e ]
+[i _divisor
+-> -> 0 `i `uc
+]
+"16
+[; ;slave_3.c: 16: uint16_t temperatura = 0;
 [v _temperatura `ui ~T0 @X0 1 e ]
 [i _temperatura
 -> -> 0 `i `ui
@@ -376,140 +385,143 @@ Version 4.0 HI-TECH Software Intermediate Code
 "29
 [p x WRT = OFF ]
 [v $root$_intadc `(v ~T0 @X0 0 e ]
-"19 slave_3.c
-[; ;slave_3.c: 19: void __attribute__((picinterrupt(("")))) intadc(void) {
+"21 slave_3.c
+[; ;slave_3.c: 21: void __attribute__((picinterrupt(("")))) intadc(void) {
 [v _intadc `(v ~T1 @X0 1 ef ]
 {
 [e :U _intadc ]
 [f ]
-"20
-[; ;slave_3.c: 20:     if (PIR1bits.ADIF == 1) {
+"22
+[; ;slave_3.c: 22:     if (PIR1bits.ADIF == 1) {
 [e $ ! == -> . . _PIR1bits 0 6 `i -> 1 `i 139  ]
 {
-"21
-[; ;slave_3.c: 21:         potem = ADRESH;
-[e = _potem -> _ADRESH `f ]
-"22
-[; ;slave_3.c: 22:         pruebab = ADRESH;
-[e = _pruebab -> _ADRESH `ui ]
 "23
-[; ;slave_3.c: 23:         _delay((unsigned long)((45)*(8000000/4000000.0)));
-[e ( __delay (1 -> * -> -> 45 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
+[; ;slave_3.c: 23:         divisor = ADRESH;
+[e = _divisor _ADRESH ]
 "24
-[; ;slave_3.c: 24:         PIR1bits.ADIF = 0;
-[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+[; ;slave_3.c: 24:         pruebab = ADRESH;
+[e = _pruebab -> _ADRESH `ui ]
 "25
-[; ;slave_3.c: 25:         ADCON0bits.GO_DONE = 1;
-[e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
+[; ;slave_3.c: 25:         _delay((unsigned long)((1)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "26
-[; ;slave_3.c: 26:     }
+[; ;slave_3.c: 26:         PIR1bits.ADIF = 0;
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+"27
+[; ;slave_3.c: 27:         ADCON0bits.GO_DONE = 1;
+[e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
+"28
+[; ;slave_3.c: 28:     }
 }
 [e :U 139 ]
-"27
-[; ;slave_3.c: 27:     if (PIR1bits.SSPIF) {
+"29
+[; ;slave_3.c: 29:     if (PIR1bits.SSPIF) {
 [e $ ! != -> . . _PIR1bits 0 3 `i -> 0 `i 140  ]
 {
-"28
-[; ;slave_3.c: 28:         if (SSPSTATbits.BF) {
+"30
+[; ;slave_3.c: 30:         if (SSPSTATbits.BF) {
 [e $ ! != -> . . _SSPSTATbits 0 0 `i -> 0 `i 141  ]
 {
-"29
-[; ;slave_3.c: 29:             elc = SSPBUF;
-[e = _elc -> _SSPBUF `ui ]
-"30
-[; ;slave_3.c: 30:         }
+"31
+[; ;slave_3.c: 31:             pruebaxd = SSPBUF;
+[e = _pruebaxd -> _SSPBUF `i ]
+"32
+[; ;slave_3.c: 32:         }
 }
 [e :U 141 ]
-"32
-[; ;slave_3.c: 32:         SSPBUF = potem;
-[e = _SSPBUF -> _potem `uc ]
 "33
-[; ;slave_3.c: 33:         PIR1bits.SSPIF = 0;
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+[; ;slave_3.c: 33:         SSPBUF = divisor;
+[e = _SSPBUF _divisor ]
 "34
-[; ;slave_3.c: 34:     }
+[; ;slave_3.c: 34:         PIR1bits.SSPIF = 0;
+[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"36
+[; ;slave_3.c: 36:     }
 }
 [e :U 140 ]
-"37
-[; ;slave_3.c: 37: }
+"39
+[; ;slave_3.c: 39: }
 [e :UE 138 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"39
-[; ;slave_3.c: 39: void main(void) {
+"41
+[; ;slave_3.c: 41: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"40
-[; ;slave_3.c: 40:     spis3();
-[e ( _spis3 ..  ]
-"41
-[; ;slave_3.c: 41:     ADCONS3();
-[e ( _ADCONS3 ..  ]
 "42
 [; ;slave_3.c: 42:     setups3();
 [e ( _setups3 ..  ]
 "43
-[; ;slave_3.c: 43:     TRISB = 0;
-[e = _TRISB -> -> 0 `i `uc ]
+[; ;slave_3.c: 43:     spis3();
+[e ( _spis3 ..  ]
 "44
-[; ;slave_3.c: 44:     PORTB = 0;
-[e = _PORTB -> -> 0 `i `uc ]
+[; ;slave_3.c: 44:     _delay((unsigned long)((40)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
 "45
-[; ;slave_3.c: 45:     ADCON0bits.GO_DONE = 1;
-[e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
+[; ;slave_3.c: 45:     ADCONS3();
+[e ( _ADCONS3 ..  ]
 "46
-[; ;slave_3.c: 46:     while (1) {
+[; ;slave_3.c: 46:     TRISB = 0;
+[e = _TRISB -> -> 0 `i `uc ]
+"47
+[; ;slave_3.c: 47:     PORTB = 0;
+[e = _PORTB -> -> 0 `i `uc ]
+"49
+[; ;slave_3.c: 49:     ADCON0bits.GO_DONE = 1;
+[e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
+"50
+[; ;slave_3.c: 50:     while (1) {
 [e :U 144 ]
 {
-"47
-[; ;slave_3.c: 47:         PORTB = pruebab;
+"51
+[; ;slave_3.c: 51:         PORTB = pruebab;
 [e = _PORTB -> _pruebab `uc ]
-"48
-[; ;slave_3.c: 48:         temperatura = (uint16_t) (potem * 2);
-[e = _temperatura -> * _potem -> -> 2 `i `f `ui ]
-"49
-[; ;slave_3.c: 49:         if (temperatura < 25) {
+"52
+[; ;slave_3.c: 52:         temperatura = (uint16_t) (divisor * 2);
+[e = _temperatura -> * -> _divisor `i -> 2 `i `ui ]
+"53
+[; ;slave_3.c: 53:         if (temperatura < 25) {
 [e $ ! < _temperatura -> -> 25 `i `ui 146  ]
 {
-"50
-[; ;slave_3.c: 50:             PORTD = 0b00000001;
+"54
+[; ;slave_3.c: 54:             PORTD = 0b00000001;
 [e = _PORTD -> -> 1 `i `uc ]
-"51
-[; ;slave_3.c: 51:         } else if ((temperatura >= 25) && (temperatura <= 36)) {
+"55
+[; ;slave_3.c: 55:         } else if ((temperatura >= 25) && (temperatura <= 36)) {
 }
 [e $U 147  ]
 [e :U 146 ]
 [e $ ! && >= _temperatura -> -> 25 `i `ui <= _temperatura -> -> 36 `i `ui 148  ]
 {
-"52
-[; ;slave_3.c: 52:             PORTD = 0b00000011;
+"56
+[; ;slave_3.c: 56:             PORTD = 0b00000011;
 [e = _PORTD -> -> 3 `i `uc ]
-"53
-[; ;slave_3.c: 53:         } else {
+"57
+[; ;slave_3.c: 57:         } else {
 }
 [e $U 149  ]
 [e :U 148 ]
 {
-"54
-[; ;slave_3.c: 54:             PORTD = 0b00000111;
+"58
+[; ;slave_3.c: 58:             PORTD = 0b00000111;
 [e = _PORTD -> -> 7 `i `uc ]
-"55
-[; ;slave_3.c: 55:         }
+"59
+[; ;slave_3.c: 59:         }
 }
 [e :U 149 ]
 [e :U 147 ]
-"57
-[; ;slave_3.c: 57:     }
+"61
+[; ;slave_3.c: 61:     }
 }
 [e :U 143 ]
 [e $U 144  ]
 [e :U 145 ]
-"58
-[; ;slave_3.c: 58:     return;
+"62
+[; ;slave_3.c: 62:     return;
 [e $UE 142  ]
-"59
-[; ;slave_3.c: 59: }
+"63
+[; ;slave_3.c: 63: }
 [e :UE 142 ]
 }

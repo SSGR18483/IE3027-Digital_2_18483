@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.20\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\slave_3.X.production.sym \
   --cmf=dist/default/production\slave_3.X.production.cmf -z -Q16F887 \
-  -oC:\Users\galic\AppData\Local\Temp\sh2o.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\galic\AppData\Local\Temp\sgro.3 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/slave_3.X.production.map -E1 -ver=XC8 Compiler \
   --acfsm=1493 -ASTACK=0110h-016Fh -pstack=STACK -ACODE=00h-07FFhx4 \
   -ASTRCODE=00h-01FFFh -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 \
@@ -18,7 +18,7 @@ Linker command line:
   -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pcinit=CODE \
   -pfunctab=ENTRY -AEEDATA=00h-0FFh/02100h -peeprom_data=EEDATA -DEEDATA=2 \
   -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 -k \
-  C:\Users\galic\AppData\Local\Temp\sh2o.o \
+  C:\Users\galic\AppData\Local\Temp\sgro.o \
   dist/default/production\slave_3.X.production.o 
 
 Object code version is 3.11
@@ -28,47 +28,37 @@ Machine type is 16F887
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\galic\AppData\Local\Temp\sh2o.o
+C:\Users\galic\AppData\Local\Temp\sgro.o
                 end_init                             10       10        3        8       0
                 reset_vec                             0        0        3        0       0
                 config                             2007     2007        2        0       4
 dist/default/production\slave_3.X.production.o
-                cinit                                13       13        E        8       0
+                cinit                                13       13       13        8       0
                 intentry                              4        4        C        8       0
                 config                             2007     2007        2        0       4
-                text9                               382      382       BA        8       0
-                text8                               4B8      4B8       7A        8       0
-                text7                               59B      59B       61        8       0
-                text6                               638      638        F        8       0
-                text5                               5FC      5FC       29        8       0
-                text4                                21       21      361        8       0
-                text3                               43C      43C       7C        8       0
-                text2                               647      647        E        8       0
-                text1                               625      625       13        8       0
-                maintext                            532      532       69        8       0
-                cstackBANK0                          20       20       34       20       1
-                cstackCOMMON                         70       70        E       70       1
-                bssBANK0                             54       54        8       20       1
-                nvBANK0                              5C       5C        2       20       1
+                text4                                74       74       3C        8       0
+                text3                                CE       CE        E        8       0
+                text2                                C0       C0        E        8       0
+                text1                                B0       B0       10        8       0
+                maintext                             26       26       4E        8       0
+                cstackBANK0                          26       26        2       20       1
+                cstackCOMMON                         77       77        5       70       1
+                bssBANK0                             20       20        6       20       1
+                bssCOMMON                            70       70        7       70       1
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
 
         CLASS   CODE           
                 end_init                             10       10        3         0
-                cinit                                13       13        E         0
+                cinit                                13       13       13         0
                 intentry                              4        4        C         0
                 reset_vec                             0        0        3         0
-                text9                               382      382       BA         0
-                text8                               4B8      4B8       7A         0
-                text7                               59B      59B       61         0
-                text6                               638      638        F         0
-                text5                               5FC      5FC       29         0
-                text4                                21       21      361         0
-                text3                               43C      43C       7C         0
-                text2                               647      647        E         0
-                text1                               625      625       13         0
-                maintext                            532      532       69         0
+                text4                                74       74       3C         0
+                text3                                CE       CE        E         0
+                text2                                C0       C0        E         0
+                text1                                B0       B0       10         0
+                maintext                             26       26       4E         0
 
         CLASS   STRCODE        
 
@@ -79,12 +69,12 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   ENTRY          
 
         CLASS   COMMON         
-                cstackCOMMON                         70       70        E         1
+                cstackCOMMON                         77       77        5         1
+                bssCOMMON                            70       70        7         1
 
         CLASS   BANK0          
-                cstackBANK0                          20       20       34         1
-                bssBANK0                             54       54        8         1
-                nvBANK0                              5C       5C        2         1
+                cstackBANK0                          26       26        2         1
+                bssBANK0                             20       20        6         1
 
         CLASS   BANK1          
 
@@ -117,27 +107,28 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class     Delta
 
                 reset_vec                      000000  000003  000003         0       0  CODE        2
-                intentry                       000004  000651  000655         8       0  CODE        2
-                cstackBANK0                    000020  00003E  00005E        20       1  BANK0       1
-                cstackCOMMON                   000070  00000E  00007E        70       1  COMMON      1
+                intentry                       000004  0000D8  0000DC         8       0  CODE        2
+                bssBANK0                       000020  000008  000028        20       1  BANK0       1
+                bssCOMMON                      000070  00000C  00007C        70       1  COMMON      1
 
 
 UNUSED ADDRESS RANGES
 
         Name                Unused          Largest block    Delta
-        BANK0            005E-006F             12           1
+        BANK0            0028-006F             48           1
         BANK1            00A0-00EF             50           1
         BANK2            0110-016F             60           1
         BANK3            0190-01EF             60           1
         CODE             0003-0003              1           2
-                         0655-1FFF            800
+                         00DC-1FFF            800
+        COMMON           007C-007D              2           1
         CONST            0003-0003              1           2
-                         0655-1FFF            100
+                         00DC-1FFF            100
         EEDATA           2100-21FF            100           2
         ENTRY            0003-0003              1           2
-                         0655-1FFF            100
+                         00DC-1FFF            100
         IDLOC            2000-2003              4           2
-        RAM              005E-006F             12           1
+        RAM              0028-006F             48           1
                          00A0-00EF             50
                          0110-016F             60
                          0190-01EF             60
@@ -147,21 +138,16 @@ UNUSED ADDRESS RANGES
         SFR3             0180-018F             10           1
         STACK            0110-016F             60           1
         STRCODE          0003-0003              1           2
-                         0655-1FFF           19AB
+                         00DC-1FFF           1F24
         STRING           0003-0003              1           2
-                         0655-1FFF            100
+                         00DC-1FFF            100
 
                                   Symbol Table
 
-?__Umul8_16              cstackBANK0  0027
-?___flmul                cstackBANK0  0030
-?___fltol                cstackBANK0  004A
-?___xxtofl               cstackCOMMON 0070
-?i1___fltol              cstackCOMMON 0070
 _ADCON0                  (abs)        001F
 _ADCON0bits              (abs)        001F
 _ADCON1                  (abs)        009F
-_ADCONS3                 text6        0638
+_ADCONS3                 text3        00CE
 _ADRESH                  (abs)        001E
 _ANSEL                   (abs)        0188
 _ANSELH                  (abs)        0189
@@ -184,7 +170,8 @@ __Hbank1                 bank1        0000
 __Hbank2                 bank2        0000
 __Hbank3                 bank3        0000
 __HbssBANK0              bssBANK0     0000
-__Hcinit                 cinit        0021
+__HbssCOMMON             bssCOMMON    0000
+__Hcinit                 cinit        0026
 __Hclrtext               clrtext      0000
 __Hcode                  code         0000
 __Hcommon                common       0000
@@ -197,7 +184,6 @@ __Hfunctab               functab      0000
 __Hinit                  init         0010
 __Hintentry              intentry     0010
 __Hmaintext              maintext     0000
-__HnvBANK0               nvBANK0      0000
 __Hpowerup               powerup      0000
 __Hram                   ram          0000
 __Hreset_vec             reset_vec    0003
@@ -205,8 +191,8 @@ __Hsfr0                  sfr0         0000
 __Hsfr1                  sfr1         0000
 __Hsfr2                  sfr2         0000
 __Hsfr3                  sfr3         0000
-__Hspace_0               (abs)        0655
-__Hspace_1               (abs)        007E
+__Hspace_0               (abs)        00DC
+__Hspace_1               (abs)        007C
 __Hspace_2               (abs)        0000
 __Hspace_3               (abs)        0000
 __Hspace_4               (abs)        4010
@@ -219,6 +205,7 @@ __Lbank1                 bank1        0000
 __Lbank2                 bank2        0000
 __Lbank3                 bank3        0000
 __LbssBANK0              bssBANK0     0000
+__LbssCOMMON             bssCOMMON    0000
 __Lcinit                 cinit        0013
 __Lclrtext               clrtext      0000
 __Lcode                  code         0000
@@ -232,7 +219,6 @@ __Lfunctab               functab      0000
 __Linit                  init         0010
 __Lintentry              intentry     0004
 __Lmaintext              maintext     0000
-__LnvBANK0               nvBANK0      0000
 __Lpowerup               powerup      0000
 __Lram                   ram          0000
 __Lreset_vec             reset_vec    0000
@@ -248,89 +234,47 @@ __Lspace_4               (abs)        0000
 __Lstack                 stack        0000
 __Lstrings               strings      0000
 __Ltext                  text         0000
-__S0                     (abs)        0655
-__S1                     (abs)        007E
+__S0                     (abs)        00DC
+__S1                     (abs)        007C
 __S2                     (abs)        0000
 __S3                     (abs)        0000
-__Umul8_16               text5        05FC
-__Umul8_16@multiplicand  cstackBANK0  0027
-__Umul8_16@multiplier    cstackBANK0  002F
-__Umul8_16@product       cstackBANK0  002B
-__Umul8_16@word_mpld     cstackBANK0  002D
-___flmul                 text4        0021
-___flmul@a               cstackBANK0  0034
-___flmul@aexp            cstackBANK0  0042
-___flmul@b               cstackBANK0  0030
-___flmul@bexp            cstackBANK0  0043
-___flmul@grs             cstackBANK0  003E
-___flmul@prod            cstackBANK0  0044
-___flmul@sign            cstackBANK0  003D
-___flmul@temp            cstackBANK0  0048
-___fltol                 text3        043C
-___fltol@exp1            cstackBANK0  0053
-___fltol@f1              cstackBANK0  004A
-___fltol@sign1           cstackBANK0  0052
 ___int_sp                stack        0000
 ___latbits               (abs)        0002
 ___sp                    stack        0000
 ___stackhi               (abs)        0000
 ___stacklo               (abs)        0000
-___xxtofl                text9        0382
-___xxtofl@arg            cstackCOMMON 007A
-___xxtofl@exp            cstackCOMMON 0079
-___xxtofl@sign           cstackCOMMON 0078
-___xxtofl@val            cstackCOMMON 0070
-__end_of_ADCONS3         text6        0647
-__end_of__Umul8_16       text5        0625
-__end_of___flmul         text4        0382
-__end_of___fltol         text3        04B8
-__end_of___xxtofl        text9        043C
-__end_of__initialization cinit        001D
-__end_of_intadc          text7        05FC
-__end_of_main            maintext     059B
-__end_of_setups3         text2        0655
-__end_of_spis3           text1        0638
-__end_ofi1___fltol       text8        0532
+__end_of_ADCONS3         text3        00DC
+__end_of__initialization cinit        0022
+__end_of_intadc          text4        00B0
+__end_of_main            maintext     0074
+__end_of_setups3         text2        00CE
+__end_of_spis3           text1        00C0
 __initialization         cinit        0013
-__pbssBANK0              bssBANK0     0054
-__pcstackBANK0           cstackBANK0  0020
-__pcstackCOMMON          cstackCOMMON 0070
+__pbssBANK0              bssBANK0     0020
+__pbssCOMMON             bssCOMMON    0070
+__pcstackBANK0           cstackBANK0  0026
+__pcstackCOMMON          cstackCOMMON 0077
 __pintentry              intentry     0004
-__pmaintext              maintext     0532
-__pnvBANK0               nvBANK0      005C
-__ptext1                 text1        0625
-__ptext2                 text2        0647
-__ptext3                 text3        043C
-__ptext4                 text4        0021
-__ptext5                 text5        05FC
-__ptext6                 text6        0638
-__ptext7                 text7        059B
-__ptext8                 text8        04B8
-__ptext9                 text9        0382
+__pmaintext              maintext     0026
+__ptext1                 text1        00B0
+__ptext2                 text2        00C0
+__ptext3                 text3        00CE
+__ptext4                 text4        0074
 __size_of_ADCONS3        (abs)        0000
-__size_of__Umul8_16      (abs)        0000
-__size_of___flmul        (abs)        0000
-__size_of___fltol        (abs)        0000
-__size_of___xxtofl       (abs)        0000
 __size_of_intadc         (abs)        0000
 __size_of_main           (abs)        0000
 __size_of_setups3        (abs)        0000
 __size_of_spis3          (abs)        0000
-__size_ofi1___fltol      (abs)        0000
-_elc                     bssBANK0     0058
-_intadc                  text7        059B
-_main                    maintext     0532
-_potem                   bssBANK0     0054
-_pruebab                 bssBANK0     005A
-_setups3                 text2        0647
-_spis3                   text1        0625
-_temperatura             nvBANK0      005C
+_divisor                 bssCOMMON    0076
+_intadc                  text4        0074
+_main                    maintext     0026
+_pruebab                 bssCOMMON    0074
+_pruebaxd                bssBANK0     0024
+_setups3                 text2        00C0
+_spis3                   text1        00B0
+_temperatura             bssCOMMON    0070
 btemp                    (abs)        007E
-end_of_initialization    cinit        001D
-i1___fltol               text8        04B8
-i1___fltol@exp1          cstackCOMMON 0079
-i1___fltol@f1            cstackCOMMON 0070
-i1___fltol@sign1         cstackCOMMON 0078
+end_of_initialization    cinit        0022
 interrupt_function       intentry     0004
 intlevel0                functab      0000
 intlevel1                functab      0000
@@ -349,7 +293,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 39 in file "slave_3.c"
+		line 41 in file "slave_3.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -357,7 +301,7 @@ FUNCTION INFORMATION:
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
-		wreg, status,2, status,0, btemp+1, pclath, cstack
+		wreg, status,2, status,0, pclath, cstack
  Tracked objects:
 		On entry : 
 		On exit  : 
@@ -365,14 +309,12 @@ FUNCTION INFORMATION:
  Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
       Params:         0       0       0       0       0
       Locals:         0       0       0       0       0
-      Temps:          0       0       0       0       0
-      Totals:         0       0       0       0       0
-Total ram usage:        0 bytes
- Hardware stack levels required when called:    4
+      Temps:          0       2       0       0       0
+      Totals:         0       2       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels required when called:    2
  This function calls:
 		_ADCONS3
-		___flmul
-		___fltol
 		_setups3
 		_spis3
  This function is called by:
@@ -382,7 +324,7 @@ Total ram usage:        0 bytes
 
  *************** function _spis3 *****************
  Defined at:
-		line 44 in file "CONFS3.c"
+		line 43 in file "CONFS3.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -402,7 +344,7 @@ Total ram usage:        0 bytes
       Totals:         0       0       0       0       0
 Total ram usage:        0 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    2
+ Hardware stack levels required when called:    1
  This function calls:
 		Nothing
  This function is called by:
@@ -432,111 +374,11 @@ Total ram usage:        0 bytes
       Totals:         0       0       0       0       0
 Total ram usage:        0 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    2
+ Hardware stack levels required when called:    1
  This function calls:
 		Nothing
  This function is called by:
 		_main
- This function uses a non-reentrant model
-
-
- *************** function ___fltol *****************
- Defined at:
-		line 43 in file "C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\fltol.c"
- Parameters:    Size  Location     Type
-  f1              4   42[BANK0 ] void 
- Auto vars:     Size  Location     Type
-  exp1            1   51[BANK0 ] unsigned char 
-  sign1           1   50[BANK0 ] unsigned char 
- Return value:  Size  Location     Type
-                  4   42[BANK0 ] long 
- Registers used:
-		wreg, status,2, status,0, btemp+1
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-      Params:         0       4       0       0       0
-      Locals:         0       2       0       0       0
-      Temps:          0       4       0       0       0
-      Totals:         0      10       0       0       0
-Total ram usage:       10 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    2
- This function calls:
-		Nothing
- This function is called by:
-		_main
- This function uses a non-reentrant model
-
-
- *************** function ___flmul *****************
- Defined at:
-		line 8 in file "C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\sprcmul.c"
- Parameters:    Size  Location     Type
-  b               4   16[BANK0 ] long 
-  a               4   20[BANK0 ] long 
- Auto vars:     Size  Location     Type
-  prod            4   36[BANK0 ] struct .
-  grs             4   30[BANK0 ] unsigned long 
-  temp            2   40[BANK0 ] struct .
-  bexp            1   35[BANK0 ] unsigned char 
-  aexp            1   34[BANK0 ] unsigned char 
-  sign            1   29[BANK0 ] unsigned char 
- Return value:  Size  Location     Type
-                  4   16[BANK0 ] unsigned char 
- Registers used:
-		wreg, status,2, status,0, btemp+1, pclath, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-      Params:         0       8       0       0       0
-      Locals:         0      13       0       0       0
-      Temps:          0       5       0       0       0
-      Totals:         0      26       0       0       0
-Total ram usage:       26 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    3
- This function calls:
-		__Umul8_16
- This function is called by:
-		_main
- This function uses a non-reentrant model
-
-
- *************** function __Umul8_16 *****************
- Defined at:
-		line 4 in file "C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\Umul8_16.c"
- Parameters:    Size  Location     Type
-  multiplier      1    wreg     unsigned char 
-  multiplicand    1    7[BANK0 ] unsigned char 
- Auto vars:     Size  Location     Type
-  multiplier      1   15[BANK0 ] unsigned char 
-  word_mpld       2   13[BANK0 ] unsigned int 
-  product         2   11[BANK0 ] unsigned int 
- Return value:  Size  Location     Type
-                  2    7[BANK0 ] unsigned int 
- Registers used:
-		wreg, status,2, status,0
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-      Params:         0       2       0       0       0
-      Locals:         0       5       0       0       0
-      Temps:          0       2       0       0       0
-      Totals:         0       9       0       0       0
-Total ram usage:        9 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    2
- This function calls:
-		Nothing
- This function is called by:
-		___flmul
  This function uses a non-reentrant model
 
 
@@ -562,7 +404,7 @@ Total ram usage:        9 bytes
       Totals:         0       0       0       0       0
 Total ram usage:        0 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    2
+ Hardware stack levels required when called:    1
  This function calls:
 		Nothing
  This function is called by:
@@ -572,7 +414,7 @@ Total ram usage:        0 bytes
 
  *************** function _intadc *****************
  Defined at:
-		line 19 in file "slave_3.c"
+		line 21 in file "slave_3.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -580,7 +422,7 @@ Total ram usage:        0 bytes
  Return value:  Size  Location     Type
                   1    wreg      void 
  Registers used:
-		wreg, status,2, status,0, btemp+1, pclath, cstack
+		wreg, btemp+1
  Tracked objects:
 		On entry : 
 		On exit  : 
@@ -588,78 +430,14 @@ Total ram usage:        0 bytes
  Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
       Params:         0       0       0       0       0
       Locals:         0       0       0       0       0
-      Temps:          0       7       0       0       0
-      Totals:         0       7       0       0       0
-Total ram usage:        7 bytes
+      Temps:          5       0       0       0       0
+      Totals:         5       0       0       0       0
+Total ram usage:        5 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    1
  This function calls:
-		___xxtofl
-		i1___fltol
+		Nothing
  This function is called by:
 		Interrupt level 1
- This function uses a non-reentrant model
-
-
- *************** function i1___fltol *****************
- Defined at:
-		line 43 in file "C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\fltol.c"
- Parameters:    Size  Location     Type
-  f1              4    0[COMMON] void 
- Auto vars:     Size  Location     Type
-  exp1            1    9[COMMON] unsigned char 
-  sign1           1    8[COMMON] unsigned char 
- Return value:  Size  Location     Type
-                  4    0[COMMON] long 
- Registers used:
-		wreg, status,2, status,0, btemp+1
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-      Params:         4       0       0       0       0
-      Locals:         2       0       0       0       0
-      Temps:          4       0       0       0       0
-      Totals:        10       0       0       0       0
-Total ram usage:       10 bytes
- Hardware stack levels used:    1
- This function calls:
-		Nothing
- This function is called by:
-		_intadc
- This function uses a non-reentrant model
-
-
- *************** function ___xxtofl *****************
- Defined at:
-		line 10 in file "C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c"
- Parameters:    Size  Location     Type
-  sign            1    wreg     unsigned char 
-  val             4    0[COMMON] long 
- Auto vars:     Size  Location     Type
-  sign            1    8[COMMON] unsigned char 
-  arg             4   10[COMMON] unsigned long 
-  exp             1    9[COMMON] unsigned char 
- Return value:  Size  Location     Type
-                  4    0[COMMON] unsigned char 
- Registers used:
-		wreg, status,2, status,0, btemp+1
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-      Params:         4       0       0       0       0
-      Locals:         6       0       0       0       0
-      Temps:          4       0       0       0       0
-      Totals:        14       0       0       0       0
-Total ram usage:       14 bytes
- Hardware stack levels used:    1
- This function calls:
-		Nothing
- This function is called by:
-		_intadc
  This function uses a non-reentrant model
 
 
@@ -668,41 +446,20 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 CONFS3.c
-		_setups3       		CODE           	0647	0000	15
-		_spis3         		CODE           	0625	0000	20
-		_ADCONS3       		CODE           	0638	0000	16
+		_setups3       		CODE           	00C0	0000	15
+		_spis3         		CODE           	00B0	0000	17
+		_ADCONS3       		CODE           	00CE	0000	15
 
-CONFS3.c estimated size: 51
-
-C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\Umul8_16.c
-		__Umul8_16     		CODE           	05FC	0000	42
-
-C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\Umul8_16.c estimated size: 42
-
-C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c
-		___xxtofl      		CODE           	0382	0000	187
-
-C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\xxtofl.c estimated size: 187
+CONFS3.c estimated size: 47
 
 slave_3.c
-		_intadc        		CODE           	059B	0000	98
-		_main          		CODE           	0532	0000	106
+		_intadc        		CODE           	0074	0000	61
+		_main          		CODE           	0026	0000	79
 
-slave_3.c estimated size: 204
+slave_3.c estimated size: 140
 
 shared
-		i1___fltol     		CODE           	04B8	0000	123
-		__initialization		CODE           	0013	0000	11
+		__initialization		CODE           	0013	0000	16
 
-shared estimated size: 134
-
-C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\fltol.c
-		___fltol       		CODE           	043C	0000	125
-
-C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\fltol.c estimated size: 125
-
-C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\sprcmul.c
-		___flmul       		CODE           	0021	0000	866
-
-C:\Program Files\Microchip\xc8\v2.20\pic\sources\c90\common\sprcmul.c estimated size: 866
+shared estimated size: 16
 

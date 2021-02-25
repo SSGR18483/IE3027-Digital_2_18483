@@ -15,11 +15,21 @@
 
 
 # 1 "./conbits.h" 1
+# 15 "./conbits.h"
+#pragma config FOSC = EXTRC_CLKOUT
+#pragma config WDTE = OFF
+#pragma config PWRTE = OFF
+#pragma config MCLRE = OFF
+#pragma config CP = OFF
+#pragma config CPD = OFF
+#pragma config BOREN = ON
+#pragma config IESO = OFF
+#pragma config FCMEN = OFF
+#pragma config LVP = OFF
 
 
-
-
-
+#pragma config BOR4V = BOR40V
+#pragma config WRT = OFF
 
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
@@ -2501,29 +2511,7 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 7 "./conbits.h" 2
-
-
-
-
-
-
-
-
-#pragma config FOSC = EXTRC_CLKOUT
-#pragma config WDTE = OFF
-#pragma config PWRTE = OFF
-#pragma config MCLRE = OFF
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = ON
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-#pragma config LVP = OFF
-
-
-#pragma config BOR4V = BOR40V
-#pragma config WRT = OFF
+# 29 "./conbits.h" 2
 
 
 
@@ -2683,16 +2671,15 @@ uint8_t divisor = 0;
 
 void __attribute__((picinterrupt(("")))) intadc(void) {
     if (PIR1bits.ADIF == 1) {
-        potem = ADRESH;
-        pruebaxd = ADRESH;
+        divisor = ADRESH;
         _delay((unsigned long)((35)*(8000000/4000000.0)));
         PIR1bits.ADIF = 0;
         ADCON0bits.GO_DONE = 1;
     }
 
     if (PIR1bits.SSPIF) {
-        if (!SSPSTATbits.BF) {
-            PORTD = SSPBUF;
+        if (SSPSTATbits.BF) {
+            pruebaxd = SSPBUF;
         }
         SSPBUF = divisor;
         PIR1bits.SSPIF = 0;
@@ -2704,7 +2691,6 @@ void __attribute__((picinterrupt(("")))) intadc(void) {
 
 void main(void) {
     ADCONS();
-    pruebaxd = 0;
     SetupS1();
     spicon();
     _delay((unsigned long)((35)*(8000000/4000000.0)));
