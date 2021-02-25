@@ -331,10 +331,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
 "11 slave_3.c
-[; ;slave_3.c: 11: float potem = 0;
-[v _potem `f ~T0 @X0 1 e ]
+[; ;slave_3.c: 11: unsigned int potem = 0;
+[v _potem `ui ~T0 @X0 1 e ]
 [i _potem
--> -> 0 `i `f
+-> -> 0 `i `ui
 ]
 "12
 [; ;slave_3.c: 12: unsigned int pruebab = 0;
@@ -399,11 +399,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;slave_3.c: 23:         divisor = ADRESH;
 [e = _divisor _ADRESH ]
 "24
-[; ;slave_3.c: 24:         pruebab = ADRESH;
-[e = _pruebab -> _ADRESH `ui ]
+[; ;slave_3.c: 24:         potem = ADRESH;
+[e = _potem -> _ADRESH `ui ]
 "25
-[; ;slave_3.c: 25:         _delay((unsigned long)((1)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;slave_3.c: 25:         _delay((unsigned long)((50)*(8000000/4000000.0)));
+[e ( __delay (1 -> * -> -> 50 `i `d / -> -> 8000000 `l `d .4000000.0 `ul ]
 "26
 [; ;slave_3.c: 26:         PIR1bits.ADIF = 0;
 [e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
@@ -430,8 +430,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 141 ]
 "33
-[; ;slave_3.c: 33:         SSPBUF = divisor;
-[e = _SSPBUF _divisor ]
+[; ;slave_3.c: 33:         SSPBUF = potem;
+[e = _SSPBUF -> _potem `uc ]
 "34
 [; ;slave_3.c: 34:         PIR1bits.SSPIF = 0;
 [e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
@@ -463,65 +463,65 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;slave_3.c: 45:     ADCONS3();
 [e ( _ADCONS3 ..  ]
 "46
-[; ;slave_3.c: 46:     TRISB = 0;
-[e = _TRISB -> -> 0 `i `uc ]
-"47
-[; ;slave_3.c: 47:     PORTB = 0;
-[e = _PORTB -> -> 0 `i `uc ]
-"49
-[; ;slave_3.c: 49:     ADCON0bits.GO_DONE = 1;
+[; ;slave_3.c: 46:     ADCON0bits.GO_DONE = 1;
 [e = . . _ADCON0bits 3 1 -> -> 1 `i `uc ]
-"50
-[; ;slave_3.c: 50:     while (1) {
+"47
+[; ;slave_3.c: 47:     while (1) {
 [e :U 144 ]
 {
+"48
+[; ;slave_3.c: 48:         TRISB =0;
+[e = _TRISB -> -> 0 `i `uc ]
+"49
+[; ;slave_3.c: 49:         PORTB=0;
+[e = _PORTB -> -> 0 `i `uc ]
+"50
+[; ;slave_3.c: 50:         PORTB = potem;
+[e = _PORTB -> _potem `uc ]
 "51
-[; ;slave_3.c: 51:         PORTB = pruebab;
-[e = _PORTB -> _pruebab `uc ]
+[; ;slave_3.c: 51:         temperatura = (uint16_t) (potem * 2);
+[e = _temperatura * _potem -> -> 2 `i `ui ]
 "52
-[; ;slave_3.c: 52:         temperatura = (uint16_t) (divisor * 2);
-[e = _temperatura -> * -> _divisor `i -> 2 `i `ui ]
-"53
-[; ;slave_3.c: 53:         if (temperatura < 25) {
+[; ;slave_3.c: 52:         if (temperatura < 25) {
 [e $ ! < _temperatura -> -> 25 `i `ui 146  ]
 {
-"54
-[; ;slave_3.c: 54:             PORTD = 0b00000001;
+"53
+[; ;slave_3.c: 53:             PORTD = 0b00000001;
 [e = _PORTD -> -> 1 `i `uc ]
-"55
-[; ;slave_3.c: 55:         } else if ((temperatura >= 25) && (temperatura <= 36)) {
+"54
+[; ;slave_3.c: 54:         } else if ((temperatura >= 25) && (temperatura <= 36)) {
 }
 [e $U 147  ]
 [e :U 146 ]
 [e $ ! && >= _temperatura -> -> 25 `i `ui <= _temperatura -> -> 36 `i `ui 148  ]
 {
-"56
-[; ;slave_3.c: 56:             PORTD = 0b00000011;
+"55
+[; ;slave_3.c: 55:             PORTD = 0b00000011;
 [e = _PORTD -> -> 3 `i `uc ]
-"57
-[; ;slave_3.c: 57:         } else {
+"56
+[; ;slave_3.c: 56:         } else {
 }
 [e $U 149  ]
 [e :U 148 ]
 {
-"58
-[; ;slave_3.c: 58:             PORTD = 0b00000111;
+"57
+[; ;slave_3.c: 57:             PORTD = 0b00000111;
 [e = _PORTD -> -> 7 `i `uc ]
-"59
-[; ;slave_3.c: 59:         }
+"58
+[; ;slave_3.c: 58:         }
 }
 [e :U 149 ]
 [e :U 147 ]
-"61
-[; ;slave_3.c: 61:     }
+"60
+[; ;slave_3.c: 60:     }
 }
 [e :U 143 ]
 [e $U 144  ]
 [e :U 145 ]
-"62
-[; ;slave_3.c: 62:     return;
+"61
+[; ;slave_3.c: 61:     return;
 [e $UE 142  ]
-"63
-[; ;slave_3.c: 63: }
+"62
+[; ;slave_3.c: 62: }
 [e :UE 142 ]
 }

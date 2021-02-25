@@ -141,7 +141,7 @@ intentry 8 131 CODE 8 0
 bssCOMMON 70 7C COMMON 70 1
 %locals
 dist/default/production\slave_1.X.production.o
-C:\Users\galic\AppData\Local\Temp\sibs.s
+C:\Users\galic\AppData\Local\Temp\s6mk.s
 941 13 0 CODE 0
 944 13 0 CODE 0
 961 13 0 CODE 0

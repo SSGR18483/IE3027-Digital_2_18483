@@ -48,13 +48,12 @@ void main(void) {
     LCD_Initialize();
     CONUSARTM(9600);
     spiconm();
-    TRISCbits.TRISC0 = 0;
-    TRISCbits.TRISC1 = 0;
-    TRISCbits.TRISC2 = 0;
-    PORTCbits.RC0 = 0;
-    PORTCbits.RC1 = 1;
-    PORTCbits.RC2 = 1;
     while (1) {
+        sprintf(datos, "%i.%iV %3i %3d\r\n", digitos[2], digitos[1], contador2, temperatura);
+        LCDGoto(0, 0);
+        LCDStr(" S1    S2    S3 ");
+        LCDGoto(0, 1);
+        LCDStr(datos);
         PORTCbits.RC0 = 0;
         SSPBUF = 1;
         if (!SSPSTATbits.BF) {
@@ -63,6 +62,12 @@ void main(void) {
         __delay_ms(2);
         PORTCbits.RC0 = 1;
 
+        voltage_int1 = (uint16_t) ((((divisor * 500) / 255)));
+        for (i = 0; i < 3; i++) {
+            digitos[i] = (char) (voltage_int1 % 10);
+            voltage_int1 /= 10;
+        }
+
         PORTCbits.RC1 = 0;
         SSPBUF = 1;
         if (!SSPSTATbits.BF) {
@@ -70,25 +75,18 @@ void main(void) {
         }
         __delay_ms(2);
         PORTCbits.RC1 = 1;
-        
+
         PORTCbits.RC2 = 0;
         SSPBUF = 1;
-        if(!SSPSTATbits.BF){
+        if (!SSPSTATbits.BF) {
             temperatura = SSPBUF;
         }
         __delay_ms(2);
         PORTCbits.RC2 = 1;
-        
-        voltage_int1 = (uint16_t) ((((divisor * 500) / 255)));
-        for (i = 0; i < 3; i++) {
-            digitos[i] = (char) (voltage_int1 % 10);
-            voltage_int1 /= 10;
-        }
-        sprintf(datos, "%i.%i%iV %3i %3i\r\n", digitos[2], digitos[1], digitos[0],contador2,temperatura);
-        LCDGoto(0, 0);
-        LCDStr(" S1    S2    S3 ");
-        LCDGoto(0, 1);
-        LCDStr(datos);
+        TRISB = 0;
+        PORTB = 0;
+        PORTB = temperatura;
+
     }
 }
 

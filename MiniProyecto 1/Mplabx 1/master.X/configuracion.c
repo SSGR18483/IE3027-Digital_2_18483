@@ -36,6 +36,12 @@ void setupm1(void) {
     PORTE = 0;
 }
 void inter(void) {
+    TRISCbits.TRISC0 = 0;
+    TRISCbits.TRISC1 = 0;
+    TRISCbits.TRISC2 = 0;
+    PORTCbits.RC0 = 0;
+    PORTCbits.RC1 = 1;
+    PORTCbits.RC2 = 1;
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
     PIE1bits.RCIE = 1;

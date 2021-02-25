@@ -29,6 +29,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "482
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 482: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
 [v _INTCONbits `VS15 ~T0 @X0 0 e@11 ]
+"1245
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1245: extern volatile unsigned char ADCON0 __attribute__((address(0x01F)));
+[v _ADCON0 `Vuc ~T0 @X0 0 e@31 ]
+"2977
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2977: extern volatile unsigned char ADCON1 __attribute__((address(0x09F)));
+[v _ADCON1 `Vuc ~T0 @X0 0 e@159 ]
 "1708
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1708:     struct {
 [s S63 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -40,12 +46,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1718
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1718: extern volatile PIE1bits_t PIE1bits __attribute__((address(0x08C)));
 [v _PIE1bits `VS62 ~T0 @X0 0 e@140 ]
-"1245
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1245: extern volatile unsigned char ADCON0 __attribute__((address(0x01F)));
-[v _ADCON0 `Vuc ~T0 @X0 0 e@31 ]
-"2977
-[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 2977: extern volatile unsigned char ADCON1 __attribute__((address(0x09F)));
-[v _ADCON1 `Vuc ~T0 @X0 0 e@159 ]
 "1546
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1546:     struct {
 [s S57 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -351,16 +351,16 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;CONFS3.c: 13:     INTCONbits.PEIE = 1;
 [p x CPD = OFF ]
 "14
-[; ;CONFS3.c: 14:     PIE1bits.RCIE = 1;
+[; ;CONFS3.c: 14:     ADCON0 = 0b10000001;
 [p x BOREN = ON ]
 "15
-[; ;CONFS3.c: 15:     PIE1bits.ADIE = 1;
+[; ;CONFS3.c: 15:     ADCON1 = 0;
 [p x IESO = OFF ]
 "16
-[; ;CONFS3.c: 16:     ADCON0 = 0b10000001;
+[; ;CONFS3.c: 16:     PIE1bits.RCIE = 1;
 [p x FCMEN = OFF ]
 "17
-[; ;CONFS3.c: 17:     ADCON1 = 0;
+[; ;CONFS3.c: 17:     PIE1bits.ADIE = 1;
 [p x LVP = OFF ]
 "20
 [; ;CONFS3.c: 20: void spis3(void) {
@@ -398,13 +398,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "36
 [e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
 "37
-[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
-"38
-[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
-"39
 [e = _ADCON0 -> -> 129 `i `uc ]
-"40
+"38
 [e = _ADCON1 -> -> 0 `i `uc ]
+"39
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+"40
+[e = . . _PIE1bits 0 6 -> -> 1 `i `uc ]
 "41
 [e :UE 139 ]
 }

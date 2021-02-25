@@ -29,6 +29,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 "414
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 414: extern volatile unsigned char PORTE __attribute__((address(0x009)));
 [v _PORTE `Vuc ~T0 @X0 0 e@9 ]
+"1546
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1546:     struct {
+[s S57 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S57 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"1545
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1545: typedef union {
+[u S56 `S57 1 ]
+[n S56 . . ]
+"1557
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1557: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x087)));
+[v _TRISCbits `VS56 ~T0 @X0 0 e@135 ]
+"296
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 296:     struct {
+[s S10 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S10 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"295
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 295: typedef union {
+[u S9 `S10 1 ]
+[n S9 . . ]
+"307
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 307: extern volatile PORTCbits_t PORTCbits __attribute__((address(0x007)));
+[v _PORTCbits `VS9 ~T0 @X0 0 e@7 ]
 "465
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 465:     struct {
 [s S16 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -349,25 +371,28 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;configuracion.c: 15: void inter(void) {
 [p x IESO = OFF ]
 "16
-[; ;configuracion.c: 16:     INTCONbits.GIE = 1;
+[; ;configuracion.c: 16:     TRISCbits.TRISC0 = 0;
 [p x FCMEN = OFF ]
 "17
-[; ;configuracion.c: 17:     INTCONbits.PEIE = 1;
+[; ;configuracion.c: 17:     TRISCbits.TRISC1 = 0;
 [p x LVP = OFF ]
 "20
-[; ;configuracion.c: 20:     PIR1bits.RCIF = 0;
+[; ;configuracion.c: 20:     PORTCbits.RC1 = 1;
 [p x BOR4V = BOR40V ]
 "21
-[; ;configuracion.c: 21:     return;
+[; ;configuracion.c: 21:     PORTCbits.RC2 = 1;
 [p x WRT = OFF ]
 "26
+[; ;configuracion.c: 26:     PIR1bits.RCIF = 0;
 [v _setupm1 `(v ~T0 @X0 1 ef ]
 {
 [e :U _setupm1 ]
 [f ]
 "27
+[; ;configuracion.c: 27:     return;
 [e = _ANSEL -> -> 0 `i `uc ]
 "28
+[; ;configuracion.c: 28: }
 [e = _ANSELH -> -> 0 `i `uc ]
 "29
 [e = _TRISA -> -> 0 `i `uc ]
@@ -394,17 +419,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _inter ]
 [f ]
 "39
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+[e = . . _TRISCbits 0 0 -> -> 0 `i `uc ]
 "40
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+[e = . . _TRISCbits 0 1 -> -> 0 `i `uc ]
 "41
-[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+[e = . . _TRISCbits 0 2 -> -> 0 `i `uc ]
 "42
-[e = . . _PIE1bits 0 4 -> -> 1 `i `uc ]
+[e = . . _PORTCbits 0 0 -> -> 0 `i `uc ]
 "43
-[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+[e = . . _PORTCbits 0 1 -> -> 1 `i `uc ]
 "44
-[e $UE 140  ]
+[e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
 "45
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+"46
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"47
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+"48
+[e = . . _PIE1bits 0 4 -> -> 1 `i `uc ]
+"49
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+"50
+[e $UE 140  ]
+"51
 [e :UE 140 ]
 }
