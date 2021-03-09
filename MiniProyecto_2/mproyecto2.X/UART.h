@@ -7,17 +7,12 @@
 
 #ifndef UART_H
 #define	UART_H
+#define _XTAL_FREQ 8000000
 
-#ifdef	__cplusplus
-extern "C" {
-#endif
+#include<xc.h>
+#include<stdint.h>
+#include <stdio.h>
 
-
-
-
-#ifdef	__cplusplus
-}
-#endif
-
+void COM_EUSART(const long int baudrate);
 #endif	/* UART_H */
 
