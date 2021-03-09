@@ -1,0 +1,4 @@
+Key adafruit:
+
+#define IO_USERNAME  "sgali"
+#define IO_KEY       "aio_PYyD52MoXmTU3q1PSlrjsPlMjRYj"
