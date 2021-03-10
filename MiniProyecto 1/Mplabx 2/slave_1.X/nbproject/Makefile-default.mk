@@ -94,7 +94,7 @@ MP_PROCESSOR_OPTION=16F887
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/adc.p1: adc.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/adc.p1: adc.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/adc.p1.d 
 	@${RM} ${OBJECTDIR}/adc.p1 
@@ -102,7 +102,7 @@ ${OBJECTDIR}/adc.p1: adc.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/adc.d ${OBJECTDIR}/adc.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/adc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/conbits.p1: conbits.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/conbits.p1: conbits.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/conbits.p1.d 
 	@${RM} ${OBJECTDIR}/conbits.p1 
@@ -110,7 +110,7 @@ ${OBJECTDIR}/conbits.p1: conbits.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/conbits.d ${OBJECTDIR}/conbits.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/conbits.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/spis1.p1: spis1.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/spis1.p1: spis1.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/spis1.p1.d 
 	@${RM} ${OBJECTDIR}/spis1.p1 
@@ -118,7 +118,7 @@ ${OBJECTDIR}/spis1.p1: spis1.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/spis1.d ${OBJECTDIR}/spis1.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/spis1.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/slave1.p1: slave1.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/slave1.p1: slave1.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/slave1.p1.d 
 	@${RM} ${OBJECTDIR}/slave1.p1 
@@ -127,7 +127,7 @@ ${OBJECTDIR}/slave1.p1: slave1.c  nbproject/Makefile-${CND_CONF}.mk
 	@${FIXDEPS} ${OBJECTDIR}/slave1.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 else
-${OBJECTDIR}/adc.p1: adc.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/adc.p1: adc.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/adc.p1.d 
 	@${RM} ${OBJECTDIR}/adc.p1 
@@ -135,7 +135,7 @@ ${OBJECTDIR}/adc.p1: adc.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/adc.d ${OBJECTDIR}/adc.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/adc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/conbits.p1: conbits.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/conbits.p1: conbits.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/conbits.p1.d 
 	@${RM} ${OBJECTDIR}/conbits.p1 
@@ -143,7 +143,7 @@ ${OBJECTDIR}/conbits.p1: conbits.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/conbits.d ${OBJECTDIR}/conbits.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/conbits.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/spis1.p1: spis1.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/spis1.p1: spis1.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/spis1.p1.d 
 	@${RM} ${OBJECTDIR}/spis1.p1 
@@ -151,7 +151,7 @@ ${OBJECTDIR}/spis1.p1: spis1.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/spis1.d ${OBJECTDIR}/spis1.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/spis1.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/slave1.p1: slave1.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/slave1.p1: slave1.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/slave1.p1.d 
 	@${RM} ${OBJECTDIR}/slave1.p1 

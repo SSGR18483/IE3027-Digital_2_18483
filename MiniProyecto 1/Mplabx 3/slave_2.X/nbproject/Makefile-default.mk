@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=slave_2.c configurator.c
+SOURCEFILES_QUOTED_IF_SPACED=configurator.c slave_2.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/slave_2.p1 ${OBJECTDIR}/configurator.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/slave_2.p1.d ${OBJECTDIR}/configurator.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/configurator.p1 ${OBJECTDIR}/slave_2.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/configurator.p1.d ${OBJECTDIR}/slave_2.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/slave_2.p1 ${OBJECTDIR}/configurator.p1
+OBJECTFILES=${OBJECTDIR}/configurator.p1 ${OBJECTDIR}/slave_2.p1
 
 # Source Files
-SOURCEFILES=slave_2.c configurator.c
+SOURCEFILES=configurator.c slave_2.c
 
 
 
@@ -94,15 +94,7 @@ MP_PROCESSOR_OPTION=16F887
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/slave_2.p1: slave_2.c  nbproject/Makefile-${CND_CONF}.mk
-	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} ${OBJECTDIR}/slave_2.p1.d 
-	@${RM} ${OBJECTDIR}/slave_2.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/slave_2.p1 slave_2.c 
-	@-${MV} ${OBJECTDIR}/slave_2.d ${OBJECTDIR}/slave_2.p1.d 
-	@${FIXDEPS} ${OBJECTDIR}/slave_2.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
-	
-${OBJECTDIR}/configurator.p1: configurator.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/configurator.p1: configurator.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/configurator.p1.d 
 	@${RM} ${OBJECTDIR}/configurator.p1 
@@ -110,22 +102,30 @@ ${OBJECTDIR}/configurator.p1: configurator.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/configurator.d ${OBJECTDIR}/configurator.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/configurator.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-else
-${OBJECTDIR}/slave_2.p1: slave_2.c  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/slave_2.p1: slave_2.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/slave_2.p1.d 
 	@${RM} ${OBJECTDIR}/slave_2.p1 
-	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/slave_2.p1 slave_2.c 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/slave_2.p1 slave_2.c 
 	@-${MV} ${OBJECTDIR}/slave_2.d ${OBJECTDIR}/slave_2.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/slave_2.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/configurator.p1: configurator.c  nbproject/Makefile-${CND_CONF}.mk
+else
+${OBJECTDIR}/configurator.p1: configurator.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/configurator.p1.d 
 	@${RM} ${OBJECTDIR}/configurator.p1 
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/configurator.p1 configurator.c 
 	@-${MV} ${OBJECTDIR}/configurator.d ${OBJECTDIR}/configurator.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/configurator.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/slave_2.p1: slave_2.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/slave_2.p1.d 
+	@${RM} ${OBJECTDIR}/slave_2.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/slave_2.p1 slave_2.c 
+	@-${MV} ${OBJECTDIR}/slave_2.d ${OBJECTDIR}/slave_2.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/slave_2.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

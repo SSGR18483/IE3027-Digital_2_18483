@@ -7,7 +7,11 @@
 
 
 #include <xc.h>
-
+#include"CONM2.h"
+#include"UART.h"
 void main(void) {
+    con_mp2();
+    COM_EUSART(9600);
+    PORTEbits.RE1=1;
     return;
 }
