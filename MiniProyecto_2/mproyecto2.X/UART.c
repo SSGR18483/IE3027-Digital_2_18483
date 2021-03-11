@@ -8,7 +8,6 @@ void COM_EUSART(const long int baudrate){
     RCSTA= 0b10010000;
     p = (_XTAL_FREQ - baudrate*64)/(baudrate*64);   
     SPBRG = p;
-    
     //error de eusart baudrate
 
 }

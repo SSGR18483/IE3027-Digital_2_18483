@@ -1,3 +1,15 @@
+//Universidad del Valle de Guatemala
+//EJEMPLO DE ADAFRUIT EN ARDUINO
+//ADAPTACION PARA MINIPROYECTO 2
+//SANTIAGO SEBASTIAN GALICIA REYES
+//CARNET 18483
+//IE3027- ELECTRONICA DIGITAL 2
+
+//Ayuda en https://www.arduino.cc/reference/es/
+//Para mas ayuda en https://www.arduino.cc/en/Tutorial/HomePage
+
+
+
 // Adafruit IO Publish Example
 //
 // Adafruit invests time and resources providing this open source code.
@@ -16,40 +28,53 @@
 // and any additional configuration needed for WiFi, cellular,
 // or ethernet clients.
 #include "config.h"
+//aqui le ponemos la clave de internet y de la configuracion del dashboard del adafruit
+
 
 /************************ Example Starts Here *******************************/
 
 // this int will hold the current count for our sketch
+//Variables
 int count = 0;
+int entrada = 0;
 
+String Intled;
+int datof =0;  
+int giro=0;
 // set up the 'counter' feed
-AdafruitIO_Feed *counter = io.feed("counter");
+AdafruitIO_Feed *L1 = io.feed("L1");//led azul
+AdafruitIO_Feed *L2 = io.feed("L2");//led roja
 
+
+//_-----------------------------------mensaje adafruit-----------------------
+void handleMessage(AdafruitIO_Data *data){
+  Intled = data->value();
+  }
+//-------------------------------------------SETUP--------------------------
 void setup() {
 
   // start the serial connection
-  Serial.begin(115200);
-
-  // wait for serial monitor to open
-  while(! Serial);
-
-  Serial.print("Connecting to Adafruit IO");
+  Serial.begin(9600);// baudrate de el ESP32 y del pic16f887
 
   // connect to io.adafruit.com
   io.connect();
 
+  L1->onMessage(handleMessage);// LedA
+  L1->onMessage(handleMessage);
   // wait for a connection
   while(io.status() < AIO_CONNECTED) {
-    Serial.print(".");
     delay(500);
+    digitalWrite(2,HIGH);
   }
-
+  digitalWrite(2,LOW);
   // we are connected
-  Serial.println();
-  Serial.println(io.statusText());
+  L1->get();
+  L2->get();
 
 }
 
+
+//--------------------Loop-------------------------------------------------
 void loop() {
 
   // io.run(); is required for all sketches.
@@ -57,15 +82,33 @@ void loop() {
   // function. it keeps the client connected to
   // io.adafruit.com, and processes any incoming data.
   io.run();
-
-  // save count to the 'counter' feed on Adafruit IO
-  Serial.print("sending -> ");
-  Serial.println(count);
-  counter->save(count);
-
-  // increment the count by 1
-  count++;
-
+  Serial.write(0x01); 
+ // if(Serial.available()>0){
+  //  entrada = Serial.read(); //es para obtener el dato del PIC16f887
+//    giro->save((entrada, DEC));
+   // }
+  
+  datof=Intled.toInt();// cambiar dato a entero
+  switch(datof){
+    case 1:
+      //Caso led azul prendida
+      Serial.write(0x01);    
+      break;
+    case 2:
+      //Caso led azul apagada
+      Serial.write(0x02);
+      break;
+    case 3:
+      //Caso led roja prendida
+      Serial.write(0x03);
+      break;
+    case 4:
+      //Caso led roja apagada
+      Serial.write(0x04);
+      break;
+      default:
+    break;
+    }
   // Adafruit IO is rate limited for publishing, so a delay is required in
   // between feed->save events. In this example, we will wait three seconds
   // (1000 milliseconds == 1 second) during each loop.
