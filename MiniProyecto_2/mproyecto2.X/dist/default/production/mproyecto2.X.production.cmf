@@ -24,7 +24,7 @@ intentry CODE 0 4 4 8 2
 bssBANK0 BANK0 1 43 43 2 1
 bssCOMMON COMMON 1 70 70 5 1
 config CONFIG 4 2007 2007 2 2
-$C:\Users\galic\AppData\Local\Temp\sqr0.o
+$C:\Users\galic\AppData\Local\Temp\s6ps.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 2 2
@@ -74,20 +74,20 @@ STRING 1A6-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\mproyecto2.X.production.o
-F cinit CODE >779:C:\Users\galic\AppData\Local\Temp\sqr0.s
-F cinit CODE >782:C:\Users\galic\AppData\Local\Temp\sqr0.s
-F cinit CODE >808:C:\Users\galic\AppData\Local\Temp\sqr0.s
-10 cinit CODE >809:C:\Users\galic\AppData\Local\Temp\sqr0.s
-11 cinit CODE >810:C:\Users\galic\AppData\Local\Temp\sqr0.s
-12 cinit CODE >811:C:\Users\galic\AppData\Local\Temp\sqr0.s
-13 cinit CODE >812:C:\Users\galic\AppData\Local\Temp\sqr0.s
-14 cinit CODE >815:C:\Users\galic\AppData\Local\Temp\sqr0.s
-15 cinit CODE >816:C:\Users\galic\AppData\Local\Temp\sqr0.s
-16 cinit CODE >817:C:\Users\galic\AppData\Local\Temp\sqr0.s
-17 cinit CODE >818:C:\Users\galic\AppData\Local\Temp\sqr0.s
-18 cinit CODE >824:C:\Users\galic\AppData\Local\Temp\sqr0.s
-18 cinit CODE >826:C:\Users\galic\AppData\Local\Temp\sqr0.s
-19 cinit CODE >827:C:\Users\galic\AppData\Local\Temp\sqr0.s
+F cinit CODE >779:C:\Users\galic\AppData\Local\Temp\s6ps.s
+F cinit CODE >782:C:\Users\galic\AppData\Local\Temp\s6ps.s
+F cinit CODE >808:C:\Users\galic\AppData\Local\Temp\s6ps.s
+10 cinit CODE >809:C:\Users\galic\AppData\Local\Temp\s6ps.s
+11 cinit CODE >810:C:\Users\galic\AppData\Local\Temp\s6ps.s
+12 cinit CODE >811:C:\Users\galic\AppData\Local\Temp\s6ps.s
+13 cinit CODE >812:C:\Users\galic\AppData\Local\Temp\s6ps.s
+14 cinit CODE >815:C:\Users\galic\AppData\Local\Temp\s6ps.s
+15 cinit CODE >816:C:\Users\galic\AppData\Local\Temp\s6ps.s
+16 cinit CODE >817:C:\Users\galic\AppData\Local\Temp\s6ps.s
+17 cinit CODE >818:C:\Users\galic\AppData\Local\Temp\s6ps.s
+18 cinit CODE >824:C:\Users\galic\AppData\Local\Temp\s6ps.s
+18 cinit CODE >826:C:\Users\galic\AppData\Local\Temp\s6ps.s
+19 cinit CODE >827:C:\Users\galic\AppData\Local\Temp\s6ps.s
 4 intentry CODE >19:C:\Users\galic\Documents\UVG\CUARTO AÑO\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto_2\mproyecto2.X\mini2.c
 165 text4 CODE >19:C:\Users\galic\Documents\UVG\CUARTO AÑO\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto_2\mproyecto2.X\mini2.c
 165 text4 CODE >27:C:\Users\galic\Documents\UVG\CUARTO AÑO\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto_2\mproyecto2.X\mini2.c
@@ -179,21 +179,21 @@ __Hspace_3 0 0 ABS 0 - -
 __Hspace_4 4010 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __Hstrings 0 0 ABS 0 strings -
-___sp 0 0 STACK 2 stack C:\Users\galic\AppData\Local\Temp\sqr0.o
+___sp 0 0 STACK 2 stack C:\Users\galic\AppData\Local\Temp\s6ps.o
 _leer 43 0 BANK0 1 bssBANK0 dist/default/production\mproyecto2.X.production.o
 _main 24C 0 CODE 0 maintext dist/default/production\mproyecto2.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\mproyecto2.X.production.o
-start 18 0 CODE 0 init C:\Users\galic\AppData\Local\Temp\sqr0.o
+start 18 0 CODE 0 init C:\Users\galic\AppData\Local\Temp\s6ps.o
 __size_of___aldiv 0 0 ABS 0 - dist/default/production\mproyecto2.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\mproyecto2.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
-intlevel0 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\sqr0.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\sqr0.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\sqr0.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\sqr0.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\sqr0.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\sqr0.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s6ps.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s6ps.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s6ps.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s6ps.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s6ps.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\galic\AppData\Local\Temp\s6ps.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 __size_of_COM_EUSART 0 0 ABS 0 - dist/default/production\mproyecto2.X.production.o
 ___aldiv@divisor 20 0 BANK0 1 cstackBANK0 dist/default/production\mproyecto2.X.production.o
@@ -204,8 +204,8 @@ __Hclrtext 0 0 ABS 0 clrtext -
 _ANSELH 189 0 ABS 0 - dist/default/production\mproyecto2.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 __end_of___aldiv 172 0 CODE 0 text3 dist/default/production\mproyecto2.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\galic\AppData\Local\Temp\sqr0.o
-___stacklo 0 0 ABS 0 - C:\Users\galic\AppData\Local\Temp\sqr0.o
+___stackhi 0 0 ABS 0 - C:\Users\galic\AppData\Local\Temp\s6ps.o
+___stacklo 0 0 ABS 0 - C:\Users\galic\AppData\Local\Temp\s6ps.o
 _BAUDCTLbits 187 0 ABS 0 - dist/default/production\mproyecto2.X.production.o
 __size_of_txint 0 0 ABS 0 - dist/default/production\mproyecto2.X.production.o
 start_initialization 1E 0 CODE 0 cinit dist/default/production\mproyecto2.X.production.o
@@ -213,7 +213,7 @@ _TRISCbits 87 0 ABS 0 - dist/default/production\mproyecto2.X.production.o
 ___aldiv@quotient 2B 0 BANK0 1 cstackBANK0 dist/default/production\mproyecto2.X.production.o
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/default/production\mproyecto2.X.production.o
 COM_EUSART@baudrate 2F 0 BANK0 1 cstackBANK0 dist/default/production\mproyecto2.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\galic\AppData\Local\Temp\sqr0.o
+___int_sp 0 0 STACK 2 stack C:\Users\galic\AppData\Local\Temp\s6ps.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -257,7 +257,7 @@ __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
 saved_w 7E 0 ABS 0 - dist/default/production\mproyecto2.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\galic\AppData\Local\Temp\sqr0.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\galic\AppData\Local\Temp\s6ps.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 _PIE1bits 8C 0 ABS 0 - dist/default/production\mproyecto2.X.production.o
 __end_of_con_mp2 34C 0 CODE 0 text1 dist/default/production\mproyecto2.X.production.o

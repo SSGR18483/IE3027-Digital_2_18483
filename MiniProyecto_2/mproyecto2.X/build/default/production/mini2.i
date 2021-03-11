@@ -2796,7 +2796,7 @@ void __attribute__((picinterrupt(("")))) txint(void) {
     if (PIR1bits.RCIF == 1) {
         leer = RCREG;
         PORTDbits.RD2 = 0;
-        _delay((unsigned long)((100)*(8000000/4000.0)));
+        _delay((unsigned long)((500)*(8000000/4000.0)));
     }
 }
 

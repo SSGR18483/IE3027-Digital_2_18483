@@ -359,8 +359,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mini2.c: 34:         PORTDbits.RD2 = 0;
 [e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
 "35
-[; ;mini2.c: 35:         _delay((unsigned long)((100)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;mini2.c: 35:         _delay((unsigned long)((500)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "36
 [; ;mini2.c: 36:     }
 }

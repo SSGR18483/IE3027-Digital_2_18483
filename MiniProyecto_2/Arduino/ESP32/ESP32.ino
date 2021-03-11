@@ -37,7 +37,14 @@
 //Variables
 int count = 0;
 int entrada = 0;
-
+int valu1 = 1;
+int valu2 = 2;
+int valu3 = 3;
+int valu4 = 4;
+//byte  valu1 = 1;
+//byte  valu2 = 2;
+//byte  valu3 = 3;
+//byte  valu4 = 4;
 String Intled;
 int datof =0;  
 int giro=0;
@@ -90,24 +97,28 @@ void loop() {
   datof=Intled.toInt();// cambiar dato a entero
   switch(datof){
     case 1:
+    if(Serial.availableForWrite()){
       //Caso led azul prendida
-      Serial.write(1); 
-      Serial.print(1, DEC);   
+      Serial.write(1); }
+      //Serial.println(1, DEC);   
       break;
     case 2:
+    if(Serial.availableForWrite()){
       //Caso led azul apagada
-      Serial.write(2);
-      Serial.print(2, DEC);
+      Serial.write(2);}
+      //Serial.println(2, DEC);}
       break;
     case 3:
+    if(Serial.availableForWrite()){
       //Caso led roja prendida
-      Serial.write(3);
-      Serial.print(3, DEC);
+      Serial.write(3);}
+      //Serial.println(3, DEC);
       break;
     case 4:
+    if(Serial.availableForWrite()){
       //Caso led roja apagada
-      Serial.write(4);
-      Serial.print(4, DEC);
+      Serial.write(4);}
+      //Serial.println(4, DEC);
       break;
       default:
     break;

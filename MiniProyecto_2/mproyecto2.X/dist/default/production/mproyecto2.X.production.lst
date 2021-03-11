@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.31 build 20201012212115 
-                                                                                               Wed Mar 10 23:01:06 2021
+                                                                                               Wed Mar 10 23:48:28 2021
 
 Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1 
      1                           	processor	16F887
@@ -1201,12 +1201,12 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1187                           ;mini2.c: 34:         PORTDbits.RD2 = 0;
   1188  0179  1108               	bcf	8,2	;volatile
   1189                           
-  1190                           ;mini2.c: 35:         _delay((unsigned long)((100)*(8000000/4000.0)));
-  1191  017A  3002               	movlw	2
+  1190                           ;mini2.c: 35:         _delay((unsigned long)((500)*(8000000/4000.0)));
+  1191  017A  3006               	movlw	6
   1192  017B  00F7               	movwf	??_txint+2
-  1193  017C  3004               	movlw	4
+  1193  017C  3013               	movlw	19
   1194  017D  00F6               	movwf	??_txint+1
-  1195  017E  30BA               	movlw	186
+  1195  017E  30AD               	movlw	173
   1196  017F  00F5               	movwf	??_txint
   1197  0180                     u56_27:
   1198  0180  0BF5               	decfsz	??_txint,f
@@ -1215,7 +1215,7 @@ Microchip MPLAB XC8 C Compiler v2.31 (Free license) build 20201012212115 Og1
   1201  0183  2980               	goto	u56_27
   1202  0184  0BF7               	decfsz	??_txint+2,f
   1203  0185  2980               	goto	u56_27
-  1204  0186  0000               	nop
+  1204  0186  2987               	nop2
   1205  0187                     i1l65:
   1206  0187  0879               	movf	??_txint+4,w
   1207  0188  008A               	movwf	10
@@ -1406,7 +1406,7 @@ DATA                 0      0      2F      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.31 build 20201012212115 
-Symbol Table                                                                                   Wed Mar 10 23:01:06 2021
+Symbol Table                                                                                   Wed Mar 10 23:48:28 2021
 
                      l11 0125                       l32 01A5                       l77 015F  
                     l232 0030                      l242 00B8                      l901 018E  

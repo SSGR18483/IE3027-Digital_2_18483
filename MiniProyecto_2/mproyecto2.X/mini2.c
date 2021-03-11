@@ -32,7 +32,7 @@ void __interrupt() txint(void) {
     if (PIR1bits.RCIF == 1) {
         leer = RCREG;
         PORTDbits.RD2 = 0;
-        __delay_ms(100);
+        __delay_ms(500);
     }
 }
 
