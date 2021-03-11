@@ -94,7 +94,7 @@ MP_PROCESSOR_OPTION=16F887
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/Lab2_18483.p1: Lab2_18483.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/Lab2_18483.p1: Lab2_18483.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/Lab2_18483.p1.d 
 	@${RM} ${OBJECTDIR}/Lab2_18483.p1 
@@ -102,7 +102,7 @@ ${OBJECTDIR}/Lab2_18483.p1: Lab2_18483.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/Lab2_18483.d ${OBJECTDIR}/Lab2_18483.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/Lab2_18483.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/ADC.p1: ADC.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/ADC.p1: ADC.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/ADC.p1.d 
 	@${RM} ${OBJECTDIR}/ADC.p1 
@@ -110,7 +110,7 @@ ${OBJECTDIR}/ADC.p1: ADC.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/ADC.d ${OBJECTDIR}/ADC.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/ADC.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/multiplex.p1: multiplex.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/multiplex.p1: multiplex.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/multiplex.p1.d 
 	@${RM} ${OBJECTDIR}/multiplex.p1 
@@ -119,7 +119,7 @@ ${OBJECTDIR}/multiplex.p1: multiplex.c  nbproject/Makefile-${CND_CONF}.mk
 	@${FIXDEPS} ${OBJECTDIR}/multiplex.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 else
-${OBJECTDIR}/Lab2_18483.p1: Lab2_18483.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/Lab2_18483.p1: Lab2_18483.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/Lab2_18483.p1.d 
 	@${RM} ${OBJECTDIR}/Lab2_18483.p1 
@@ -127,7 +127,7 @@ ${OBJECTDIR}/Lab2_18483.p1: Lab2_18483.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/Lab2_18483.d ${OBJECTDIR}/Lab2_18483.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/Lab2_18483.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/ADC.p1: ADC.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/ADC.p1: ADC.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/ADC.p1.d 
 	@${RM} ${OBJECTDIR}/ADC.p1 
@@ -135,7 +135,7 @@ ${OBJECTDIR}/ADC.p1: ADC.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/ADC.d ${OBJECTDIR}/ADC.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/ADC.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/multiplex.p1: multiplex.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/multiplex.p1: multiplex.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/multiplex.p1.d 
 	@${RM} ${OBJECTDIR}/multiplex.p1 

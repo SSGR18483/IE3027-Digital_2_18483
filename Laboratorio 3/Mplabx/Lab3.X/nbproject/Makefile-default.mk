@@ -94,7 +94,7 @@ MP_PROCESSOR_OPTION=16F887
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/adc.p1: adc.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/adc.p1: adc.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/adc.p1.d 
 	@${RM} ${OBJECTDIR}/adc.p1 
@@ -102,7 +102,7 @@ ${OBJECTDIR}/adc.p1: adc.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/adc.d ${OBJECTDIR}/adc.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/adc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/LCD.p1: LCD.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/LCD.p1: LCD.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/LCD.p1.d 
 	@${RM} ${OBJECTDIR}/LCD.p1 
@@ -110,7 +110,7 @@ ${OBJECTDIR}/LCD.p1: LCD.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/LCD.d ${OBJECTDIR}/LCD.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/LCD.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/INT.p1: INT.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/INT.p1: INT.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/INT.p1.d 
 	@${RM} ${OBJECTDIR}/INT.p1 
@@ -118,7 +118,7 @@ ${OBJECTDIR}/INT.p1: INT.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/INT.d ${OBJECTDIR}/INT.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/INT.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/CONFIG.p1: CONFIG.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/CONFIG.p1: CONFIG.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/CONFIG.p1.d 
 	@${RM} ${OBJECTDIR}/CONFIG.p1 
@@ -126,7 +126,7 @@ ${OBJECTDIR}/CONFIG.p1: CONFIG.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/CONFIG.d ${OBJECTDIR}/CONFIG.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/CONFIG.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/confb.p1: confb.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/confb.p1: confb.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/confb.p1.d 
 	@${RM} ${OBJECTDIR}/confb.p1 
@@ -134,7 +134,7 @@ ${OBJECTDIR}/confb.p1: confb.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/confb.d ${OBJECTDIR}/confb.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/confb.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/EUSCON.p1: EUSCON.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/EUSCON.p1: EUSCON.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/EUSCON.p1.d 
 	@${RM} ${OBJECTDIR}/EUSCON.p1 
@@ -142,7 +142,7 @@ ${OBJECTDIR}/EUSCON.p1: EUSCON.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/EUSCON.d ${OBJECTDIR}/EUSCON.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/EUSCON.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/Lab3.p1: Lab3.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/Lab3.p1: Lab3.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/Lab3.p1.d 
 	@${RM} ${OBJECTDIR}/Lab3.p1 
@@ -151,7 +151,7 @@ ${OBJECTDIR}/Lab3.p1: Lab3.c  nbproject/Makefile-${CND_CONF}.mk
 	@${FIXDEPS} ${OBJECTDIR}/Lab3.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 else
-${OBJECTDIR}/adc.p1: adc.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/adc.p1: adc.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/adc.p1.d 
 	@${RM} ${OBJECTDIR}/adc.p1 
@@ -159,7 +159,7 @@ ${OBJECTDIR}/adc.p1: adc.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/adc.d ${OBJECTDIR}/adc.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/adc.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/LCD.p1: LCD.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/LCD.p1: LCD.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/LCD.p1.d 
 	@${RM} ${OBJECTDIR}/LCD.p1 
@@ -167,7 +167,7 @@ ${OBJECTDIR}/LCD.p1: LCD.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/LCD.d ${OBJECTDIR}/LCD.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/LCD.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/INT.p1: INT.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/INT.p1: INT.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/INT.p1.d 
 	@${RM} ${OBJECTDIR}/INT.p1 
@@ -175,7 +175,7 @@ ${OBJECTDIR}/INT.p1: INT.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/INT.d ${OBJECTDIR}/INT.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/INT.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/CONFIG.p1: CONFIG.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/CONFIG.p1: CONFIG.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/CONFIG.p1.d 
 	@${RM} ${OBJECTDIR}/CONFIG.p1 
@@ -183,7 +183,7 @@ ${OBJECTDIR}/CONFIG.p1: CONFIG.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/CONFIG.d ${OBJECTDIR}/CONFIG.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/CONFIG.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/confb.p1: confb.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/confb.p1: confb.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/confb.p1.d 
 	@${RM} ${OBJECTDIR}/confb.p1 
@@ -191,7 +191,7 @@ ${OBJECTDIR}/confb.p1: confb.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/confb.d ${OBJECTDIR}/confb.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/confb.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/EUSCON.p1: EUSCON.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/EUSCON.p1: EUSCON.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/EUSCON.p1.d 
 	@${RM} ${OBJECTDIR}/EUSCON.p1 
@@ -199,7 +199,7 @@ ${OBJECTDIR}/EUSCON.p1: EUSCON.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/EUSCON.d ${OBJECTDIR}/EUSCON.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/EUSCON.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/Lab3.p1: Lab3.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/Lab3.p1: Lab3.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/Lab3.p1.d 
 	@${RM} ${OBJECTDIR}/Lab3.p1 

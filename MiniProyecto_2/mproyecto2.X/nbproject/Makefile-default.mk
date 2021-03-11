@@ -94,7 +94,7 @@ MP_PROCESSOR_OPTION=16F887
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: compile
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/UART.p1: UART.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/UART.p1: UART.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/UART.p1.d 
 	@${RM} ${OBJECTDIR}/UART.p1 
@@ -102,7 +102,7 @@ ${OBJECTDIR}/UART.p1: UART.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/UART.d ${OBJECTDIR}/UART.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/UART.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/CONM2.p1: CONM2.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/CONM2.p1: CONM2.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/CONM2.p1.d 
 	@${RM} ${OBJECTDIR}/CONM2.p1 
@@ -110,7 +110,7 @@ ${OBJECTDIR}/CONM2.p1: CONM2.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/CONM2.d ${OBJECTDIR}/CONM2.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/CONM2.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/mini2.p1: mini2.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/mini2.p1: mini2.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/mini2.p1.d 
 	@${RM} ${OBJECTDIR}/mini2.p1 
@@ -119,7 +119,7 @@ ${OBJECTDIR}/mini2.p1: mini2.c  nbproject/Makefile-${CND_CONF}.mk
 	@${FIXDEPS} ${OBJECTDIR}/mini2.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 else
-${OBJECTDIR}/UART.p1: UART.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/UART.p1: UART.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/UART.p1.d 
 	@${RM} ${OBJECTDIR}/UART.p1 
@@ -127,7 +127,7 @@ ${OBJECTDIR}/UART.p1: UART.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/UART.d ${OBJECTDIR}/UART.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/UART.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/CONM2.p1: CONM2.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/CONM2.p1: CONM2.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/CONM2.p1.d 
 	@${RM} ${OBJECTDIR}/CONM2.p1 
@@ -135,7 +135,7 @@ ${OBJECTDIR}/CONM2.p1: CONM2.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/CONM2.d ${OBJECTDIR}/CONM2.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/CONM2.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
-${OBJECTDIR}/mini2.p1: mini2.c  nbproject/Makefile-${CND_CONF}.mk 
+${OBJECTDIR}/mini2.p1: mini2.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
 	@${RM} ${OBJECTDIR}/mini2.p1.d 
 	@${RM} ${OBJECTDIR}/mini2.p1 
