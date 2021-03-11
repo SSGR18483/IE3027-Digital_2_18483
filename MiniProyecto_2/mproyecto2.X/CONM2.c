@@ -28,10 +28,15 @@
 void con_mp2(void) {
     ANSEL = 0;
     ANSELH = 0;
+    TRISD = 0;
+    PORTD = 0;
     TRISE = 0;
     PORTE = 0;
+    TRISCbits.TRISC7 = 0;
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
     PIE1bits.RCIE = 1;
     PIE1bits.TXIE = 1;
+//    PIR1bits.RCIF = 0;
+//    PIR1bits.TXIF = 0;
 }

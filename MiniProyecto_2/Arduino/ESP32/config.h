@@ -3,7 +3,7 @@
 // visit io.adafruit.com if you need to create an account,
 // or if you need your Adafruit IO key.
 #define IO_USERNAME  "sgali"
-#define IO_KEY       "aio_Rpuv16qAccwF9IiLNtanq5yVrqlM"
+#define IO_KEY       "aio_FAjA66Mi1fbowjhjnZDIyMCUvJ0Q"
 
 /******************************* WIFI **************************************/
 

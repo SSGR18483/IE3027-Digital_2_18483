@@ -5,12 +5,29 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3449
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3449: extern volatile unsigned char ANSELH __attribute__((address(0x189)));
 [v _ANSELH `Vuc ~T0 @X0 0 e@393 ]
+"1602
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1602: extern volatile unsigned char TRISD __attribute__((address(0x088)));
+[v _TRISD `Vuc ~T0 @X0 0 e@136 ]
+"352
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 352: extern volatile unsigned char PORTD __attribute__((address(0x008)));
+[v _PORTD `Vuc ~T0 @X0 0 e@8 ]
 "1664
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1664: extern volatile unsigned char TRISE __attribute__((address(0x089)));
 [v _TRISE `Vuc ~T0 @X0 0 e@137 ]
 "414
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 414: extern volatile unsigned char PORTE __attribute__((address(0x009)));
 [v _PORTE `Vuc ~T0 @X0 0 e@9 ]
+"1546
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1546:     struct {
+[s S57 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S57 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"1545
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1545: typedef union {
+[u S56 `S57 1 ]
+[n S56 . . ]
+"1557
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1557: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x087)));
+[v _TRISCbits `VS56 ~T0 @X0 0 e@135 ]
 "465
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 465:     struct {
 [s S16 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -296,31 +313,34 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
 "8 CONM2.c
-[; ;CONM2.c: 8:     TRISE = 0;
+[; ;CONM2.c: 8:     TRISD = 0;
 [p x FOSC  =  INTRC_NOCLKOUT ]
 "9
-[; ;CONM2.c: 9:     PORTE = 0;
+[; ;CONM2.c: 9:     PORTD = 0;
 [p x WDTE  =  OFF        ]
 "10
-[; ;CONM2.c: 10:     INTCONbits.GIE = 1;
+[; ;CONM2.c: 10:     TRISE = 0;
 [p x PWRTE  =  ON        ]
 "11
-[; ;CONM2.c: 11:     INTCONbits.PEIE = 1;
+[; ;CONM2.c: 11:     PORTE = 0;
 [p x MCLRE  =  OFF       ]
 "12
-[; ;CONM2.c: 12:     PIE1bits.RCIE = 1;
+[; ;CONM2.c: 12:     TRISCbits.TRISC7 = 0;
 [p x CP  =  OFF          ]
 "13
-[; ;CONM2.c: 13:     PIE1bits.TXIE = 1;
+[; ;CONM2.c: 13:     INTCONbits.GIE = 1;
 [p x CPD  =  OFF         ]
 "14
-[; ;CONM2.c: 14: }
+[; ;CONM2.c: 14:     INTCONbits.PEIE = 1;
 [p x BOREN  =  OFF       ]
 "15
+[; ;CONM2.c: 15:     PIE1bits.RCIE = 1;
 [p x IESO  =  OFF        ]
 "16
+[; ;CONM2.c: 16:     PIE1bits.TXIE = 1;
 [p x FCMEN  =  OFF       ]
 "17
+[; ;CONM2.c: 17: 
 [p x LVP  =  OFF         ]
 "20
 [p x BOR4V  =  BOR40V    ]
@@ -336,17 +356,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 "30
 [e = _ANSELH -> -> 0 `i `uc ]
 "31
-[e = _TRISE -> -> 0 `i `uc ]
+[e = _TRISD -> -> 0 `i `uc ]
 "32
-[e = _PORTE -> -> 0 `i `uc ]
+[e = _PORTD -> -> 0 `i `uc ]
 "33
-[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
+[e = _TRISE -> -> 0 `i `uc ]
 "34
-[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+[e = _PORTE -> -> 0 `i `uc ]
 "35
-[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+[e = . . _TRISCbits 0 7 -> -> 0 `i `uc ]
 "36
-[e = . . _PIE1bits 0 4 -> -> 1 `i `uc ]
+[e = . . _INTCONbits 0 7 -> -> 1 `i `uc ]
 "37
+[e = . . _INTCONbits 0 6 -> -> 1 `i `uc ]
+"38
+[e = . . _PIE1bits 0 5 -> -> 1 `i `uc ]
+"39
+[e = . . _PIE1bits 0 4 -> -> 1 `i `uc ]
+"42
 [e :UE 139 ]
 }

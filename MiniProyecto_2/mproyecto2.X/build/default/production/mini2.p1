@@ -1,7 +1,18 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [t ~ __interrupt . k ]
 [t T1 __interrupt ]
-"543 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
+"358 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 358:     struct {
+[s S12 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S12 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"357
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 357: typedef union {
+[u S11 `S12 1 ]
+[n S11 . . ]
+"369
+[; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 369: extern volatile PORTDbits_t PORTDbits __attribute__((address(0x008)));
+[v _PORTDbits `VS11 ~T0 @X0 0 e@8 ]
+"543
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 543:     struct {
 [s S19 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S19 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF ]
@@ -18,6 +29,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1140
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1140: extern volatile unsigned char RCREG __attribute__((address(0x01A)));
 [v _RCREG `Vuc ~T0 @X0 0 e@26 ]
+[v F1256 `(v ~T0 @X0 1 tf1`ul ]
+"92 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\pic.h
+[v __delay `JF1256 ~T0 @X0 0 e ]
+[p i __delay ]
 [p mainexit ]
 "45 ./CONM2.h
 [; ;./CONM2.h: 45: void con_mp2(void);
@@ -295,8 +310,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "30
 [p x WRT  =  OFF         ]
 "13 mini2.c
-[; ;mini2.c: 13: char leer;
-[v _leer `uc ~T0 @X0 1 e ]
+[; ;mini2.c: 13: int leer;
+[v _leer `i ~T0 @X0 1 e ]
 "14
 [; ;mini2.c: 14: char escribir;
 [v _escribir `uc ~T0 @X0 1 e ]
@@ -320,114 +335,123 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _txint ]
 [f ]
 "27
-[; ;mini2.c: 27:     if (PIR1bits.TXIF == 1) {
+[; ;mini2.c: 27:     PORTDbits.RD2 =1;
+[e = . . _PORTDbits 0 2 -> -> 1 `i `uc ]
+"28
+[; ;mini2.c: 28:     if (PIR1bits.TXIF == 1) {
 [e $ ! == -> . . _PIR1bits 0 4 `i -> 1 `i 140  ]
 {
-"28
-[; ;mini2.c: 28:         TXREG = escribir;
-[e = _TXREG -> _escribir `uc ]
 "29
-[; ;mini2.c: 29:     }
+[; ;mini2.c: 29:         TXREG = escribir;
+[e = _TXREG -> _escribir `uc ]
+"30
+[; ;mini2.c: 30:     }
 }
 [e :U 140 ]
-"31
-[; ;mini2.c: 31:     if (PIR1bits.RCIF == 1) {
+"32
+[; ;mini2.c: 32:     if (PIR1bits.RCIF == 1) {
 [e $ ! == -> . . _PIR1bits 0 5 `i -> 1 `i 141  ]
 {
-"32
-[; ;mini2.c: 32:         leer = RCREG;
-[e = _leer -> _RCREG `uc ]
 "33
-[; ;mini2.c: 33:     }
+[; ;mini2.c: 33:         leer = RCREG;
+[e = _leer -> _RCREG `i ]
+"34
+[; ;mini2.c: 34:         PORTDbits.RD2 = 0;
+[e = . . _PORTDbits 0 2 -> -> 0 `i `uc ]
+"35
+[; ;mini2.c: 35:         _delay((unsigned long)((100)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+"36
+[; ;mini2.c: 36:     }
 }
 [e :U 141 ]
-"34
-[; ;mini2.c: 34: }
+"37
+[; ;mini2.c: 37: }
 [e :UE 139 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"36
-[; ;mini2.c: 36: void main(void) {
+"39
+[; ;mini2.c: 39: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"37
-[; ;mini2.c: 37:     con_mp2();
+"40
+[; ;mini2.c: 40:     con_mp2();
 [e ( _con_mp2 ..  ]
-"38
-[; ;mini2.c: 38:     COM_EUSART(9600);
+"41
+[; ;mini2.c: 41:     COM_EUSART(9600);
 [e ( _COM_EUSART (1 -> -> 9600 `i `l ]
-"39
-[; ;mini2.c: 39:     while (1) {
+"42
+[; ;mini2.c: 42:     while (1) {
 [e :U 144 ]
 {
-"42
-[; ;mini2.c: 42:         if (leer == 0x01) {
-[e $ ! == -> _leer `i -> 1 `i 146  ]
+"45
+[; ;mini2.c: 45:         if (leer == 1) {
+[e $ ! == _leer -> 1 `i 146  ]
 {
-"43
-[; ;mini2.c: 43:             PORTEbits.RE0 = 0;
+"46
+[; ;mini2.c: 46:             PORTEbits.RE0 = 0;
 [e = . . _PORTEbits 0 0 -> -> 0 `i `uc ]
-"44
-[; ;mini2.c: 44:         } else if (leer == 0x02) {
+"47
+[; ;mini2.c: 47:         } else if (leer == 2) {
 }
 [e $U 147  ]
 [e :U 146 ]
-[e $ ! == -> _leer `i -> 2 `i 148  ]
+[e $ ! == _leer -> 2 `i 148  ]
 {
-"45
-[; ;mini2.c: 45:             PORTEbits.RE0 = 1;
+"48
+[; ;mini2.c: 48:             PORTEbits.RE0 = 1;
 [e = . . _PORTEbits 0 0 -> -> 1 `i `uc ]
-"46
-[; ;mini2.c: 46:         } else if (leer == 0x03) {
+"49
+[; ;mini2.c: 49:         } else if (leer == 3) {
 }
 [e $U 149  ]
 [e :U 148 ]
-[e $ ! == -> _leer `i -> 3 `i 150  ]
+[e $ ! == _leer -> 3 `i 150  ]
 {
-"47
-[; ;mini2.c: 47:             PORTEbits.RE1 = 0;
+"50
+[; ;mini2.c: 50:             PORTEbits.RE1 = 0;
 [e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
-"48
-[; ;mini2.c: 48:         } else if (leer == 0x04) {
+"51
+[; ;mini2.c: 51:         } else if (leer == 4) {
 }
 [e $U 151  ]
 [e :U 150 ]
-[e $ ! == -> _leer `i -> 4 `i 152  ]
-{
-"49
-[; ;mini2.c: 49:             PORTEbits.RE1 = 1;
-[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
-"50
-[; ;mini2.c: 50:         }
-}
-[e $U 153  ]
-"51
-[; ;mini2.c: 51:         else{
-[e :U 152 ]
+[e $ ! == _leer -> 4 `i 152  ]
 {
 "52
-[; ;mini2.c: 52:         PORTEbits.RE0 = 0;
-[e = . . _PORTEbits 0 0 -> -> 0 `i `uc ]
+[; ;mini2.c: 52:             PORTEbits.RE1 = 1;
+[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
 "53
-[; ;mini2.c: 53:         PORTEbits.RE1 = 0;}
+[; ;mini2.c: 53:         }
+}
+[e $U 153  ]
+"54
+[; ;mini2.c: 54:         else{
+[e :U 152 ]
+{
+"55
+[; ;mini2.c: 55:         PORTEbits.RE0 = 0;
+[e = . . _PORTEbits 0 0 -> -> 0 `i `uc ]
+"56
+[; ;mini2.c: 56:         PORTEbits.RE1 = 0;}
 [e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
 }
 [e :U 153 ]
 [e :U 151 ]
 [e :U 149 ]
 [e :U 147 ]
-"54
-[; ;mini2.c: 54:     }
+"57
+[; ;mini2.c: 57:     }
 }
 [e :U 143 ]
 [e $U 144  ]
 [e :U 145 ]
-"55
-[; ;mini2.c: 55:     return;
+"58
+[; ;mini2.c: 58:     return;
 [e $UE 142  ]
-"56
-[; ;mini2.c: 56: }
+"59
+[; ;mini2.c: 59: }
 [e :UE 142 ]
 }

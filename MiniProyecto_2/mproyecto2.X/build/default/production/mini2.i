@@ -2774,7 +2774,7 @@ void COM_EUSART(const long int baudrate);
 # 11 "mini2.c" 2
 
 
-char leer;
+int leer;
 char escribir;
 char led1;
 char led2;
@@ -2788,12 +2788,15 @@ void __attribute__((picinterrupt(("")))) txint(void) {
 
 
 
+    PORTDbits.RD2 =1;
     if (PIR1bits.TXIF == 1) {
         TXREG = escribir;
     }
 
     if (PIR1bits.RCIF == 1) {
         leer = RCREG;
+        PORTDbits.RD2 = 0;
+        _delay((unsigned long)((100)*(8000000/4000.0)));
     }
 }
 
@@ -2803,13 +2806,13 @@ void main(void) {
     while (1) {
 
 
-        if (leer == 0x01) {
+        if (leer == 1) {
             PORTEbits.RE0 = 0;
-        } else if (leer == 0x02) {
+        } else if (leer == 2) {
             PORTEbits.RE0 = 1;
-        } else if (leer == 0x03) {
+        } else if (leer == 3) {
             PORTEbits.RE1 = 0;
-        } else if (leer == 0x04) {
+        } else if (leer == 4) {
             PORTEbits.RE1 = 1;
         }
         else{

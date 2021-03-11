@@ -253,30 +253,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 "3546
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 3546: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"4 UART.c
-[; ;UART.c: 4: void COM_EUSART(const long int baudrate){
+"5 UART.c
+[; ;UART.c: 5: void COM_EUSART(const long int baudrate){
 [v _COM_EUSART `(v ~T0 @X0 1 ef1`Cl ]
 {
 [e :U _COM_EUSART ]
 [v _baudrate `Cl ~T0 @X0 1 r1 ]
 [f ]
-"5
-[; ;UART.c: 5:     long int p;
-[v _p `l ~T0 @X0 1 a ]
 "6
-[; ;UART.c: 6:     TXSTA = 0b00100000;
-[e = _TXSTA -> -> 32 `i `uc ]
+[; ;UART.c: 6:     long int p;
+[v _p `l ~T0 @X0 1 a ]
 "7
-[; ;UART.c: 7:     BAUDCTLbits.BRG16 = 0;
-[e = . . _BAUDCTLbits 0 3 -> -> 0 `i `uc ]
+[; ;UART.c: 7:     TXSTA = 0b00100000;
+[e = _TXSTA -> -> 32 `i `uc ]
 "8
-[; ;UART.c: 8:     RCSTA= 0b10010000;
-[e = _RCSTA -> -> 144 `i `uc ]
+[; ;UART.c: 8:     BAUDCTLbits.BRG16 = 0;
+[e = . . _BAUDCTLbits 0 3 -> -> 0 `i `uc ]
 "9
-[; ;UART.c: 9:     p = (8000000 - baudrate*64)/(baudrate*64);
-[e = _p / - -> 8000000 `l * _baudrate -> -> 64 `i `l * _baudrate -> -> 64 `i `l ]
+[; ;UART.c: 9:     RCSTA= 0b10010000;
+[e = _RCSTA -> -> 144 `i `uc ]
 "10
-[; ;UART.c: 10:     SPBRG = p;
+[; ;UART.c: 10:     p = (8000000 - baudrate*64)/(baudrate*64);
+[e = _p / - -> 8000000 `l * _baudrate -> -> 64 `i `l * _baudrate -> -> 64 `i `l ]
+"11
+[; ;UART.c: 11:     SPBRG = p;
 [e = _SPBRG -> _p `uc ]
 "13
 [; ;UART.c: 13: }

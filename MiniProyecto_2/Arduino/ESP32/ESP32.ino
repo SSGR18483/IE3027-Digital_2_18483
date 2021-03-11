@@ -60,11 +60,11 @@ void setup() {
   io.connect();
 
   L1->onMessage(handleMessage);// LedA
-  L1->onMessage(handleMessage);
+  L2->onMessage(handleMessage);
   // wait for a connection
   while(io.status() < AIO_CONNECTED) {
-    delay(500);
     digitalWrite(2,HIGH);
+    delay(500);
   }
   digitalWrite(2,LOW);
   // we are connected
@@ -82,7 +82,6 @@ void loop() {
   // function. it keeps the client connected to
   // io.adafruit.com, and processes any incoming data.
   io.run();
-  Serial.write(0x01); 
  // if(Serial.available()>0){
   //  entrada = Serial.read(); //es para obtener el dato del PIC16f887
 //    giro->save((entrada, DEC));
@@ -92,19 +91,23 @@ void loop() {
   switch(datof){
     case 1:
       //Caso led azul prendida
-      Serial.write(0x01);    
+      Serial.write(1); 
+      Serial.print(1, DEC);   
       break;
     case 2:
       //Caso led azul apagada
-      Serial.write(0x02);
+      Serial.write(2);
+      Serial.print(2, DEC);
       break;
     case 3:
       //Caso led roja prendida
-      Serial.write(0x03);
+      Serial.write(3);
+      Serial.print(3, DEC);
       break;
     case 4:
       //Caso led roja apagada
-      Serial.write(0x04);
+      Serial.write(4);
+      Serial.print(4, DEC);
       break;
       default:
     break;

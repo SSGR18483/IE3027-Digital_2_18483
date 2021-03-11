@@ -2730,6 +2730,9 @@ void COM_EUSART(const long int baudrate);
 # 1 "UART.c" 2
 
 
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
+# 3 "UART.c" 2
+
 
 void COM_EUSART(const long int baudrate){
     long int p;
@@ -2738,6 +2741,5 @@ void COM_EUSART(const long int baudrate){
     RCSTA= 0b10010000;
     p = (8000000 - baudrate*64)/(baudrate*64);
     SPBRG = p;
-
 
 }
