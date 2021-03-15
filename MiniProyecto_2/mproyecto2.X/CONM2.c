@@ -26,8 +26,12 @@
 #include <xc.h>
 
 void con_mp2(void) {
-    ANSEL = 0;
-    ANSELH = 0;
+    ANSEL = 0; // digitalizamos puerto a
+    ANSELH = 0; // digitalizamos puerto b
+    TRISA = 0;
+    PORTA = 0;
+    TRISB = 0;
+    PORTB = 0;
     TRISD = 0;
     PORTD = 0;
     TRISE = 0;
@@ -37,6 +41,7 @@ void con_mp2(void) {
     INTCONbits.PEIE = 1;
     PIE1bits.RCIE = 1;
     PIE1bits.TXIE = 1;
-//    PIR1bits.RCIF = 0;
-//    PIR1bits.TXIF = 0;
+    IOCB = 0;
+    //    PIR1bits.RCIF = 0;
+    //    PIR1bits.TXIF = 0;
 }

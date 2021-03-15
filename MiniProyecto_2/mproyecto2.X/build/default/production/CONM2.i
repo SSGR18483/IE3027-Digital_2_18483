@@ -2783,6 +2783,10 @@ void con_mp2(void);
 void con_mp2(void) {
     ANSEL = 0;
     ANSELH = 0;
+    TRISA = 0;
+    PORTA = 0;
+    TRISB = 0;
+    PORTB = 0;
     TRISD = 0;
     PORTD = 0;
     TRISE = 0;
@@ -2792,6 +2796,7 @@ void con_mp2(void) {
     INTCONbits.PEIE = 1;
     PIE1bits.RCIE = 1;
     PIE1bits.TXIE = 1;
+    IOCB = 0;
 
 
 }

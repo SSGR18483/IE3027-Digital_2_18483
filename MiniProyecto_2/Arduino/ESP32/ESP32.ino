@@ -32,15 +32,17 @@
 
 
 /************************ Example Starts Here *******************************/
-
+#define IO_LOOP_DELAY 10000
 // this int will hold the current count for our sketch
 //Variables
 int count = 0;
 int entrada = 0;
-int valu1 = 1;
-int valu2 = 2;
-int valu3 = 3;
+char *valu1 = 1;
+char *valu2 = 2;
 int valu4 = 4;
+float x_d;
+float y_d;
+float z_d;
 //byte  valu1 = 1;
 //byte  valu2 = 2;
 //byte  valu3 = 3;
@@ -51,6 +53,9 @@ int giro=0;
 // set up the 'counter' feed
 AdafruitIO_Feed *L1 = io.feed("L1");//led azul
 AdafruitIO_Feed *L2 = io.feed("L2");//led roja
+AdafruitIO_Feed *EJE_X = io.feed("EJE X");//dato de adafruit de eje x
+AdafruitIO_Feed *EJE_Y = io.feed("EJE Y");
+AdafruitIO_Feed *EJE_Z = io.feed("EJE Z");
 
 
 //_-----------------------------------mensaje adafruit-----------------------
@@ -78,6 +83,9 @@ void setup() {
   L1->get();
   L2->get();
 
+  L1->onMessage(adaled);
+  L2->onMessage(adaled1);
+  
 }
 
 
@@ -94,38 +102,27 @@ void loop() {
 //    giro->save((entrada, DEC));
    // }
   
-  datof=Intled.toInt();// cambiar dato a entero
-  switch(datof){
-    case 1:
-    if(Serial.availableForWrite()){
-      //Caso led azul prendida
-      Serial.write(1); }
-      //Serial.println(1, DEC);   
-      break;
-    case 2:
-    if(Serial.availableForWrite()){
-      //Caso led azul apagada
-      Serial.write(2);}
-      //Serial.println(2, DEC);}
-      break;
-    case 3:
-    if(Serial.availableForWrite()){
-      //Caso led roja prendida
-      Serial.write(3);}
-      //Serial.println(3, DEC);
-      break;
-    case 4:
-    if(Serial.availableForWrite()){
-      //Caso led roja apagada
-      Serial.write(4);}
-      //Serial.println(4, DEC);
-      break;
-      default:
-    break;
-    }
   // Adafruit IO is rate limited for publishing, so a delay is required in
   // between feed->save events. In this example, we will wait three seconds
   // (1000 milliseconds == 1 second) during each loop.
   delay(3000);
 
 }
+
+void adaled(AdafruitIO_Data *data){
+   Serial.print("received <- ");
+  valu1 =  data->value();
+  Serial.println(valu1);
+  if(*valu1 == '1')Serial.write(1); 
+  else Serial.write(2); 
+  return;
+  }
+  
+void adaled1(AdafruitIO_Data *data){
+   Serial.print("received <- ");
+  valu2 =  data->value(); 
+  Serial.println(valu2);
+  if(*valu2 == '1')Serial.write(3); 
+  else Serial.write(4); 
+  return;
+  }

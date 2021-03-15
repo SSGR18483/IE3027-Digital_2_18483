@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=UART.c CONM2.c mini2.c
+SOURCEFILES_QUOTED_IF_SPACED=UART.c CONM2.c mini2.c I2C.c giros.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/UART.p1 ${OBJECTDIR}/CONM2.p1 ${OBJECTDIR}/mini2.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/UART.p1.d ${OBJECTDIR}/CONM2.p1.d ${OBJECTDIR}/mini2.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/UART.p1 ${OBJECTDIR}/CONM2.p1 ${OBJECTDIR}/mini2.p1 ${OBJECTDIR}/I2C.p1 ${OBJECTDIR}/giros.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/UART.p1.d ${OBJECTDIR}/CONM2.p1.d ${OBJECTDIR}/mini2.p1.d ${OBJECTDIR}/I2C.p1.d ${OBJECTDIR}/giros.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/UART.p1 ${OBJECTDIR}/CONM2.p1 ${OBJECTDIR}/mini2.p1
+OBJECTFILES=${OBJECTDIR}/UART.p1 ${OBJECTDIR}/CONM2.p1 ${OBJECTDIR}/mini2.p1 ${OBJECTDIR}/I2C.p1 ${OBJECTDIR}/giros.p1
 
 # Source Files
-SOURCEFILES=UART.c CONM2.c mini2.c
+SOURCEFILES=UART.c CONM2.c mini2.c I2C.c giros.c
 
 
 
@@ -118,6 +118,22 @@ ${OBJECTDIR}/mini2.p1: mini2.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/mini2.d ${OBJECTDIR}/mini2.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/mini2.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/I2C.p1: I2C.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/I2C.p1.d 
+	@${RM} ${OBJECTDIR}/I2C.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/I2C.p1 I2C.c 
+	@-${MV} ${OBJECTDIR}/I2C.d ${OBJECTDIR}/I2C.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/I2C.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/giros.p1: giros.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/giros.p1.d 
+	@${RM} ${OBJECTDIR}/giros.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/giros.p1 giros.c 
+	@-${MV} ${OBJECTDIR}/giros.d ${OBJECTDIR}/giros.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/giros.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/UART.p1: UART.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -142,6 +158,22 @@ ${OBJECTDIR}/mini2.p1: mini2.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/mini2.p1 mini2.c 
 	@-${MV} ${OBJECTDIR}/mini2.d ${OBJECTDIR}/mini2.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/mini2.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/I2C.p1: I2C.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/I2C.p1.d 
+	@${RM} ${OBJECTDIR}/I2C.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/I2C.p1 I2C.c 
+	@-${MV} ${OBJECTDIR}/I2C.d ${OBJECTDIR}/I2C.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/I2C.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/giros.p1: giros.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/giros.p1.d 
+	@${RM} ${OBJECTDIR}/giros.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-osccal -mno-resetbits -mno-save-resetbits -mno-download -mno-stackcall $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto     -o ${OBJECTDIR}/giros.p1 giros.c 
+	@-${MV} ${OBJECTDIR}/giros.d ${OBJECTDIR}/giros.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/giros.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

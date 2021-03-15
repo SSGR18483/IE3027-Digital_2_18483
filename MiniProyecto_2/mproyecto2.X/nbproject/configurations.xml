@@ -6,6 +6,8 @@
                    projectFiles="true">
       <itemPath>UART.h</itemPath>
       <itemPath>CONM2.h</itemPath>
+      <itemPath>I2C.h</itemPath>
+      <itemPath>giros.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -17,6 +19,8 @@
       <logicalFolder name="f1" displayName="Lm2" projectFiles="true">
         <itemPath>UART.c</itemPath>
         <itemPath>CONM2.c</itemPath>
+        <itemPath>I2C.c</itemPath>
+        <itemPath>giros.c</itemPath>
       </logicalFolder>
       <itemPath>mini2.c</itemPath>
     </logicalFolder>

@@ -1,4 +1,4 @@
-# 1 "mini2.c"
+# 1 "I2C.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,15 +6,15 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mini2.c" 2
+# 1 "I2C.c" 2
 
 
 
 
 
 
-
-
+# 1 "./i2c.h" 1
+# 32 "./i2c.h"
 # 1 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -2495,32 +2495,8 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\\pic\\include\\xc.h" 2 3
-# 9 "mini2.c" 2
-
-# 1 "./CONM2.h" 1
-# 17 "./CONM2.h"
-#pragma config FOSC = INTRC_NOCLKOUT
-#pragma config WDTE = OFF
-#pragma config PWRTE = ON
-#pragma config MCLRE = OFF
-#pragma config CP = OFF
-#pragma config CPD = OFF
-#pragma config BOREN = OFF
-#pragma config IESO = OFF
-#pragma config FCMEN = OFF
-#pragma config LVP = OFF
-
-
-#pragma config BOR4V = BOR40V
-#pragma config WRT = OFF
-
-
-
-
-
-
-
-
+# 32 "./i2c.h" 2
+# 68 "./i2c.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
 # 13 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 3
 typedef signed char int8_t;
@@ -2654,7 +2630,7 @@ typedef int16_t intptr_t;
 
 
 typedef uint16_t uintptr_t;
-# 38 "./CONM2.h" 2
+# 68 "./i2c.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdio.h" 1 3
 
@@ -2753,80 +2729,69 @@ extern int vsscanf(const char *, const char *, va_list) __attribute__((unsupport
 #pragma printf_check(sprintf) const
 extern int sprintf(char *, const char *, ...);
 extern int printf(const char *, ...);
-# 39 "./CONM2.h" 2
+# 69 "./i2c.h" 2
+
+
+void I2C_Master_Init(const unsigned long c);
+void I2C_Master_Wait(void);
+void I2C_Master_Start(void);
+void I2C_Master_RepeatedStart(void);
+void I2C_Master_Stop(void);
+void I2C_Master_Write(int d);
+int I2C_Master_Read(int a);
+# 7 "I2C.c" 2
 
 
 
 
 
-
-void con_mp2(void);
-# 10 "mini2.c" 2
-
-# 1 "./UART.h" 1
-# 13 "./UART.h"
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
-# 13 "./UART.h" 2
-
-
-
-void COM_EUSART(const long int baudrate);
-# 11 "mini2.c" 2
-
-
-int leer;
-char escribir;
-char led1;
-char giros[6];
-char led2;
-int cont = 0;
-int num;
-
-void __attribute__((picinterrupt(("")))) txint(void) {
-# 30 "mini2.c"
-    if (PIR1bits.TXIF == 1) {
-        TXREG = escribir;
-        if (num == 5) {
-            num = 0;
-        } else {
-            num++;
-        }
-    } else {
-        TXREG = 66;
-    }
-
-
-    if (PIR1bits.RCIF == 1) {
-        leer = RCREG;
-
-
-    }
+void I2C_Master_Init(const unsigned long c)
+{
+  SSPCON = 0b00101000;
+  SSPCON2 = 0;
+  SSPADD = (8000000/(4*c))-1;
+  SSPSTAT = 0;
+  TRISC3 = 1;
+  TRISC4 = 1;
 }
 
-void main(void) {
-    con_mp2();
-    COM_EUSART(9600);
-    while (1) {
+
+void I2C_Master_Wait()
+{
+  while ((SSPSTAT & 0x04) || (SSPCON2 & 0x1F));
+}
 
 
-        if (leer == 1) {
-            PORTEbits.RE0 = 0;
-        }
-        if (leer == 2) {
-            PORTEbits.RE0 = 1;
-        }
-        if (leer == 3) {
-            PORTEbits.RE1 = 0;
-        }
-        if (leer == 4) {
-            PORTEbits.RE1 = 1;
-        }
-        giros[0] = adxl345_read(0x32);
-        giros[1] = adxl345_read(0x33);
-        giros[2] = adxl345_read(0x34);
-        giros[3] = adxl345_read(0x35);
-        giros[4] = adxl345_read(0x36);
-        giros[5] = adxl345_read(0x37);
-    }
-    return;
+void I2C_Master_Start()
+{
+  I2C_Master_Wait();
+  SEN = 1;
+}
+
+
+void I2C_Master_Stop()
+{
+  I2C_Master_Wait();
+  PEN = 1;
+}
+
+
+void I2C_Master_Write(int d)
+{
+  I2C_Master_Wait();
+  SSPBUF = d;
+}
+
+
+int I2C_Master_Read(int a)
+{
+  int temp;
+  I2C_Master_Wait();
+  RCEN = 1;
+  I2C_Master_Wait();
+  temp = SSPBUF;
+  I2C_Master_Wait();
+  ACKDT = (a)?0:1;
+  ACKEN = 1;
+  return temp;
 }
