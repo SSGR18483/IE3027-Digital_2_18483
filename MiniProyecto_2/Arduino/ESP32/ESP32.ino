@@ -10,6 +10,7 @@
 
 
 
+
 // Adafruit IO Publish Example
 //
 // Adafruit invests time and resources providing this open source code.
@@ -37,8 +38,8 @@
 //Variables
 int count = 0;
 int entrada = 0;
-char *valu1 = 1;
-char *valu2 = 2;
+char *valu1 ;
+char *valu2 ;
 int valu4 = 4;
 float x_d;
 float y_d;
@@ -58,10 +59,6 @@ AdafruitIO_Feed *EJE_Y = io.feed("EJE Y");
 AdafruitIO_Feed *EJE_Z = io.feed("EJE Z");
 
 
-//_-----------------------------------mensaje adafruit-----------------------
-void handleMessage(AdafruitIO_Data *data){
-  Intled = data->value();
-  }
 //-------------------------------------------SETUP--------------------------
 void setup() {
 
@@ -71,8 +68,6 @@ void setup() {
   // connect to io.adafruit.com
   io.connect();
 
-  L1->onMessage(handleMessage);// LedA
-  L2->onMessage(handleMessage);
   // wait for a connection
   while(io.status() < AIO_CONNECTED) {
     digitalWrite(2,HIGH);
@@ -105,7 +100,6 @@ void loop() {
   // Adafruit IO is rate limited for publishing, so a delay is required in
   // between feed->save events. In this example, we will wait three seconds
   // (1000 milliseconds == 1 second) during each loop.
-  delay(3000);
 
 }
 

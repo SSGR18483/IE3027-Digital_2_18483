@@ -18,14 +18,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1140
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 1140: extern volatile unsigned char RCREG __attribute__((address(0x01A)));
 [v _RCREG `Vuc ~T0 @X0 0 e@26 ]
-[p mainexit ]
-"45 ./CONM2.h
-[; ;./CONM2.h: 45: void con_mp2(void);
-[v _con_mp2 `(v ~T0 @X0 0 ef ]
-"16 ./UART.h
-[; ;./UART.h: 16: void COM_EUSART(const long int baudrate);
-[v _COM_EUSART `(v ~T0 @X0 0 ef1`Cl ]
-"420 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
+"420
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 420:     struct {
 [s S14 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
 [n S14 . RE0 RE1 RE2 RE3 ]
@@ -36,8 +29,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "427
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 427: extern volatile PORTEbits_t PORTEbits __attribute__((address(0x009)));
 [v _PORTEbits `VS13 ~T0 @X0 0 e@9 ]
-"67 mini2.c
-[; ;mini2.c: 67:         giros[0] = adxl345_read(0x32);
+[p mainexit ]
+"45 ./CONM2.h
+[; ;./CONM2.h: 45: void con_mp2(void);
+[v _con_mp2 `(v ~T0 @X0 0 ef ]
+"16 ./UART.h
+[; ;./UART.h: 16: void COM_EUSART(const long int baudrate);
+[v _COM_EUSART `(v ~T0 @X0 0 ef1`Cl ]
+"68 mini2.c
+[; ;mini2.c: 68:         giros[0] = adxl345_read(0x32);
 [v _adxl345_read `(i ~T0 @X0 0 e? ]
 "54 C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h
 [; ;C:/Program Files (x86)/Microchip/MPLABX/v5.40/packs/Microchip/PIC16Fxxx_DFP/1.2.33/xc8\pic\include\proc\pic16f887.h: 54: __asm("INDF equ 00h");
@@ -376,102 +376,102 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;mini2.c: 43:         leer = RCREG;
 [e = _leer -> _RCREG `i ]
 "46
-[; ;mini2.c: 46:     }
+[; ;mini2.c: 46:         if (leer == 1) {
+[e $ ! == _leer -> 1 `i 145  ]
+{
+"47
+[; ;mini2.c: 47:             PORTEbits.RE0 = 0;
+[e = . . _PORTEbits 0 0 -> -> 0 `i `uc ]
+"48
+[; ;mini2.c: 48:         }
+}
+[e :U 145 ]
+"49
+[; ;mini2.c: 49:         if (leer == 2) {
+[e $ ! == _leer -> 2 `i 146  ]
+{
+"50
+[; ;mini2.c: 50:             PORTEbits.RE0 = 1;
+[e = . . _PORTEbits 0 0 -> -> 1 `i `uc ]
+"51
+[; ;mini2.c: 51:         }
+}
+[e :U 146 ]
+"52
+[; ;mini2.c: 52:         if (leer == 3) {
+[e $ ! == _leer -> 3 `i 147  ]
+{
+"53
+[; ;mini2.c: 53:             PORTEbits.RE1 = 0;
+[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
+"54
+[; ;mini2.c: 54:         }
+}
+[e :U 147 ]
+"55
+[; ;mini2.c: 55:         if (leer == 4) {
+[e $ ! == _leer -> 4 `i 148  ]
+{
+"56
+[; ;mini2.c: 56:             PORTEbits.RE1 = 1;
+[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
+"57
+[; ;mini2.c: 57:         }
+}
+[e :U 148 ]
+"58
+[; ;mini2.c: 58:     }
 }
 [e :U 144 ]
-"47
-[; ;mini2.c: 47: }
+"59
+[; ;mini2.c: 59: }
 [e :UE 139 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"49
-[; ;mini2.c: 49: void main(void) {
+"61
+[; ;mini2.c: 61: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"50
-[; ;mini2.c: 50:     con_mp2();
+"62
+[; ;mini2.c: 62:     con_mp2();
 [e ( _con_mp2 ..  ]
-"51
-[; ;mini2.c: 51:     COM_EUSART(9600);
+"63
+[; ;mini2.c: 63:     COM_EUSART(9600);
 [e ( _COM_EUSART (1 -> -> 9600 `i `l ]
-"52
-[; ;mini2.c: 52:     while (1) {
-[e :U 147 ]
+"64
+[; ;mini2.c: 64:     while (1) {
+[e :U 151 ]
 {
-"55
-[; ;mini2.c: 55:         if (leer == 1) {
-[e $ ! == _leer -> 1 `i 149  ]
-{
-"56
-[; ;mini2.c: 56:             PORTEbits.RE0 = 0;
-[e = . . _PORTEbits 0 0 -> -> 0 `i `uc ]
-"57
-[; ;mini2.c: 57:         }
-}
-[e :U 149 ]
-"58
-[; ;mini2.c: 58:         if (leer == 2) {
-[e $ ! == _leer -> 2 `i 150  ]
-{
-"59
-[; ;mini2.c: 59:             PORTEbits.RE0 = 1;
-[e = . . _PORTEbits 0 0 -> -> 1 `i `uc ]
-"60
-[; ;mini2.c: 60:         }
+"68
+[; ;mini2.c: 68:         giros[0] = adxl345_read(0x32);
+[e = *U + &U _giros * -> -> -> 0 `i `ui `ux -> -> # *U &U _giros `ui `ux -> ( _adxl345_read -> 50 `i `uc ]
+"69
+[; ;mini2.c: 69:         giros[1] = adxl345_read(0x33);
+[e = *U + &U _giros * -> -> -> 1 `i `ui `ux -> -> # *U &U _giros `ui `ux -> ( _adxl345_read -> 51 `i `uc ]
+"70
+[; ;mini2.c: 70:         giros[2] = adxl345_read(0x34);
+[e = *U + &U _giros * -> -> -> 2 `i `ui `ux -> -> # *U &U _giros `ui `ux -> ( _adxl345_read -> 52 `i `uc ]
+"71
+[; ;mini2.c: 71:         giros[3] = adxl345_read(0x35);
+[e = *U + &U _giros * -> -> -> 3 `i `ui `ux -> -> # *U &U _giros `ui `ux -> ( _adxl345_read -> 53 `i `uc ]
+"72
+[; ;mini2.c: 72:         giros[4] = adxl345_read(0x36);
+[e = *U + &U _giros * -> -> -> 4 `i `ui `ux -> -> # *U &U _giros `ui `ux -> ( _adxl345_read -> 54 `i `uc ]
+"73
+[; ;mini2.c: 73:         giros[5] = adxl345_read(0x37);
+[e = *U + &U _giros * -> -> -> 5 `i `ui `ux -> -> # *U &U _giros `ui `ux -> ( _adxl345_read -> 55 `i `uc ]
+"74
+[; ;mini2.c: 74:     }
 }
 [e :U 150 ]
-"61
-[; ;mini2.c: 61:         if (leer == 3) {
-[e $ ! == _leer -> 3 `i 151  ]
-{
-"62
-[; ;mini2.c: 62:             PORTEbits.RE1 = 0;
-[e = . . _PORTEbits 0 1 -> -> 0 `i `uc ]
-"63
-[; ;mini2.c: 63:         }
-}
-[e :U 151 ]
-"64
-[; ;mini2.c: 64:         if (leer == 4) {
-[e $ ! == _leer -> 4 `i 152  ]
-{
-"65
-[; ;mini2.c: 65:             PORTEbits.RE1 = 1;
-[e = . . _PORTEbits 0 1 -> -> 1 `i `uc ]
-"66
-[; ;mini2.c: 66:         }
-}
+[e $U 151  ]
 [e :U 152 ]
-"67
-[; ;mini2.c: 67:         giros[0] = adxl345_read(0x32);
-[e = *U + &U _giros * -> -> -> 0 `i `ui `ux -> -> # *U &U _giros `ui `ux -> ( _adxl345_read -> 50 `i `uc ]
-"68
-[; ;mini2.c: 68:         giros[1] = adxl345_read(0x33);
-[e = *U + &U _giros * -> -> -> 1 `i `ui `ux -> -> # *U &U _giros `ui `ux -> ( _adxl345_read -> 51 `i `uc ]
-"69
-[; ;mini2.c: 69:         giros[2] = adxl345_read(0x34);
-[e = *U + &U _giros * -> -> -> 2 `i `ui `ux -> -> # *U &U _giros `ui `ux -> ( _adxl345_read -> 52 `i `uc ]
-"70
-[; ;mini2.c: 70:         giros[3] = adxl345_read(0x35);
-[e = *U + &U _giros * -> -> -> 3 `i `ui `ux -> -> # *U &U _giros `ui `ux -> ( _adxl345_read -> 53 `i `uc ]
-"71
-[; ;mini2.c: 71:         giros[4] = adxl345_read(0x36);
-[e = *U + &U _giros * -> -> -> 4 `i `ui `ux -> -> # *U &U _giros `ui `ux -> ( _adxl345_read -> 54 `i `uc ]
-"72
-[; ;mini2.c: 72:         giros[5] = adxl345_read(0x37);
-[e = *U + &U _giros * -> -> -> 5 `i `ui `ux -> -> # *U &U _giros `ui `ux -> ( _adxl345_read -> 55 `i `uc ]
-"73
-[; ;mini2.c: 73:     }
-}
-[e :U 146 ]
-[e $U 147  ]
-[e :U 148 ]
-"74
-[; ;mini2.c: 74:     return;
-[e $UE 145  ]
 "75
-[; ;mini2.c: 75: }
-[e :UE 145 ]
+[; ;mini2.c: 75:     return;
+[e $UE 149  ]
+"76
+[; ;mini2.c: 76: }
+[e :UE 149 ]
 }

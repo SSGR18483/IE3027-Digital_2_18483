@@ -2781,6 +2781,7 @@ void con_mp2(void);
 
 
 void con_mp2(void) {
+    OSCCONbits.IRCF =0b111;
     ANSEL = 0;
     ANSELH = 0;
     TRISA = 0;

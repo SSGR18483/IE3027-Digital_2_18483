@@ -26,6 +26,7 @@
 #include <xc.h>
 
 void con_mp2(void) {
+    OSCCONbits.IRCF =0b111;
     ANSEL = 0; // digitalizamos puerto a
     ANSELH = 0; // digitalizamos puerto b
     TRISA = 0;

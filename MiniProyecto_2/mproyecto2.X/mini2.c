@@ -43,15 +43,6 @@ void __interrupt() txint(void) {
         leer = RCREG;
         // PORTDbits.RD2 = 0;
         //__delay_ms(500);
-    }
-}
-
-void main(void) {
-    con_mp2();
-    COM_EUSART(9600);
-    while (1) {
-        //        led1 = PORTEbits.RE0;
-        //        led2 = PORTEbits.RE1;
         if (leer == 1) {
             PORTEbits.RE0 = 0;
         }
@@ -64,6 +55,16 @@ void main(void) {
         if (leer == 4) {
             PORTEbits.RE1 = 1;
         }
+    }
+}
+
+void main(void) {
+    con_mp2();
+    COM_EUSART(9600);
+    while (1) {
+        //        led1 = PORTEbits.RE0;
+        //        led2 = PORTEbits.RE1;
+   
         giros[0] = adxl345_read(0x32);
         giros[1] = adxl345_read(0x33);
         giros[2] = adxl345_read(0x34);

@@ -33,7 +33,7 @@
 [v _I2C_Master_Read I2C_Master_Read `(i  1 e 2 0 ]
 "21 C:\Users\galic\Documents\UVG\CUARTO AÑO\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto_2\mproyecto2.X\mini2.c
 [v _txint txint `II(v  1 e 1 0 ]
-"49
+"61
 [v _main main `(v  1 e 1 0 ]
 "5 C:\Users\galic\Documents\UVG\CUARTO AÑO\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto_2\mproyecto2.X\UART.c
 [v _COM_EUSART COM_EUSART `(v  1 e 1 0 ]
@@ -45,15 +45,15 @@
 [v _PORTD PORTD `VEuc  1 e 1 @8 ]
 "414
 [v _PORTE PORTE `VEuc  1 e 1 @9 ]
-[s S187 . 1 `uc 1 RE0 1 0 :1:0 
+[s S216 . 1 `uc 1 RE0 1 0 :1:0 
 `uc 1 RE1 1 0 :1:1 
 `uc 1 RE2 1 0 :1:2 
 `uc 1 RE3 1 0 :1:3 
 ]
 "427
-[u S192 . 1 `S187 1 . 1 0 ]
-[v _PORTEbits PORTEbits `VES192  1 e 1 @9 ]
-[s S88 . 1 `uc 1 RBIF 1 0 :1:0 
+[u S221 . 1 `S216 1 . 1 0 ]
+[v _PORTEbits PORTEbits `VES221  1 e 1 @9 ]
+[s S114 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -63,14 +63,14 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "482
-[s S97 . 1 `uc 1 . 1 0 :2:0 
+[s S123 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 TMR0IE 1 0 :1:5 
 ]
-[u S102 . 1 `S88 1 . 1 0 `S97 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES102  1 e 1 @11 ]
-[s S164 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S128 . 1 `S114 1 . 1 0 `S123 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES128  1 e 1 @11 ]
+[s S195 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -79,8 +79,8 @@
 `uc 1 ADIF 1 0 :1:6 
 ]
 "553
-[u S172 . 1 `S164 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES172  1 e 1 @12 ]
+[u S203 . 1 `S195 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES203  1 e 1 @12 ]
 "843
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "850
@@ -95,7 +95,7 @@
 [v _TRISA TRISA `VEuc  1 e 1 @133 ]
 "1478
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
-[s S67 . 1 `uc 1 TRISC0 1 0 :1:0 
+[s S93 . 1 `uc 1 TRISC0 1 0 :1:0 
 `uc 1 TRISC1 1 0 :1:1 
 `uc 1 TRISC2 1 0 :1:2 
 `uc 1 TRISC3 1 0 :1:3 
@@ -105,13 +105,13 @@
 `uc 1 TRISC7 1 0 :1:7 
 ]
 "1557
-[u S76 . 1 `S67 1 . 1 0 ]
-[v _TRISCbits TRISCbits `VES76  1 e 1 @135 ]
+[u S102 . 1 `S93 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES102  1 e 1 @135 ]
 "1602
 [v _TRISD TRISD `VEuc  1 e 1 @136 ]
 "1664
 [v _TRISE TRISE `VEuc  1 e 1 @137 ]
-[s S120 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S146 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSPIE 1 0 :1:3 
@@ -120,8 +120,22 @@
 `uc 1 ADIE 1 0 :1:6 
 ]
 "1718
-[u S128 . 1 `S120 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES128  1 e 1 @140 ]
+[u S154 . 1 `S146 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES154  1 e 1 @140 ]
+[s S57 . 1 `uc 1 SCS 1 0 :1:0 
+`uc 1 LTS 1 0 :1:1 
+`uc 1 HTS 1 0 :1:2 
+`uc 1 OSTS 1 0 :1:3 
+`uc 1 IRCF 1 0 :3:4 
+]
+"1882
+[s S63 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 IRCF0 1 0 :1:4 
+`uc 1 IRCF1 1 0 :1:5 
+`uc 1 IRCF2 1 0 :1:6 
+]
+[u S68 . 1 `S57 1 . 1 0 `S63 1 . 1 0 ]
+[v _OSCCONbits OSCCONbits `VES68  1 e 1 @143 ]
 "1979
 [v _SSPCON2 SSPCON2 `VEuc  1 e 1 @145 ]
 "2048
@@ -172,15 +186,15 @@
 [v _giros giros `[6]uc  1 e 6 0 ]
 "19
 [v _num num `i  1 e 2 0 ]
-"49
+"61
 [v _main main `(v  1 e 1 0 ]
 {
-"75
+"76
 } 0
 "28 C:\Users\galic\Documents\UVG\CUARTO AÑO\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto_2\mproyecto2.X\CONM2.c
 [v _con_mp2 con_mp2 `(v  1 e 1 0 ]
 {
-"47
+"48
 } 0
 "27 C:\Users\galic\Documents\UVG\CUARTO AÑO\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto_2\mproyecto2.X\giros.c
 [v _adxl345_read adxl345_read `(i  1 e 2 0 ]
@@ -246,5 +260,5 @@
 "21 C:\Users\galic\Documents\UVG\CUARTO AÑO\ELECTRONICA DIGITAL 2\Laboratorio\IE3027-Digital_2_18483\MiniProyecto_2\mproyecto2.X\mini2.c
 [v _txint txint `II(v  1 e 1 0 ]
 {
-"47
+"59
 } 0

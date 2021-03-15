@@ -2800,15 +2800,6 @@ void __attribute__((picinterrupt(("")))) txint(void) {
         leer = RCREG;
 
 
-    }
-}
-
-void main(void) {
-    con_mp2();
-    COM_EUSART(9600);
-    while (1) {
-
-
         if (leer == 1) {
             PORTEbits.RE0 = 0;
         }
@@ -2821,6 +2812,16 @@ void main(void) {
         if (leer == 4) {
             PORTEbits.RE1 = 1;
         }
+    }
+}
+
+void main(void) {
+    con_mp2();
+    COM_EUSART(9600);
+    while (1) {
+
+
+
         giros[0] = adxl345_read(0x32);
         giros[1] = adxl345_read(0x33);
         giros[2] = adxl345_read(0x34);
