@@ -104,13 +104,13 @@ String SendHTML(void) {
   ptr +="}\n";
   ptr += "<h1>Proyecto Final </h1>\n";
   ptr += "<h3>Santiago Galicia 18483</h3>\n";
-  ptr += "<canvas id=\"Parqueo 1\" width=\"150\" height=\"150\" style=\"border:0px solid #000000;\">\n";
-  ptr += "</canvas>\n";
-  ptr += "<canvas id=\"Parqueo 2\" width=\"150\" height=\"150\" style=\"border:0px solid #000000;\">\n";
+  ptr += "<canvas id=\"Parqueo 4\" width=\"150\" height=\"150\" style=\"border:0px solid #000000;\">\n";
   ptr += "</canvas>\n";
   ptr += "<canvas id=\"Parqueo 3\" width=\"150\" height=\"150\" style=\"border:0px solid #000000;\">\n";
   ptr += "</canvas>\n";
-  ptr += "<canvas id=\"Parqueo 4\" width=\"150\" height=\"150\" style=\"border:0px solid #000000;\">\n";
+  ptr += "<canvas id=\"Parqueo 2\" width=\"150\" height=\"150\" style=\"border:0px solid #000000;\">\n";
+  ptr += "</canvas>\n";
+  ptr += "<canvas id=\"Parqueo 1\" width=\"150\" height=\"150\" style=\"border:0px solid #000000;\">\n";
   ptr += "</canvas>\n";
   ptr += "<canvas id=\"Cantidad\" width=\"825\" height=\"40\" style=\"border:0px solid #000000;\">\n";
   ptr += "</canvas>\n";
