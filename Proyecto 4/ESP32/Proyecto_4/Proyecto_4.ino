@@ -1,3 +1,6 @@
+//UVG
+//Santiago Galicia Reyes
+//Carnet 18483
 //************************************************************************************************
 // Librerías
 //************************************************************************************************
@@ -93,6 +96,12 @@ String SendHTML(void) {
   ptr += "<body>\n";
   ptr +="<body style=\"background-color:#F28916;\">\n";
   ptr += "<body>\n";
+  ptr +="h2 {\n";
+  ptr +="  font-family: \"Brush Script\";\n";
+  ptr +="  font-size: 300%;\n";
+  ptr +="  font-family: \"Lucida Handwriting\";\n";
+  ptr +="\n";
+  ptr +="}\n";
   ptr += "<h1>Proyecto Final </h1>\n";
   ptr += "<h3>Santiago Galicia 18483</h3>\n";
   ptr += "<canvas id=\"Parqueo 1\" width=\"150\" height=\"150\" style=\"border:0px solid #000000;\">\n";
