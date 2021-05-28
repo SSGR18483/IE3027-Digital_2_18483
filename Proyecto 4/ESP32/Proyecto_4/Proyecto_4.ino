@@ -1,14 +1,14 @@
 //UVG
 //Santiago Galicia Reyes
 //Carnet 18483
-//************************************************************************************************
+//===============================
 // Librerías
-//************************************************************************************************
+//================================
 #include <WiFi.h>
 #include <WebServer.h>
-//************************************************************************************************
+//================================
 // Variables globales
-//************************************************************************************************
+//=====================
 // SSID & Password
 const char* ssid = "CLARO_132940";  // Enter your SSID here
 const char* password = "24C55C41B7";  //Enter your Password here
@@ -20,9 +20,9 @@ WebServer server(80);  // Object of WebServer(HTTP port, 80 is defult)
 uint8_t LED1pin = 2;
 bool LED1status = LOW;
  
-//************************************************************************************************
+//========================
 // Configuración
-//************************************************************************************************
+//============================
 void setup() {
   Serial.begin(115200);
   Serial2.begin(115200);
@@ -54,12 +54,12 @@ void setup() {
   Serial.println("HTTP server started");
   delay(100);
 }
-//************************************************************************************************
+//==========================================
 // loop principal
-//************************************************************************************************
+//======================================================
 void loop() {
   server.handleClient();          //Inicia servidor
-  if (Serial2.available())        //Inicia lectura del UART
+  if (Serial2.available())        //Inicia lectura desde RX por medio de comunicacion uart
     {   
       digitalWrite(2, 1);         //Encendera las led siempre que se reciba datos por UART
         for (int i = 0; i<=3; i++)//Lee 4 bytes y almacenan en un array
@@ -92,17 +92,19 @@ void handle_Data() {                          //se envia la data y se concatena 
 //************************************************************************************************
 String SendHTML(void) {
   String ptr = "<!DOCTYPE html>\n";
-  ptr = "<html>\n";
-  ptr += "<body>\n";
+  ptr += "<html>\n";
+  ptr +="<body>\n";
   ptr +="<body style=\"background-color:#F28916;\">\n";
-  ptr += "<body>\n";
-  ptr +="h2 {\n";
-  ptr +="  font-family: \"Brush Script\";\n";
-  ptr +="  font-size: 300%;\n";
-  ptr +="  font-family: \"Lucida Handwriting\";\n";
-  ptr +="\n";
+  ptr +="<style>\n";
+  ptr +="h1{\n";
+  ptr +="text-align:center;\n";
   ptr +="}\n";
-  ptr += "<h1>Proyecto Final </h1>\n";
+  ptr +="h3{\n";
+  ptr +="text-align:center;\n";
+  ptr +="}\n";
+  ptr +="</style\n";
+  ptr +="<body>\n";
+  ptr += "<h1 align=\"center\">Proyecto Final </h1>\n";
   ptr += "<h3>Santiago Galicia 18483</h3>\n";
   ptr += "<canvas id=\"Parqueo 4\" width=\"150\" height=\"150\" style=\"border:0px solid #000000;\">\n";
   ptr += "</canvas>\n";
